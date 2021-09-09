@@ -1,0 +1,6 @@
+[submodule "aoKicad"]
+	path = aoKicad
+	url = git@github.com:holmesrichards/aoKicad.git
+[submodule "Kosmo_panel"]
+	path = Kosmo_panel
+	url = git@github.com:holmesrichards/Kosmo_panel.git

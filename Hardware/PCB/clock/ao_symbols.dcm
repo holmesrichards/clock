@@ -1,0 +1,107 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 1N4148
+D 100V 0.15A standard switching diode, DO-35
+K diode
+F https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf
+$ENDCMP
+#
+$CMP 1N5817
+D 20V 1A Schottky Barrier Rectifier Diode, DO-41
+K diode Schottky
+F http://www.vishay.com/docs/88525/1n5817.pdf
+$ENDCMP
+#
+$CMP 1N914
+D 100V 0.3A Small Signal Fast Switching Diode, DO-35
+K diode
+F http://www.vishay.com/docs/85622/1n914.pdf
+$ENDCMP
+#
+$CMP 2N3904
+D 0.2A Ic, 40V Vce, Small Signal NPN Transistor, TO-92
+K NPN Transistor
+F https://www.onsemi.com/pub/Collateral/2N3903-D.PDF
+$ENDCMP
+#
+$CMP 2_pin_Molex_connector
+D 2 pin Molex connector 2.54 mm spacing
+K connector
+F ~
+$ENDCMP
+#
+$CMP 2_pin_Molex_header
+D 2 pin Molex header 2.54 mm spacing
+K connector
+F ~
+$ENDCMP
+#
+$CMP 3_pin_Molex_connector
+D 3 pin Molex connector 2.54 mm spacing
+K connector
+F ~
+$ENDCMP
+#
+$CMP 3_pin_Molex_header
+D 3 pin Molex header 2.54 mm spacing
+K connector
+F ~
+$ENDCMP
+#
+$CMP C
+D Unpolarized capacitor
+K cap capacitor
+F ~
+$ENDCMP
+#
+$CMP CP
+D Polarized capacitor
+K cap capacitor
+F ~
+$ENDCMP
+#
+$CMP LM13700
+D Dual Operational Transconductance Amplifiers with Linearizing Diodes and Buffers, DIP-16
+K operational transconductance amplifier OTA
+F http://www.ti.com/lit/ds/symlink/lm13700.pdf
+$ENDCMP
+#
+$CMP R_SLIDE_POT
+D Slide potentiometer
+K resistor variable
+F ~
+$ENDCMP
+#
+$CMP Screw_Terminal_01x03
+D Screw terminal, single row, 01x03
+K screw terminal
+F ~
+$ENDCMP
+#
+$CMP Synth_power_2x5
+D 2x5 pin shrouded header 2.54 mm spacing
+$ENDCMP
+#
+$CMP Synth_power_2x5_passive
+D 2x5 pin shrouded header 2.54 mm spacing
+$ENDCMP
+#
+$CMP TL071
+D Single Low-Noise JFET-Input Operational Amplifiers, DIP-8
+K single opamp
+F http://www.ti.com/lit/ds/symlink/lm741.pdf
+$ENDCMP
+#
+$CMP TL072
+D Dual Low-Noise JFET-Input Operational Amplifiers, DIP-8
+K dual opamp
+F http://www.ti.com/lit/ds/symlink/tl071.pdf
+$ENDCMP
+#
+$CMP TL074
+D Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/tl071.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name ao_tht)(type KiCad)(uri ${KIPRJMOD}/ao_tht.pretty)(options "")(descr ""))
+  (lib (name clock)(type KiCad)(uri ${KIPRJMOD}/clock.pretty)(options "")(descr ""))
+)
