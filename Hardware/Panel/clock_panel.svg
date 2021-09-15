@@ -2538,7 +2538,7 @@
        height="7.8740039"
        width="1.9685059"
        id="rect829-4"
-       style="display:inline;fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;filter:url(#filter1945)"
+       style="display:inline;fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:0.0104167"
        inkscape:export-xdpi="300.03741"
        inkscape:export-ydpi="300.03741" />
     <text
@@ -2558,19 +2558,19 @@
        inkscape:connector-curvature="0"
        id="path1048"
        d="M 1.9685038,2.362205 H 3.9370077"
-       style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0312501;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter1945)"
+       style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0312501;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-xdpi="300.03741"
        inkscape:export-ydpi="300.03741" />
     <path
        sodipodi:nodetypes="cc"
-       style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.03125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter1945)"
+       style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.03125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        d="M 1.9685038,9.4488193 H 3.9370077"
        id="path1050"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="300.03741"
        inkscape:export-ydpi="300.03741" />
     <flowRoot
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.249999px;line-height:0;font-family:Limelight;-inkscape-font-specification:'Limelight, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter1945)"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.249999px;line-height:0;font-family:Limelight;-inkscape-font-specification:'Limelight, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="flowRoot3370"
        xml:space="preserve"
        transform="matrix(1.000002,0,0,1.000002,-1.0397197e-5,0.5905456)"><flowRegion
