@@ -1,18 +1,49 @@
-fp-info-cache
-*bak
-*cache*
-Narrow
-*~
+########################
+# For PCBs designed using KiCad: http://www.kicad-pcb.org/
+# Format documentation: http://kicad-pcb.org/help/file-formats/
+
+# Temporary files
+*.000
+*.bak
 *.bck
-*.zip
-*.DS_Store
-*~
-.gitignore-extra
-*.dsn
+*.kicad_pcb-bak
+*.kicad_sch-bak
 *.kicad_prl
-*.kicad_pro
-*.rules
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
 *.ses
+
+# Exported BOM files
+*.xml
+*.csv
+##########################
+
+# Additional ignored
+
+# KiCad backups folders
+*-backups
+
+# Compressed files
+*.zip
+
+# Mac stuff
+*.DS_Store
+
+# Emacs temps 
+*~
 \#*
+
+# Note to myself
 SETUP.md
 Ignore
