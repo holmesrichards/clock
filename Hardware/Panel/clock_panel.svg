@@ -5,7 +5,7 @@
    viewBox="0 0 8.5 11"
    version="1.1"
    id="svg8"
-   inkscape:version="1.1.1 (1:1.1+202109281949+c3084ef5ed)"
+   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
    sodipodi:docname="clock_panel.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -907,15 +907,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.60104076"
-     inkscape:cx="29.948052"
-     inkscape:cy="445.06133"
+     inkscape:zoom="1.2020815"
+     inkscape:cx="404.2987"
+     inkscape:cy="559.8622"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer11"
      showgrid="false"
      units="in"
      inkscape:window-width="1581"
-     inkscape:window-height="1020"
+     inkscape:window-height="1013"
      inkscape:window-x="6"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -924,7 +924,7 @@
      inkscape:snap-midpoints="true"
      inkscape:snap-others="true"
      inkscape:snap-grids="true"
-     inkscape:snap-nodes="true"
+     inkscape:snap-nodes="false"
      inkscape:snap-object-midpoints="true"
      inkscape:snap-center="true"
      inkscape:snap-text-baseline="false"
@@ -932,7 +932,7 @@
      inkscape:measure-end="236.22,687.874"
      inkscape:object-paths="true"
      inkscape:document-rotation="0"
-     inkscape:snap-bbox="true"
+     inkscape:snap-bbox="false"
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:snap-smooth-nodes="true"
      inkscape:object-nodes="true"
@@ -1004,7 +1004,7 @@
        orientation="0,-1"
        id="guide3122" />
     <sodipodi:guide
-       position="2.9527557,5.8818898"
+       position="2.9527559,5.4881887"
        orientation="0,-1"
        id="guide3128" />
     <sodipodi:guide
@@ -3455,7 +3455,7 @@
          r="0.025" />
     </g>
     <g
-       transform="translate(8.8582679,-1.6299212)"
+       transform="translate(8.8582636,-0.44881727)"
        id="g5570"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
@@ -3473,25 +3473,6 @@
          cy="5.5669289"
          r="0.17716536" />
     </g>
-    <circle
-       r="0.51181102"
-       cy="5.5118113"
-       cx="2.9527559"
-       id="circle8920"
-       style="opacity:1;vector-effect:none;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <rect
-       style="font-variation-settings:normal;display:inline;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-       id="rect3636-3"
-       width="0.86614174"
-       height="0.55118108"
-       x="2.7163463"
-       y="2.5958352"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
     <path
        inkscape:connector-curvature="0"
        id="path2632"
@@ -3526,25 +3507,159 @@
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
        inkscape:export-ydpi="101.46577" />
+    <path
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       d="m 2.259449,3.1574801 h 1.3937008 v 1.318898 H 3.2318903 v -0.11811 H 2.6807095 v 0.11811 H 2.259449 Z"
+       id="path5445"
+       sodipodi:nodetypes="ccccccccc" />
+    <rect
+       style="font-variation-settings:normal;display:inline;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00787402;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       id="rect5455"
+       width="1.1503937"
+       height="0.57086617"
+       x="2.3775592"
+       y="3.4547243" />
     <g
-       id="g27380"
-       transform="translate(6.2429146,0.51462303)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577">
+       id="g6060"
+       transform="translate(12.132046,-9.9704979)"
+       style="display:inline">
       <rect
-         y="2.1023629"
-         x="-4.1338596"
-         height="0.5"
-         width="0.27007875"
-         id="rect27376"
-         style="opacity:1;vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.993004;-inkscape-stroke:none;stop-color:#000000"
+         id="rect5467"
+         width="0.05905512"
+         height="0.05905512"
+         x="-9.3552752"
+         y="13.177191" />
       <circle
-         r="0.13503937"
-         cy="2.3523629"
-         cx="-3.9988203"
-         id="circle27378"
-         style="opacity:1;vector-effect:none;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+         style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         id="circle5469"
+         cx="-9.3257475"
+         cy="13.206719"
+         r="0.019685039" />
+    </g>
+    <g
+       id="g6065"
+       transform="translate(12.132046,-9.9704979)"
+       style="display:inline">
+      <g
+         id="g5475"
+         transform="translate(2.0011459,18.823035)"
+         style="display:inline">
+        <circle
+           style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+           id="circle5471"
+           cx="-11.226892"
+           cy="-5.6163168"
+           r="0.02952756" />
+        <circle
+           style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+           id="circle5473"
+           cx="-11.226892"
+           cy="-5.6163168"
+           r="0.019685039" />
+      </g>
+    </g>
+    <g
+       id="g5481"
+       transform="translate(14.233192,8.8525371)"
+       style="display:inline">
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle5477"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.02952756" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle5479"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.019685039" />
+    </g>
+    <g
+       id="g5487"
+       transform="translate(14.333192,8.8525371)"
+       style="display:inline">
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle5483"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.02952756" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle5485"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.019685039" />
+    </g>
+    <g
+       id="g6038"
+       style="display:inline"
+       transform="translate(11.972598,-9.9901829)">
+      <circle
+         style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         id="circle5451"
+         cx="-9.6147213"
+         cy="13.246087"
+         r="0.088582672" />
+      <circle
+         style="font-variation-settings:normal;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         id="circle5461"
+         cx="-9.6147223"
+         cy="13.246088"
+         r="0.05905512" />
+    </g>
+    <g
+       id="g6044"
+       transform="translate(13.169448,-9.9901829)"
+       style="display:inline">
+      <circle
+         style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         id="circle6040"
+         cx="-9.6147213"
+         cy="13.246087"
+         r="0.088582672" />
+      <circle
+         style="font-variation-settings:normal;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         id="circle6042"
+         cx="-9.6147223"
+         cy="13.246088"
+         r="0.05905512" />
+    </g>
+    <g
+       id="g6050"
+       transform="translate(11.972598,-8.8681357)"
+       style="display:inline">
+      <circle
+         style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         id="circle6046"
+         cx="-9.6147213"
+         cy="13.246087"
+         r="0.088582672" />
+      <circle
+         style="font-variation-settings:normal;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         id="circle6048"
+         cx="-9.6147223"
+         cy="13.246088"
+         r="0.05905512" />
+    </g>
+    <g
+       id="g6056"
+       transform="translate(13.169448,-8.8681357)"
+       style="display:inline">
+      <circle
+         style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         id="circle6052"
+         cx="-9.6147213"
+         cy="13.246087"
+         r="0.088582672" />
+      <circle
+         style="font-variation-settings:normal;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         id="circle6054"
+         cx="-9.6147223"
+         cy="13.246088"
+         r="0.05905512" />
     </g>
   </g>
   <g
@@ -5210,28 +5325,14 @@
          y="9.3307095"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">DIV N OUT</tspan></text>
     <circle
-       cy="3.9370062"
-       cx="2.9527602"
+       cy="5.1181102"
+       cx="2.9527559"
        id="circle5572"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.17716536"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
        inkscape:export-ydpi="101.46577" />
-    <text
-       id="text5576"
-       y="4.7047229"
-       x="2.9527602"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       xml:space="preserve"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.0104167"
-         y="4.7047229"
-         x="2.9527602"
-         id="tspan5574"
-         sodipodi:role="line">RATE</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -5260,337 +5361,6 @@
          x="3.4448817"
          y="7.3622055"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">CLK OUT</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="2.6917303"
-       y="5.1244702"
-       id="text17779"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         sodipodi:role="line"
-         id="tspan17777"
-         x="2.6917303"
-         y="5.1244702"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167">6</tspan></text>
-    <text
-       id="text17783"
-       y="5.3154039"
-       x="2.5007966"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       xml:space="preserve"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167"
-         y="5.3154039"
-         x="2.5007966"
-         id="tspan17781"
-         sodipodi:role="line">4</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="2.4309099"
-       y="5.5762243"
-       id="text17787"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         sodipodi:role="line"
-         id="tspan17785"
-         x="2.4309099"
-         y="5.5762243"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167">3</tspan></text>
-    <text
-       id="text17791"
-       y="5.8370447"
-       x="2.5007966"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       xml:space="preserve"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167"
-         y="5.8370447"
-         x="2.5007966"
-         id="tspan17789"
-         sodipodi:role="line">2</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="2.6917303"
-       y="6.0279779"
-       id="text17795"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         sodipodi:role="line"
-         id="tspan17793"
-         x="2.6917303"
-         y="6.0279779"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167;fill:#ffffff">7</tspan></text>
-    <text
-       id="text17799"
-       y="6.0978651"
-       x="2.9525506"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       xml:space="preserve"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167;fill:#ffffff"
-         y="6.0978651"
-         x="2.9525506"
-         id="tspan17797"
-         sodipodi:role="line">6</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="3.213371"
-       y="6.0279779"
-       id="text17803"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         sodipodi:role="line"
-         id="tspan17801"
-         x="3.213371"
-         y="6.0279779"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167;fill:#ffffff">5</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="3.4436724"
-       y="5.8370447"
-       id="text17807"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         sodipodi:role="line"
-         id="tspan17805"
-         x="3.4436724"
-         y="5.8370447"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167">32</tspan></text>
-    <text
-       id="text17811"
-       y="5.5762243"
-       x="3.5135591"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       xml:space="preserve"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167"
-         y="5.5762243"
-         x="3.5135591"
-         id="tspan17809"
-         sodipodi:role="line">24</tspan></text>
-    <text
-       id="text17815"
-       y="5.3154039"
-       x="3.4436724"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       xml:space="preserve"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167"
-         y="5.3154039"
-         x="3.4436724"
-         id="tspan17813"
-         sodipodi:role="line">16</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="3.2527387"
-       y="5.1244702"
-       id="text17819"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         sodipodi:role="line"
-         id="tspan17817"
-         x="3.2527387"
-         y="5.1244702"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167">12</tspan></text>
-    <text
-       id="text17823"
-       y="5.0545835"
-       x="2.9525506"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.401505px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       xml:space="preserve"
-       transform="scale(1.0000618,0.9999382)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.167294px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke:none;stroke-width:0.0104167"
-         y="5.0545835"
-         x="2.9525506"
-         id="tspan17821"
-         sodipodi:role="line">8</tspan></text>
-    <ellipse
-       cy="4.990201"
-       cx="2.9527085"
-       id="ellipse17825"
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse17827"
-       cx="2.6918721"
-       cy="5.0600834"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       cy="5.0600834"
-       cx="3.2135451"
-       id="ellipse17829"
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse17831"
-       cx="2.5009265"
-       cy="5.2510052"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       cy="5.5118093"
-       cx="2.4310355"
-       id="ellipse17833"
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse17835"
-       cx="3.4044907"
-       cy="5.2510052"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       cy="5.5118093"
-       cx="3.4743814"
-       id="ellipse17837"
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse17839"
-       cx="3.4044907"
-       cy="5.772614"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse17841"
-       cx="3.2135451"
-       cy="5.9635353"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       cy="6.0334182"
-       cx="2.9527085"
-       id="ellipse17843"
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse17845"
-       cx="2.6918721"
-       cy="5.9635353"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       cy="5.772614"
-       cx="2.5009265"
-       id="ellipse17847"
-       style="vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       rx="0.063669793"
-       ry="0.063661925"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <path
-       inkscape:transform-center-y="2.2740167e-06"
-       inkscape:transform-center-x="-1.3779534e-06"
-       inkscape:randomized="0"
-       inkscape:rounded="0"
-       inkscape:flatsided="true"
-       sodipodi:arg2="1.3089969"
-       sodipodi:arg1="1.0471976"
-       sodipodi:r2="0.41831371"
-       sodipodi:r1="0.43307021"
-       sodipodi:cy="5.6850281"
-       sodipodi:cx="3.4448888"
-       sodipodi:sides="12"
-       id="path17849"
-       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.008648;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       sodipodi:type="star"
-       transform="matrix(1.2045921,0,0,1.2044432,-1.1969642,-1.3354889)"
-       d="M 3.6614239,6.0600779 3.4448888,6.1180983 3.2283537,6.0600779 3.069839,5.9015632 3.0118186,5.6850281 3.069839,5.468493 3.2283537,5.3099783 l 0.2165352,-0.05802 0.2165351,0.05802 0.1585146,0.1585147 0.05802,0.2165351 -0.05802,0.2165351 z"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <ellipse
-       ry="0.21338518"
-       rx="0.21341155"
-       cy="5.5118089"
-       cx="2.9527342"
-       id="ellipse17851"
-       style="display:inline;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
     <circle
        r="0.098425195"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -5627,25 +5397,6 @@
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
        inkscape:export-ydpi="101.46577" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.166667px;line-height:1;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;opacity:1;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-       x="3.7401574"
-       y="2.8534324"
-       id="text8533"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         sodipodi:role="line"
-         id="tspan8531"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.166667px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF Bold';fill:#000000;stroke:none;stroke-width:0.0104167"
-         x="3.7401574"
-         y="2.8534324">PER</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.166667px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF Bold';fill:#000000;stroke:none;stroke-width:0.0104167"
-         x="3.7401574"
-         y="3.0250995"
-         id="tspan8535">MIN</tspan></text>
     <circle
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2640"
@@ -5728,57 +5479,6 @@
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
        inkscape:export-ydpi="101.46577" />
-    <circle
-       r="0.17716536"
-       style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="circle27382"
-       cx="2.2440994"
-       cy="2.8669848"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.166667px;line-height:1;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-       x="2.2440944"
-       y="3.2036998"
-       id="text8533-1"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.166667px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF Bold';fill:#000000;stroke:none;stroke-width:0.0104167"
-         x="2.2440944"
-         y="3.2036998"
-         id="tspan8535-8">MM</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.166667px;line-height:1;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF';text-align:center;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-       x="2.2440944"
-       y="2.6771653"
-       id="text28975"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.166667px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF Bold';fill:#000000;stroke:none;stroke-width:0.0104167"
-         x="2.2440944"
-         y="2.6771653"
-         id="tspan28973">FREE</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="2.9527555"
-       y="6.1811032"
-       id="text8926"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577"><tspan
-         sodipodi:role="line"
-         id="tspan8924"
-         x="2.9527555"
-         y="6.1811032"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.0104167">DIV</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -6468,8 +6168,8 @@
          y="2.0236225" />
     </g>
     <circle
-       cy="3.9370062"
-       cx="2.9527602"
+       cy="5.1181102"
+       cx="2.9527559"
        id="circle5578"
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.13779527"
@@ -6479,7 +6179,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path5580"
-       d="m 2.9527559,3.8385819 v 0.196852"
+       d="m 2.9527516,5.0196858 v 0.196852"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
@@ -6487,43 +6187,8 @@
     <path
        inkscape:connector-curvature="0"
        id="path5582"
-       d="m 3.0511809,3.9370079 h -0.19685"
+       d="m 3.0511766,5.1181118 h -0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <circle
-       r="0.13779527"
-       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="circle9008"
-       cx="2.9527555"
-       cy="5.5118113"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <path
-       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 2.9527508,5.4133858 v 0.196852"
-       id="path9010"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <path
-       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 3.0511758,5.5118118 h -0.19685"
-       id="path9012"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <rect
-       style="font-variation-settings:normal;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-       id="rect3636-6"
-       width="0.86614174"
-       height="0.55118108"
-       x="2.7163463"
-       y="2.5958352"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
        inkscape:export-ydpi="101.46577" />
@@ -6677,31 +6342,37 @@
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
        inkscape:export-ydpi="101.46577" />
+    <rect
+       style="font-variation-settings:normal;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00787402;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       id="rect5489"
+       width="1.1503941"
+       height="0.57086641"
+       x="2.3775592"
+       y="3.4547243" />
     <circle
-       r="0.13779527"
-       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="circle27384"
-       cx="2.2440994"
-       cy="2.8669848"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <path
-       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 2.2440943,2.7685606 V 2.9654111"
-       id="path27386"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
-    <path
-       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 2.3425193,2.8669858 h -0.19685"
-       id="path27388"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577" />
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle5491"
+       cx="2.3578763"
+       cy="4.3779507"
+       r="0.039370079" />
+    <circle
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle5493"
+       cx="3.5547271"
+       cy="4.3779507"
+       r="0.039370079" />
+    <circle
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle5495"
+       cx="2.3578753"
+       cy="3.2559052"
+       r="0.039370079" />
+    <circle
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle5497"
+       cx="3.5547261"
+       cy="3.2559052"
+       r="0.039370079" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -7599,248 +7270,6 @@
          cy="6.5440121"
          r="0.098425195" />
     </g>
-    <g
-       style="display:inline"
-       transform="matrix(-0.72831063,0,0,0.72831063,4.674708,0.36354882)"
-       id="g9022"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577">
-      <circle
-         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="circle9014"
-         cx="2.3643098"
-         cy="7.0687695"
-         r="0.61374104" />
-      <path
-         style="opacity:0.884;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#b3b3b3;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="m 2.2736434,6.5666128 0.181333,-10e-7 0.030222,0.068581 0.1426661,0.068693 0.072459,-0.019142 0.1130813,0.1417544 -0.034766,0.066393 0.034612,0.1514862 0.06015,0.044707 -0.040299,0.1767984 -0.073582,0.014226 -0.096838,0.1215243 0.00256,0.074901 -0.1633405,0.07875 -0.057007,-0.048651 -0.1611692,-1e-6 -0.057007,0.048651 -0.1633405,-0.07875 0.00256,-0.074901 -0.096838,-0.1215246 -0.073582,-0.014226 -0.040299,-0.1767984 0.06015,-0.044707 0.034612,-0.1514858 -0.034766,-0.066393 0.1130812,-0.1417542 0.072459,0.019142 0.1426662,-0.068691 z"
-         id="path9016"
-         inkscape:connector-curvature="0" />
-      <circle
-         style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="circle9018"
-         cx="2.3643107"
-         cy="7.0687723"
-         r="0.39753675" />
-      <path
-         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:0.0312499;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="M 2.3622056,6.4724214 V 6.6692718"
-         id="path9020"
-         inkscape:connector-curvature="0" />
-    </g>
-    <g
-       id="g8155"
-       transform="translate(0.1968504)"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577">
-      <rect
-         style="font-variation-settings:normal;display:inline;fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-         id="rect3636-7"
-         width="0.86614174"
-         height="0.55118108"
-         x="2.519496"
-         y="2.5958352" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-         d="M 2.5863699,2.708573 H 2.7630532 L 2.7372038,3.0394585 H 2.5602066 Z"
-         id="path6708" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:#4d4d4d;fill-opacity:1;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-         d="m 2.6168914,2.7407405 h 0.1126033 l -0.00934,0.1162456 H 2.6082179 Z"
-         id="path6743" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:#4d4d4d;fill-opacity:1;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-         d="m 2.6027303,2.8890953 h 0.1126033 l -0.00934,0.1162456 H 2.5940568 Z"
-         id="path6825" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.5863718,2.7085737 c 0,0 0.030521,0.032167 0.030521,0.032167"
-         id="path6960"
-         inkscape:path-effect="#path-effect6962"
-         inkscape:original-d="m 2.5863718,2.7085737 0.030521,0.032167" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.7201567,2.8569869 c 0,0 0.029974,0.01703 0.029974,0.01703"
-         id="path6997"
-         inkscape:path-effect="#path-effect6999"
-         inkscape:original-d="m 2.7201567,2.8569869 0.029974,0.01703" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.6082198,2.8569869 c 0,0 -0.03493,0.01703 -0.03493,0.01703"
-         id="path7001"
-         inkscape:path-effect="#path-effect7003"
-         inkscape:original-d="m 2.6082198,2.8569869 -0.03493,0.01703" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.7630552,2.7085737 c 0,0 -0.033559,0.032167 -0.033559,0.032167"
-         id="path7005"
-         inkscape:path-effect="#path-effect7007"
-         inkscape:original-d="m 2.7630552,2.7085737 -0.033559,0.032167" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.7153355,2.8890961 c 0,0 0.034795,-0.015079 0.034795,-0.015079"
-         id="path7009"
-         inkscape:path-effect="#path-effect7011"
-         inkscape:original-d="m 2.7153355,2.8890961 0.034795,-0.015079" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.6027322,2.8890961 c 0,0 -0.029441,-0.015078 -0.029441,-0.015078"
-         id="path7013"
-         inkscape:path-effect="#path-effect7015"
-         inkscape:original-d="M 2.6027322,2.8890961 2.5732917,2.8740177" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.5940587,3.0053417 c 0,0 -0.03385,0.034118 -0.03385,0.034118"
-         id="path7017"
-         inkscape:path-effect="#path-effect7019"
-         inkscape:original-d="m 2.5940587,3.0053417 -0.03385,0.034118" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.7059955,3.0053417 c 0,0 0.03121,0.034118 0.03121,0.034118"
-         id="path7021"
-         inkscape:path-effect="#path-effect7023"
-         inkscape:original-d="m 2.7059955,3.0053417 0.03121,0.034118" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-         d="M 2.8774957,2.708573 H 3.054179 L 3.0283296,3.0394585 H 2.8513324 Z"
-         id="path7118" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:#4d4d4d;fill-opacity:1;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-         d="m 2.9080172,2.7407405 h 0.1126033 l -0.00934,0.1162456 H 2.8993437 Z"
-         id="path7120" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:#4d4d4d;fill-opacity:1;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-         d="m 2.8938561,2.8890953 h 0.1126033 l -0.00934,0.1162456 H 2.8851826 Z"
-         id="path7122" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.8774976,2.7085737 c 0,0 0.030521,0.032167 0.030521,0.032167"
-         id="path7124"
-         inkscape:path-effect="#path-effect7144"
-         inkscape:original-d="m 2.8774976,2.7085737 0.030521,0.032167" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 3.0112825,2.8569869 c 0,0 0.029974,0.01703 0.029974,0.01703"
-         id="path7126"
-         inkscape:path-effect="#path-effect7148"
-         inkscape:original-d="m 3.0112825,2.8569869 0.029974,0.01703" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.8993456,2.8569869 c 0,0 -0.03493,0.01703 -0.03493,0.01703"
-         id="path7128"
-         inkscape:path-effect="#path-effect7152"
-         inkscape:original-d="m 2.8993456,2.8569869 -0.03493,0.01703" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 3.054181,2.7085737 c 0,0 -0.033558,0.032167 -0.033558,0.032167"
-         id="path7130"
-         inkscape:path-effect="#path-effect7156"
-         inkscape:original-d="M 3.054181,2.7085737 3.020623,2.7407407" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 3.0064613,2.8890961 c 0,0 0.034795,-0.015079 0.034795,-0.015079"
-         id="path7132"
-         inkscape:path-effect="#path-effect7160"
-         inkscape:original-d="m 3.0064613,2.8890961 0.034795,-0.015079" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.893858,2.8890961 c 0,0 -0.02944,-0.015078 -0.02944,-0.015078"
-         id="path7134"
-         inkscape:path-effect="#path-effect7164"
-         inkscape:original-d="M 2.893858,2.8890961 2.864418,2.8740181" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.8851845,3.0053417 c 0,0 -0.03385,0.034118 -0.03385,0.034118"
-         id="path7136"
-         inkscape:path-effect="#path-effect7168"
-         inkscape:original-d="m 2.8851845,3.0053417 -0.03385,0.034118" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 2.9971213,3.0053417 c 0,0 0.03121,0.034118 0.03121,0.034118"
-         id="path7138"
-         inkscape:path-effect="#path-effect7172"
-         inkscape:original-d="m 2.9971213,3.0053417 0.03121,0.034118" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-         d="M 3.1719167,2.708573 H 3.3486 L 3.3227506,3.0394585 H 3.1457534 Z"
-         id="path7174" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:#4d4d4d;fill-opacity:1;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-         d="m 3.2024382,2.7407405 h 0.1126033 l -0.00934,0.1162456 H 3.1937647 Z"
-         id="path7176" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:#4d4d4d;fill-opacity:1;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-         d="m 3.1882771,2.8890953 h 0.1126033 l -0.00934,0.1162456 H 3.1796036 Z"
-         id="path7178" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 3.1719186,2.7085737 c 0,0 0.030521,0.032167 0.030521,0.032167"
-         id="path7180"
-         inkscape:path-effect="#path-effect7200"
-         inkscape:original-d="m 3.1719186,2.7085737 0.030521,0.032167" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 3.3057035,2.8569869 c 0,0 0.029974,0.01703 0.029974,0.01703"
-         id="path7182"
-         inkscape:path-effect="#path-effect7204"
-         inkscape:original-d="m 3.3057035,2.8569869 0.029974,0.01703" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 3.1937666,2.8569869 c 0,0 -0.03493,0.01703 -0.03493,0.01703"
-         id="path7184"
-         inkscape:path-effect="#path-effect7208"
-         inkscape:original-d="m 3.1937666,2.8569869 -0.03493,0.01703" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 3.348602,2.7085737 c 0,0 -0.033559,0.032167 -0.033559,0.032167"
-         id="path7186"
-         inkscape:path-effect="#path-effect7212"
-         inkscape:original-d="M 3.348602,2.7085737 3.315043,2.7407407" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 3.3008823,2.8890961 c 0,0 0.034795,-0.015079 0.034795,-0.015079"
-         id="path7188"
-         inkscape:path-effect="#path-effect7216"
-         inkscape:original-d="m 3.3008823,2.8890961 0.034795,-0.015079" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 3.188279,2.8890961 c 0,0 -0.029441,-0.015078 -0.029441,-0.015078"
-         id="path7190"
-         inkscape:path-effect="#path-effect7220"
-         inkscape:original-d="M 3.188279,2.8890961 3.1588385,2.8740177" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 3.1796055,3.0053417 c 0,0 -0.03385,0.034118 -0.03385,0.034118"
-         id="path7192"
-         inkscape:path-effect="#path-effect7224"
-         inkscape:original-d="m 3.1796055,3.0053417 -0.03385,0.034118" />
-      <path
-         style="fill:#ff0000;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
-         d="m 3.2915423,3.0053417 c 0,0 0.03121,0.034118 0.03121,0.034118"
-         id="path7194"
-         inkscape:path-effect="#path-effect7228"
-         inkscape:original-d="m 3.2915423,3.0053417 0.03121,0.034118" />
-      <circle
-         style="vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="path7592"
-         cx="2.7611799"
-         cy="3.025157"
-         r="0.014965095" />
-      <circle
-         style="vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="circle7616"
-         cx="3.0543289"
-         cy="3.025157"
-         r="0.014965095" />
-      <circle
-         style="vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="circle7698"
-         cx="3.3501163"
-         cy="3.025157"
-         r="0.014965095" />
-    </g>
     <circle
        cy="8.661418"
        cx="2.9527559"
@@ -7970,7 +7399,7 @@
        inkscape:export-xdpi="101.46577"
        inkscape:export-ydpi="101.46577" />
     <g
-       transform="matrix(-0.85870685,0,0,0.85870685,4.9830048,-2.1266879)"
+       transform="matrix(-0.85870685,0,0,0.85870685,4.9830058,-0.95189294)"
        id="g1928-1"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
@@ -8000,31 +7429,147 @@
          inkscape:connector-curvature="0" />
     </g>
     <g
-       transform="matrix(1.000002,0,0,1.000002,0.66928818,-3.2117445)"
-       id="g27396"
+       id="g7021"
        style="display:inline"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
-       inkscape:export-xdpi="101.46577"
-       inkscape:export-ydpi="101.46577">
+       transform="translate(11.972598,-9.9901829)">
+      <text
+         xml:space="preserve"
+         style="font-size:0.173085px;line-height:0.6;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#00ffff;stroke-width:0.00999996;stroke-linejoin:bevel;stop-color:#000000"
+         x="-6.7349734"
+         y="19.243032"
+         id="text5517"
+         transform="scale(1.4258493,0.70133641)"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0865431px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999996"
+           x="-6.7349734"
+           y="19.243032"
+           id="tspan5499">Lorem ipsum </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0865431px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999996"
+           x="-6.7349734"
+           y="19.346884"
+           id="tspan5501">dolor sit amet, </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0865431px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999996"
+           x="-6.7349734"
+           y="19.450735"
+           id="tspan5503">consectetur </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0865431px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999996"
+           x="-6.7349734"
+           y="19.554586"
+           id="tspan5505">adipiscing elit,</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0865431px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999996"
+           x="-6.7349734"
+           y="19.658436"
+           id="tspan5507">sed do eiusmod </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0865431px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999996"
+           x="-6.7349734"
+           y="19.762287"
+           id="tspan5509">tempor. Lorem</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0865431px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999996"
+           x="-6.7349734"
+           y="19.866138"
+           id="tspan5511">ipsum dolor sit </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0865431px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999996"
+           x="-6.7349734"
+           y="19.96999"
+           id="tspan5513">amet, </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0865431px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999996"
+           x="-6.7349734"
+           y="20.073841"
+           id="tspan5515" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:0.173049px;line-height:0.6;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#ffff00;stroke-width:0.00999998;stroke-linejoin:bevel;stop-color:#000000"
+         x="-6.733726"
+         y="19.246386"
+         id="text5525"
+         transform="scale(1.4261007,0.70121273)"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.086525px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.00999998"
+           x="-6.733726"
+           y="19.246386"
+           id="tspan5519">Lorem ipsum </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.086525px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.00999998"
+           x="-6.733726"
+           y="19.350216"
+           id="tspan5521">dolor sit amet, </tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.086525px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.00999998"
+           x="-6.733726"
+           y="19.454044"
+           id="tspan5523" /></text>
+    </g>
+    <g
+       id="g5531"
+       transform="matrix(0.75171498,0,0,0.75168394,5.5305203,3.5502601)"
+       style="display:inline;stroke-width:1.33032">
       <circle
-         style="opacity:1;vector-effect:none;fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="circle27390"
-         cx="1.5748031"
-         cy="6.0787182"
-         r="0.15748031" />
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle5527"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path5529"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5537"
+       transform="matrix(0.75171498,0,0,0.75168394,6.7273697,3.5502611)"
+       style="display:inline;stroke-width:1.33032">
       <circle
-         cy="6.0787182"
-         cx="1.5748031"
-         id="circle27392"
-         style="opacity:1;vector-effect:none;fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         r="0.11811024" />
-      <rect
-         style="opacity:1;vector-effect:none;fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect27394"
-         width="0.064111046"
-         height="0.22685447"
-         x="1.5427476"
-         y="5.8563037" />
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle5533"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path5535"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5543"
+       transform="matrix(0.75171498,0,0,0.75168394,6.7273697,2.4282141)"
+       style="display:inline;stroke-width:1.33032">
+      <circle
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle5539"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path5541"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g5549"
+       transform="matrix(0.75171498,0,0,0.75168394,5.5305193,2.4282141)"
+       style="display:inline;stroke-width:1.33032">
+      <circle
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle5545"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path5547"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
   </g>
   <g
@@ -8269,16 +7814,5 @@
          y="2.0866208"
          x="-4.4488177"
          sodipodi:role="line" /></text>
-    <text
-       xml:space="preserve"
-       style="font-weight:bold;font-size:0.166667px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-rule:evenodd;stroke:none;stroke-width:0.03125;stroke-linejoin:round;stroke-opacity:0.993004"
-       x="4.1549287"
-       y="2.9223785"
-       id="text2847"><tspan
-         sodipodi:role="line"
-         id="tspan2845"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.166667px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;text-anchor:start;fill:#000000;stroke:none;stroke-width:0.03125"
-         x="4.1549287"
-         y="2.9223785">Tayda A-381 etc</tspan></text>
   </g>
 </svg>

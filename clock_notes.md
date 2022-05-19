@@ -9,59 +9,62 @@
 
 ###Stuff to add:
 
-* Start/stop button
+
 * Ext clock in
-* RE + OLED interface:
+* RE + OLED + tact button interface:
+    * Start/stop
     * Tempo
     * Duty cycle
-    * Division
+    * Division amount and offset
 * OLED to display state
-* Variable division in addition to hard /2, /4, /8.
-* Quantization: Restrict settings to MM standard values:
+* Variable division (amount and offset) in addition to hard /2, /4, /8.
+* Mode that restricts tempo settings to MM standard values.
 
->    The most common arrangement of tempos on a Maelzel metronome begins with at 40 beats per minute and increases by 2s:
+The usual Maelzel metronome settings are:
 
->    40 42 44 46 48 50 52 54 56 58 60
+|    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+|    |    |    |    |    | 40 | 42 | 44 | 46 | 48 |  50 |  52 |  54 |  56 |  58 |  60 |
+| 63 | 66 | 69 | 72 | 76 | 80 | 84 | 88 | 92 | 96 | 100 | 104 | 108 | 112 | 116 | 120 |
+| 126 | 132 | 138 | 144 | 152 | 160 | 168 | 176 | 184 | 192 | 200 | 208 |     |     |     |     |
 
->    then by 3s: 63 66 69 72
+(Note each line is 2x the previous.)
 
->    then by 4s: 72 76 80 84 88 92 96 100 104 108 112 116 120
-
->    then by 6s: 126 132 138 144
-
->    then by 8s: 144 152 160 168 176 184 192 200 208.
-
-    Extend this to 2*108, 2*112, 2*116... 2*208, 4*108... and 76/2, 72/2, 69/2, 66/2... 40/2, 76/4...
-    Or in short: [63 66 69 72 76 80 84 88 92 96 100 104 108 112 116 120] times powers of 2.
-
-* Capacitive pad for tap?
-
+    Extend this to [63 66 69 72 76 80 84 88 92 96 100 104 108 112 116 120] times powers of 2. Maybe from 7.875 to 960 (63/8 to 120*8).
 
 ## Menus/controls
 
 * Run mode:
 
-    * (RE long push to enter set mode)
-    * (RE to toggle start/stop)
-    * Tempo  (left = x 1/2, right = x 2, RE = ±1 BPM if free mode or next/prev MM if MM mode, long left or right for 120 BPM)
+    * RE turn to set tempo, ±1 BPM if free mode or next/prev MM if MM mode
+    * RE press to toggle start/stop
+    * RE long press to change tempo mode (free or MM)
+    * Tact press(es) to set tempo, constrained to integer if free mode or MM value if MM mode
+    * Tact long press to enter set mode
 
 * Set mode:
 
-    * (RE push to move to next line)
-    * (RE long push to enter run mode)
-    * Lines:
-        1. Width  (left = narrower, right = wider, RE = ±1%, long left or right for 50%).
-        2. Division (left = x 1/2 (rounded), right = x 2, RE = ±1, long left or right for /2)
-        3. Tempo mode  (left or RE or right to change between MM and Free)
+    * Tact long press to enter run mode
+    * RE turn to move to next line, RE press to select
+    * Lines — RE press to leave line function, tact long press to enter run mode:
+        1. Width  (RE turn ±1%, tact press ±5%)
+        2. Division amount (RE turn ±1, tact press ±4)
+        3. Division offset (RE turn ±1, tact press ±4)
 
-"narrower" and "wider" are previous/next in sequence 3%, 6%, 12%, 25%, 50%, 75%, 88%, 94%, 97%. Min and max width are 3%, 97%. Min and max tempo TBD.
+Switch to MM mode does not change tempo, but restricts what tempo can be changed to.
 
+Offset 0 means output pulses occur on clock pulses 1 (start), 1+div amount, 1+2*div amount...
+
+Nonzero offset means output pulses occur that many clock pulses later, on pulses 1+offset, 1+offset+div amount, 1+offset+2*div amount...
+
+For instance /4 is pulses 1, 5, 9, 13, 17...; /4 with offset 3 is pulses 4, 8, 12, 16, 20...
+
+Offset is set to 0 when division amount is changed, and can be set in range 0 to amount.
 
 ## Panel
 
 * OLED
 * RE
-* 2 push buttons (left, right)
 * Push or pad: Tap
-* 6 jacks: Clock in, clock out, /2, /4, /8, /n
+* 6 jacks: Clock in, clock out, /2, /4, /8, /n+offset
 
