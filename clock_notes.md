@@ -48,18 +48,16 @@ The usual Maelzel metronome settings are:
     * RE turn to move to next line, RE press to select
     * Lines — RE press to leave line function, tact long press to enter run mode:
         1. Width  (RE turn ±1%, tact press ±5%)
-        2. Division amount (RE turn ±1, tact press ±4)
-        3. Division offset (RE turn ±1, tact press ±4)
+        2. Division amount, N (RE turn ±1, tact press ±4)
+        3. Division offset, O (RE turn ±1, tact press ±4, modulo N)
 
 Switch to MM mode does not change tempo, but restricts what tempo can be changed to.
 
-Offset 0 means output pulses occur on clock pulses 1 (start), 1+div amount, 1+2*div amount...
+When clock is powered on or started after a stop, first pulse is pulse 0. /2 pulses are on pulse 0, 2, 4, 6, ...; /4 pulses are on pulse 0, 4, 8, 12, ...; /8 pulses are on pulse 0, 8, 16, 24, ... .
 
-Nonzero offset means output pulses occur that many clock pulses later, on pulses 1+offset, 1+offset+div amount, 1+offset+2*div amount...
+/N pulses are goverend by the amount, N, in the range 0 to 65535, and O, in the range 0 to N-1. If N is 0 no pulses are output. If N is nonzero pulses are output on pulse O, O+N, O+2N, O+3N, ... .
 
-For instance /4 is pulses 1, 5, 9, 13, 17...; /4 with offset 3 is pulses 4, 8, 12, 16, 20...
-
-Offset is set to 0 when division amount is changed, and can be set in range 0 to amount.
+When powered on N and O are 0. When N is changed, O is reset to 0.
 
 ## Panel
 
