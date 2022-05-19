@@ -1,3 +1,2 @@
 (sym_lib_table
-  (lib (name ao_symbols)(type Legacy)(uri ${KIPRJMOD}/ao_symbols.lib)(options "")(descr ""))
 )
