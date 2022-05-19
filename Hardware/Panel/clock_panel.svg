@@ -18,6 +18,17 @@
      id="defs2">
     <inkscape:path-effect
        effect="bspline"
+       id="path-effect2430"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
        id="path-effect2666"
        is_visible="true"
        lpeversion="1"
@@ -907,9 +918,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2020815"
-     inkscape:cx="404.2987"
-     inkscape:cy="559.8622"
+     inkscape:zoom="0.85"
+     inkscape:cx="396.47059"
+     inkscape:cy="577.64706"
      inkscape:document-units="mm"
      inkscape:current-layer="layer11"
      showgrid="false"
@@ -3455,7 +3466,7 @@
          r="0.025" />
     </g>
     <g
-       transform="translate(8.8582636,-0.44881727)"
+       transform="translate(8.8582636,-1.0393684)"
        id="g5570"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
@@ -3509,7 +3520,7 @@
        inkscape:export-ydpi="101.46577" />
     <path
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-       d="m 2.259449,3.1574801 h 1.3937008 v 1.318898 H 3.2318903 v -0.11811 H 2.6807095 v 0.11811 H 2.259449 Z"
+       d="m 2.259449,2.5669289 h 1.3937008 v 1.318898 H 3.2318903 v -0.11811 H 2.6807095 v 0.11811 H 2.259449 Z"
        id="path5445"
        sodipodi:nodetypes="ccccccccc" />
     <rect
@@ -3518,10 +3529,10 @@
        width="1.1503937"
        height="0.57086617"
        x="2.3775592"
-       y="3.4547243" />
+       y="2.8641734" />
     <g
        id="g6060"
-       transform="translate(12.132046,-9.9704979)"
+       transform="translate(12.132046,-10.561048)"
        style="display:inline">
       <rect
          style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.993004;-inkscape-stroke:none;stop-color:#000000"
@@ -3539,7 +3550,7 @@
     </g>
     <g
        id="g6065"
-       transform="translate(12.132046,-9.9704979)"
+       transform="translate(12.132046,-10.561048)"
        style="display:inline">
       <g
          id="g5475"
@@ -3561,7 +3572,7 @@
     </g>
     <g
        id="g5481"
-       transform="translate(14.233192,8.8525371)"
+       transform="translate(14.233192,8.2619859)"
        style="display:inline">
       <circle
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -3578,7 +3589,7 @@
     </g>
     <g
        id="g5487"
-       transform="translate(14.333192,8.8525371)"
+       transform="translate(14.333192,8.2619859)"
        style="display:inline">
       <circle
          style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -3596,7 +3607,7 @@
     <g
        id="g6038"
        style="display:inline"
-       transform="translate(11.972598,-9.9901829)">
+       transform="translate(11.972598,-10.580733)">
       <circle
          style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
          id="circle5451"
@@ -3612,7 +3623,7 @@
     </g>
     <g
        id="g6044"
-       transform="translate(13.169448,-9.9901829)"
+       transform="translate(13.169448,-10.580733)"
        style="display:inline">
       <circle
          style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
@@ -3629,7 +3640,7 @@
     </g>
     <g
        id="g6050"
-       transform="translate(11.972598,-8.8681357)"
+       transform="translate(11.972598,-9.4586869)"
        style="display:inline">
       <circle
          style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
@@ -3646,7 +3657,7 @@
     </g>
     <g
        id="g6056"
-       transform="translate(13.169448,-8.8681357)"
+       transform="translate(13.169448,-9.4586869)"
        style="display:inline">
       <circle
          style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
@@ -3753,7 +3764,7 @@
     <path
        id="rect3576"
        style="display:inline;vector-effect:none;fill-rule:evenodd;stroke-width:0.0104167"
-       d="m 2.0078731,7.4409447 0.9842529,2e-7 0,-0.9842544 h 0.9055118 l -6e-7,0.9842542 V 9.4094486 H 2.0078731 Z"
+       d="m 2.0078731,7.4409447 0.8197905,-8.238e-4 0.010846,-0.9851788 1.0591278,0.00175 -6e-7,0.9842542 V 9.4094486 H 2.0078731 Z"
        sodipodi:nodetypes="cccccccc"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
@@ -5325,7 +5336,7 @@
          y="9.3307095"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">DIV N OUT</tspan></text>
     <circle
-       cy="5.1181102"
+       cy="4.5275593"
        cx="2.9527559"
        id="circle5572"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -5476,6 +5487,24 @@
        id="path2662"
        inkscape:path-effect="#path-effect2666"
        inkscape:original-d="M 2.9527569,8.0708694 3.4448828,7.874031"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
+       inkscape:export-xdpi="101.46577"
+       inkscape:export-ydpi="101.46577" />
+    <circle
+       r="0.098425195"
+       style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle2423"
+       cx="2.9527559"
+       cy="7.0879421"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
+       inkscape:export-xdpi="101.46577"
+       inkscape:export-ydpi="101.46577" />
+    <path
+       style="opacity:1;fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.03125;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
+       d="m 2.9527569,7.0866174 c 0,0 0.4921259,-0.1968384 0.4921259,-0.1968384"
+       id="path2426"
+       inkscape:path-effect="#path-effect2430"
+       inkscape:original-d="M 2.9527569,7.0866174 3.4448828,6.889779"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
        inkscape:export-ydpi="101.46577" />
@@ -6168,7 +6197,7 @@
          y="2.0236225" />
     </g>
     <circle
-       cy="5.1181102"
+       cy="4.5275593"
        cx="2.9527559"
        id="circle5578"
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -6179,7 +6208,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path5580"
-       d="m 2.9527516,5.0196858 v 0.196852"
+       d="m 2.9527516,4.4291346 v 0.196852"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
@@ -6187,7 +6216,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path5582"
-       d="m 3.0511766,5.1181118 h -0.19685"
+       d="m 3.0511766,4.5275606 h -0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
@@ -6348,31 +6377,91 @@
        width="1.1503941"
        height="0.57086641"
        x="2.3775592"
-       y="3.4547243" />
+       y="2.8641734" />
     <circle
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
        id="circle5491"
        cx="2.3578763"
-       cy="4.3779507"
+       cy="3.7873998"
        r="0.039370079" />
     <circle
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
        id="circle5493"
        cx="3.5547271"
-       cy="4.3779507"
+       cy="3.7873998"
        r="0.039370079" />
     <circle
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
        id="circle5495"
        cx="2.3578753"
-       cy="3.2559052"
+       cy="2.6653543"
        r="0.039370079" />
     <circle
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
        id="circle5497"
        cx="3.5547261"
-       cy="3.2559052"
+       cy="2.6653543"
        r="0.039370079" />
+    <g
+       id="g2321"
+       style="display:inline"
+       transform="translate(-2.5931798,0.66532637)">
+      <rect
+         style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+         id="rect5257-7"
+         width="0.47244096"
+         height="0.47244096"
+         x="5.3097153"
+         y="4.8071146" />
+      <g
+         id="g5654"
+         transform="translate(-0.35957613,-0.66532645)"
+         style="display:inline">
+        <path
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 5.9055115,5.6692914 v 0.07874"
+           id="path4700-3"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 5.9448817,5.7086615 h -0.07874"
+           id="path4702-6"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 3.5433022,6.8897738 h -0.19685"
+       id="path2432"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
+       inkscape:export-xdpi="101.46577"
+       inkscape:export-ydpi="101.46577" />
+    <circle
+       r="0.098425195"
+       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle2434"
+       cx="2.9527559"
+       cy="7.0879421"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
+       inkscape:export-xdpi="101.46577"
+       inkscape:export-ydpi="101.46577" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 2.9527557,7.0485717 v 0.07874"
+       id="path2436"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
+       inkscape:export-xdpi="101.46577"
+       inkscape:export-ydpi="101.46577" />
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 2.9921259,7.0866145 h -0.07874"
+       id="path2438"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
+       inkscape:export-xdpi="101.46577"
+       inkscape:export-ydpi="101.46577" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -7399,7 +7488,7 @@
        inkscape:export-xdpi="101.46577"
        inkscape:export-ydpi="101.46577" />
     <g
-       transform="matrix(-0.85870685,0,0,0.85870685,4.9830058,-0.95189294)"
+       transform="matrix(-0.85870685,0,0,0.85870685,4.9830058,-1.5424441)"
        id="g1928-1"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
@@ -7431,7 +7520,7 @@
     <g
        id="g7021"
        style="display:inline"
-       transform="translate(11.972598,-9.9901829)">
+       transform="translate(11.972598,-10.580733)">
       <text
          xml:space="preserve"
          style="font-size:0.173085px;line-height:0.6;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#00ffff;stroke-width:0.00999996;stroke-linejoin:bevel;stop-color:#000000"
@@ -7509,7 +7598,7 @@
     </g>
     <g
        id="g5531"
-       transform="matrix(0.75171498,0,0,0.75168394,5.5305203,3.5502601)"
+       transform="matrix(0.75171498,0,0,0.75168394,5.5305203,2.9597089)"
        style="display:inline;stroke-width:1.33032">
       <circle
          cy="1.1011159"
@@ -7525,7 +7614,7 @@
     </g>
     <g
        id="g5537"
-       transform="matrix(0.75171498,0,0,0.75168394,6.7273697,3.5502611)"
+       transform="matrix(0.75171498,0,0,0.75168394,6.7273697,2.9597099)"
        style="display:inline;stroke-width:1.33032">
       <circle
          cy="1.1011159"
@@ -7541,7 +7630,7 @@
     </g>
     <g
        id="g5543"
-       transform="matrix(0.75171498,0,0,0.75168394,6.7273697,2.4282141)"
+       transform="matrix(0.75171498,0,0,0.75168394,6.7273697,1.8376629)"
        style="display:inline;stroke-width:1.33032">
       <circle
          cy="1.1011159"
@@ -7557,7 +7646,7 @@
     </g>
     <g
        id="g5549"
-       transform="matrix(0.75171498,0,0,0.75168394,5.5305193,2.4282141)"
+       transform="matrix(0.75171498,0,0,0.75168394,5.5305193,1.8376629)"
        style="display:inline;stroke-width:1.33032">
       <circle
          cy="1.1011159"
@@ -7571,6 +7660,22 @@
          d="M -4.1174816,1.1011159 H -4.3236004"
          style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
+    <rect
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#1a1a1a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="rect5257-9"
+       width="0.47244096"
+       height="0.47244096"
+       x="2.7165356"
+       y="5.4724407" />
+    <circle
+       cy="7.0879421"
+       cx="2.9527559"
+       id="circle2440"
+       style="display:inline;opacity:1;vector-effect:none;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       r="0.098425187"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
+       inkscape:export-xdpi="101.46577"
+       inkscape:export-ydpi="101.46577" />
   </g>
   <g
      inkscape:groupmode="layer"
