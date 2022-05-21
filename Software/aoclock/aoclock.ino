@@ -4,9 +4,9 @@
  * Heavily modified and extended from code by SynthMafia
  */
 
-#include <TimerOne.h>
-// From https://github.com/PaulStoffregen/TimerOne
-#include <assert.h>
+#include <TimerOne.h> // From https://github.com/PaulStoffregen/TimerOne
+#include <assert.h> // Builtin
+#include <U8g2lib.h>  // library for drawing to OLED from https://github.com/olikraus/u8g2
 
 #define DEBUG 1  // Nonzero for debug prints to serial
 
@@ -27,23 +27,33 @@ int count = 0;
 
 bool started = false;
 bool tact_pushed = false;
+long tact_push_millis = -1;
+bool tact_push_handled = false;
+bool enc_pushed = false;
+long enc_push_millis = -1;
+bool enc_push_handled = false;
 long tap_millis;           // millis for latest tap
 long tap_millis_prev = -1;  // millis for previous tap
 int tap_time;             // time between taps
-int tempo_pot = 0;      // latest tempo pot reading
-int tempo_pot_prev = 0; // previous tempo pot reading
-int duty_pot = 0;       // duty cycle pot reading
 float BPM = 120.0;
-float BPM_tact = 0.0;        // next BPM from tact tap
 float max_BPM = 960.0;
 float min_BPM = 7.875;
 int max_time = ((1/(min_BPM/60)) * 1000);
 int min_time = ((1/(max_BPM/60)) * 1000);
-float duty_cycle = 0.3;
+int duty_cycle = 50;  // in percent
+int min_duty = 5;
+int max_duty = 95;
 long cycle_start = 0;
 long cycle_stop = 0;
+bool running = true;  // clock is running
+bool set_mode = false; // menu mode for settings
 
-int Ndiv = 7;    // variable division amount
+int Ndiv = 16;    // variable division amount
+int Noff = 0;    // variable division offset
+
+bool ext_clock = false;  // external or internal clock
+
+bool ec_on = false; // external clock state
 
 // Encoder handling
 int enc_a_prev;
@@ -52,9 +62,16 @@ int enc_b;
 
 // For the timer interrupt
 long millicount = 0; // millisecond counter
-long time1 = 0;  // time to turn off
-long time2 = 0;  // time to turn on again
+long time1 = -1;  // time to turn off
+long time2 = -1;  // time to turn on again
 
+U8X8_SH1106_128X64_NONAME_HW_I2C u8x8;  // object for OLED control
+int curs_col = 0;
+int curs_row = 2;
+const int WID_ROW = 5;
+const int AMT_ROW = 2;
+const int OFF_ROW = 3;
+const int CLK_ROW = 4;
 
 int MM[18] = {60, 63, 66, 69, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 126};   // Maelzel tempos
 bool MMmode = true;
@@ -63,38 +80,42 @@ bool MMmode = true;
 
 void cycle_off()
 {
-  digitalWrite (CLOCK_OUT, LOW);
-  digitalWrite (DIV2, LOW);
-  digitalWrite (DIV4, LOW);
-  digitalWrite (DIV8, LOW);
-  digitalWrite (DIVN, LOW);
-
-  count++;
-
-  if (count == 8*Ndiv)
-    count = 0;
+  if (running)
+    {
+      digitalWrite (CLOCK_OUT, LOW);
+      digitalWrite (DIV2, LOW);
+      digitalWrite (DIV4, LOW);
+      digitalWrite (DIV8, LOW);
+      digitalWrite (DIVN, LOW);
+      count++;
+      if (count == 8*Ndiv)
+	count = 0;
+    }  
 }
 
 /*********************************************************************/
 
 void cycle_on()
 {
-  digitalWrite (CLOCK_OUT, HIGH);
-  if (count%2 == 0)
+  if (running)
     {
-      digitalWrite (DIV2, HIGH);
-      if (count%4 == 0)
+      digitalWrite (CLOCK_OUT, HIGH);
+      if (count%2 == 0)
 	{
-	  digitalWrite (DIV4, HIGH);
-	  if (count%8 == 0)
+	  digitalWrite (DIV2, HIGH);
+	  if (count%4 == 0)
 	    {
-	      digitalWrite (DIV8, HIGH);
+	      digitalWrite (DIV4, HIGH);
+	      if (count%8 == 0)
+		{
+		  digitalWrite (DIV8, HIGH);
+		}
 	    }
 	}
-    }
-  if (count%Ndiv == 0)
-    {
-      digitalWrite (DIVN, HIGH);
+      if (count%Ndiv == Noff)
+	{
+	  digitalWrite (DIVN, HIGH);
+	}
     }
 }
 
@@ -103,19 +124,25 @@ void cycle_on()
 void timerStuff()
 {
   // Called by interrupt handler
-  millicount++;
-  if (time1 > 0 && millicount >= time1)
+  if (ext_clock)
+    return;
+  
+  if (running)
     {
-      cycle_off();
-      time1 = -1;
-    }
-  if (millicount >= time2)
-    {
-      cycle_on();
-      if (millicount > 2147483647L - cycle_start)
-        millicount = millicount % (8*Ndiv); // prevent overflow, preserve divisions
-      time1 = millicount + cycle_stop;
-      time2 = millicount + cycle_start;
+      millicount++;
+      if (time1 > 0 && millicount >= time1)
+	{
+	  cycle_off();
+	  time1 = -1;
+	}
+      if (millicount >= time2)
+	{
+	  cycle_on();
+	  if (millicount > 2147483647L - cycle_start)
+	    millicount = millicount % (8*Ndiv); // prevent overflow, preserve divisions
+	  time1 = millicount + cycle_stop;
+	  time2 = millicount + cycle_start;
+	}
     }
 }
 
@@ -191,6 +218,115 @@ float MMdir (float was, int dir)
 
 /*********************************************************************/
 
+void ftoca (float f, char* buf, int l)
+{
+  // Float to char*, right justified, with as many decimal places as needed
+
+  float ff = f;
+  int i = 0;
+  for (; i < 4; ++i)
+    {
+      if (ff == int(ff))
+	break;
+      ff *= 10;
+    }
+  String s = String (f, i);
+  while (s.length() < l-1)
+    s = String(" ") + s;
+  s.toCharArray (buf, l);      
+}
+
+/*********************************************************************/
+
+void oled_display()
+{
+  char buf[17];
+  if (set_mode)
+    {
+      u8x8.setFont(u8x8_font_victoriamedium8_r);
+      u8x8.drawString (0, 0, "                ");      
+      u8x8.drawString (0, 1, "                ");      
+      u8x8.drawString (0, WID_ROW, ext_clock ? "                " : " Width          ");      
+      u8x8.drawString (0, AMT_ROW, " /N amt         ");      
+      u8x8.drawString (0, OFF_ROW, " /N off         ");      
+      u8x8.drawString (0, CLK_ROW, " Clock          ");      
+      u8x8.drawString (0, 6, "                ");      
+      u8x8.drawString (0, 7, "                ");
+      String os = ext_clock ? String (" ") : String (duty_cycle) + String ("%");
+      int los = os.length();
+      os.toCharArray (buf, los+1);
+      u8x8.drawString (15-los, WID_ROW, buf);
+      os = String (Ndiv);
+      los = os.length();
+      os.toCharArray (buf, los+1);
+      u8x8.drawString (15-los, AMT_ROW, buf);
+      os = String (Noff);
+      los = os.length();
+      os.toCharArray (buf, los+1);
+      u8x8.drawString (15-los, OFF_ROW, buf);
+      u8x8.drawString (12, CLK_ROW, ext_clock ? "EXT" : "INT");	  
+      u8x8.drawString (curs_col, curs_row, curs_col == 0 ? ">" : "<");
+    }
+  else
+    {
+      if (ext_clock)
+	{
+	  u8x8.setFont(u8x8_font_victoriamedium8_r);
+	  u8x8.drawString (0, 0, "                ");
+	  u8x8.drawString (0, 1, "                ");
+	  u8x8.drawString (0, 5, "                ");
+	  u8x8.drawString (0, 6, "                ");
+	  u8x8.drawString (0, 7, "                ");
+	  u8x8.setFont(u8x8_font_profont29_2x3_r);
+	  u8x8.drawString (0, 2, "EXTERNAL");
+	  return;
+	}     
+      else if (running)
+	{
+	  ftoca (BPM, buf, 9);
+	  u8x8.setFont(u8x8_font_profont29_2x3_r);
+	  u8x8.drawString (0, 0, "                ");
+	  u8x8.drawString (0, 1, buf);
+	  u8x8.drawString (0, 4, "     BPM");
+	}
+      else
+	{
+	  u8x8.setFont(u8x8_font_victoriamedium8_r);
+	  u8x8.drawString (0, 0, "                ");
+	  u8x8.drawString (0, 1, "                ");
+	  u8x8.drawString (0, 5, "                ");
+	  u8x8.drawString (0, 6, "                ");
+	  u8x8.setFont(u8x8_font_profont29_2x3_r);
+	  u8x8.drawString (0, 2, " STOPPED");
+	}     
+      u8x8.setFont(u8x8_font_victoriamedium8_r);
+      u8x8.drawString (0, 7, MMmode ? "MM " : "ANY");
+    }    
+}
+
+/*********************************************************************/
+
+void stop_it()
+{
+  digitalWrite (CLOCK_OUT, LOW);
+  digitalWrite (DIV2, LOW);
+  digitalWrite (DIV4, LOW);
+  digitalWrite (DIV8, LOW);
+  digitalWrite (DIVN, LOW);
+}
+
+/*********************************************************************/
+
+void start_it()
+{
+  time1 = -1;
+  time2 = -1;
+  count = 0;
+  cycle_on();
+}
+
+/*********************************************************************/
+
 void setup()
 {
 #if DEBUG  
@@ -203,10 +339,16 @@ void setup()
   pinMode (DIV8, OUTPUT);
   pinMode (DIVN, OUTPUT);
   pinMode (TACT, INPUT);    
-  pinMode (ENCA,INPUT);
-  pinMode (ENCB,INPUT);
+  pinMode (ENCA, INPUT);
+  pinMode (ENCB, INPUT);
+  pinMode (ENCPUSH, INPUT);
+  pinMode (CLOCK_IN, INPUT);
   enc_a_prev = digitalRead(ENCA);
 
+  //OLED
+  u8x8.begin();
+  oled_display();
+  
   // Timer interrupt
   Timer1.initialize(1000); // interrupt every 1 ms
   Timer1.attachInterrupt(timerStuff);
@@ -218,94 +360,233 @@ void loop()
 {
   if (!started)
     {
-      // check pots
-      duty_pot = analogRead (A1);
-      BPM_tact = 0.0;
-      duty_cycle =  map (duty_pot, 0, 1023, 1, 90) * 0.01;
       long cycletime = (60000/BPM);
       cycle_start = cycletime;
-      cycle_stop = long(cycletime * duty_cycle);
+      cycle_stop = long(cycletime * duty_cycle * 0.01);
 
       cycle_on();
 
       started = true;
     }
-  
-  if (digitalRead (TACT) == LOW)
+
+  if (ext_clock)
     {
-      if (tact_pushed)
+      int new_ec = digitalRead (CLOCK_IN) == HIGH;
+      if (new_ec and !ec_on)
+	cycle_on();
+      else if (!new_ec and ec_on)
+	cycle_off();
+      ec_on = new_ec;
+    }
+
+  int dre = digitalRead (ENCPUSH);
+  int drt = digitalRead (TACT);
+  if (set_mode)
+    {
+      // Set mode ==========================================
+      
+      if (!enc_pushed && dre == HIGH)
 	{
-	  // Tact not being pushed but was pushed, let tap BPM take effect
-	  if (BPM_tact > 0.0)
-	    BPM = BPM_tact;
-	  tact_pushed = false;
+	  // Set mode: Encoder has been newly pushed ====================
+	  enc_pushed = true;
+	  enc_push_millis = millis();
+	  enc_push_handled = false;
 	}
-      else
+      else if (enc_pushed && !enc_push_handled 
+	       && dre == HIGH && millis() - enc_push_millis >= 500)
 	{
-	  // Tact not being pushed and was not pushed, do nothing
+	  // Set mode: Unhandled long encoder press in progress ====================
+	  enc_push_handled = true;
+	}
+      else if (enc_pushed && dre == LOW)
+	{
+	  // Set mode: Encoder push is over ====================
+	  enc_pushed = false;
+	  if (millis() - enc_push_millis < 500)
+	    {
+	      curs_col = 15-curs_col;
+	    }
+	  else
+	    if (!enc_push_handled)
+	      {}
+	  
+	  oled_display();
+	}
+      else if (!tact_pushed && drt == HIGH)
+	{
+	  // Set mode: Tact has been newly pushed ====================
+	  tact_pushed = true;
+	  tact_push_millis = millis();
+	  tact_push_handled = false;
+	}
+      else if (tact_pushed && !tact_push_handled 
+	       && drt == HIGH && millis() - tact_push_millis >= 500)
+	{
+	  // Set mode: Unhandled long tact press in progress ====================
+	  set_mode = false;
+	  oled_display();
+	  tact_push_handled = true;
+	}
+      else if (tact_pushed && drt == LOW)
+	{
+	  // Set mode: Tact push is over ====================
+	  tact_pushed = false;
+	  if (millis() - tact_push_millis < 500)
+	    {
+	    }
+	  else
+	    if (!tact_push_handled)
+	      {
+		set_mode = false;
+		oled_display();
+	      }
 	}
 
-      // check pots
-      duty_pot = analogRead (A1);
+      // No push in progress or pending  ====================
+      // Check encoder rotation
       
-      // If the encoder moves, set BPM from that
+      int delta = encoder();
+      if (delta != 0)
+	{
+	  if (curs_col == 0)
+	    curs_row = constrain (curs_row+delta, 2, 5);
+	  else
+	    if (!ext_clock && curs_row == WID_ROW)
+	      {
+		duty_cycle = constrain (duty_cycle + 5*delta, min_duty, max_duty);
+	      }
+	    else if (curs_row == AMT_ROW)
+	      {
+		Ndiv = constrain (Ndiv + delta, 1, 64);
+		Noff = 0;
+	      }
+	    else if (curs_row == OFF_ROW)
+	      Noff = (Noff + delta + Ndiv) % Ndiv;
+	    else if (curs_row == CLK_ROW)
+	      {
+		if (ext_clock)
+		  {
+		    ext_clock = false;
+		    start_it();
+		  }		
+		else
+		  {
+		    stop_it();		    
+		    ext_clock = true;
+		  }
+	      }
+	  oled_display();
+	}
+    }
+  else
+    {
+      // Run mode ==========================================
+      if (running && !ext_clock && !enc_pushed && dre == HIGH)
+	{
+	  // Run mode: Encoder has been newly pushed ====================
+	  enc_pushed = true;
+	  enc_push_millis = millis();
+	  enc_push_handled = false;
+	}
+      else if (running && !ext_clock && enc_pushed && !enc_push_handled 
+	       && dre == HIGH && millis() - enc_push_millis >= 500)
+	{
+	  // Run mode: Unhandled long encoder press in progress ====================
+	  MMmode = !MMmode;
+	  oled_display();
+	  enc_push_handled = true;
+	}
+      else if (running && !ext_clock && enc_pushed && dre == LOW)
+	{
+	  // Run mode: Encoder push is over ====================
+	  enc_pushed = false;
+	  if (millis() - enc_push_millis < 500)
+	    {
+	      if (running)
+		{
+		  stop_it();
+		  running = false;
+		}
+	      else
+		{
+		  running = true;
+		  start_it();
+		}
+	    }
+	  else
+	    if (!enc_push_handled)
+	      MMmode = !MMmode;
+	  
+	  oled_display();
+	}
+      else if (!tact_pushed && drt == HIGH)
+	{
+	  // Run mode: Tact has been newly pushed ====================
+	  tact_pushed = true;
+	  tact_push_millis = millis();
+	  tact_push_handled = false;
+	}
+      else if (tact_pushed && !tact_push_handled 
+	       && drt == HIGH && millis() - tact_push_millis >= 500)
+	{
+	  // Run mode: Unhandled long tact press in progress ====================
+	  set_mode = true;
+	  curs_col = 0;
+	  curs_row = 2;	  
+	  oled_display();
+	  tact_push_handled = true;
+	}
+      else if (tact_pushed && drt == LOW)
+	{
+	  // Run mode: Tact push is over ====================
+	  tact_pushed = false;
+	  if (running && !ext_clock && millis() - tact_push_millis < 500)
+	    {
+	      if (tap_millis_prev == -1)
+		// See a tap with no previous one, set tap_millis_prev
+		tap_millis_prev = millis ();
+	      else
+		{
+		  // See a tap with a previous one, set BPM
+		  tap_millis = millis ();
+		  tap_time = constrain (tap_millis - tap_millis_prev, min_time, max_time);
+		  tap_millis_prev = tap_millis;
+		  if (MMmode)
+		    BPM = constrain (MMdir (60000.0 / tap_time, 0), min_BPM, max_BPM);
+		  else
+		    BPM = int (constrain (60000.0 / tap_time, min_BPM, max_BPM) + 0.5);
+		  oled_display();
+		}
+	    }
+	  else if (tact_push_millis >= 500 && !tact_push_handled)
+	      {
+		set_mode = true;
+		curs_col = 0;
+		curs_row = 2;	  
+		oled_display();
+	      }
+	}
+
+      // No push in progress or pending  ====================
+      // Check encoder rotation
+      
       int delta = encoder();
       if (delta != 0)
 	{
 	  if (MMmode)
 	    BPM = constrain (MMdir (BPM, delta), min_BPM, max_BPM);
 	  else
-	    BPM = int(constrain (BPM+delta, min_BPM, max_BPM));
-	  BPM_tact = 0.0;
-#if DEBUG
-	  Serial.print ("BPM = ");
-	  Serial.println (BPM);
-#endif
+	    BPM = constrain (int(BPM+delta+0.5), int(min_BPM), int(max_BPM));
+	  oled_display();
 	}
-
-      duty_cycle =  map (duty_pot, 0, 1023, 1, 90) * 0.01;
     }
-  else
-    if (tact_pushed)
-      {
-	// Tact being pushed and was pushed, do nothing
-      }
-    else
-      {
-	// Tact being pushed and was not pushed, process tap
-	tact_pushed = true;
-	if (tap_millis_prev == -1)
-	  // See a tap with no previous one, set tap_millis_prev
-	  {
-	    tap_millis_prev = millis ();
-#if DEBUG
-	    Serial.print ("First tap, millis ");
-	    Serial.println (tap_millis_prev);
-#endif
-	  }
-	else
-	  {
-	    // See a tap with a previous one, set BPM_tact
-	    tap_millis = millis ();
-	    tap_time = constrain (tap_millis - tap_millis_prev, min_time, max_time);
-	    tap_millis_prev = tap_millis;
-	    if (MMmode)
-	      BPM_tact = constrain (MMdir (60000.0 / tap_time, 0), min_BPM, max_BPM);
-	    else
-	      BPM_tact = int (constrain (60000.0 / tap_time, min_BPM, max_BPM));
-#if DEBUG
-	    Serial.print ("Nonfirst tap, BPM ");
-	    Serial.println (BPM_tact);
-#endif
-	  }
-      }
   
   // No taps for a while, cancel tap processing
   if (millis() - tap_millis_prev > 4000)
     tap_millis_prev = -1; 
-
+  
   // Set cycle start and stop times
   long cycletime = (60000/BPM);
   cycle_start = cycletime;
-  cycle_stop = long(cycletime * duty_cycle);
+  cycle_stop = long(cycletime * duty_cycle * 0.01);
 }
