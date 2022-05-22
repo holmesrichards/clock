@@ -39,8 +39,8 @@ long tap_millis_prev = -1;  // millis for previous tap
 
 // Tempo and duty cycle parameters
 float BPM = 120.0;
-float max_BPM = 960.0;
-float min_BPM = 7.875;
+float max_BPM = 928.0;
+float min_BPM = 7.5;
 int max_time = 60000 / min_BPM;
 int min_time = 60000 / max_BPM;
 int duty_cycle = 50;  // in percent
@@ -74,7 +74,7 @@ const int WID_ROW = 5;
 int curs_col = 0;
 int curs_row = AMT_ROW;
 
-int MM[18] = {60, 63, 66, 69, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 126};   // Maelzel tempos
+int MM[18] = {58, 60, 63, 66, 69, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120};   // Maelzel tempos
 
 /*********************************************************************/
 
@@ -474,15 +474,12 @@ void run_mode_handler (int dre, int drt)
   // Run mode interface ==========================================
 
   long mli = millis();
-  long epmdif = mli - tact_push_millis;
+  long epmdif = mli - enc_push_millis;
   if (epmdif < 0)
     epmdif += 2147483648L;
   long tpmdif = mli - tact_push_millis;
   if (tpmdif < 0)
     tpmdif += 2147483648L;
-  long tppmdif = mli - tap_push_millis;
-  if (tppmdif < 0)
-    tppmdif += 2147483648L;
 
   if (!ext_clock && !enc_pushed && dre == HIGH)
     {
@@ -553,21 +550,18 @@ void run_mode_handler (int dre, int drt)
       tact_pushed = false;
       if (running && !ext_clock && tpmdif < 500)
 	{
-	  if (tap_millis_prev == -1)
-	    // See a tap with no previous one, set tap_millis_prev
-	    tap_millis_prev = mli;
-	  else
+	  if (tap_millis_prev != -1)
 	    {
-	      // See a tap with a previous one, set BPM
-	      long tap_millis = mli;
-	      long tap_time = constrain (tppmdif, min_time, max_time);
-	      tap_millis_prev = tap_millis;
+	      long tmpdif = mli - tap_millis_prev;
+	      if (tmpdif < 0)
+		tmpdif += 2147483648L;
 	      if (MMmode)
-		BPM = constrain (MMdir (60000.0 / tap_time, 0), min_BPM, max_BPM);
+		BPM = constrain (MMdir (60000.0 / tmpdif, 0), min_BPM, max_BPM);
 	      else
-		BPM = int (constrain (60000.0 / tap_time, min_BPM, max_BPM) + 0.5);
+		BPM = int(constrain (60000.0 / tmpdif, min_BPM, max_BPM) + 0.5);
 	      oled_display_run_bpm();
 	    }
+	  tap_millis_prev = mli;
 	  return;
 	}
       else if (tpmdif && !tact_push_handled)
@@ -589,7 +583,7 @@ void run_mode_handler (int dre, int drt)
       if (MMmode)
 	BPM = constrain (MMdir (BPM, delta), min_BPM, max_BPM);
       else
-	BPM = constrain (int(BPM+delta+0.5), int(min_BPM), int(max_BPM));
+	BPM = int (constrain (BPM+delta, min_BPM, max_BPM)+0.5);
       oled_display_run_bpm();
       return;
     }
