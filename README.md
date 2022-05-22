@@ -36,6 +36,8 @@ In this mode, while the internal clock is running:
 
 If the clock is stopped or external clock is enabled, the display shows "STOPPED" or "EXTERNAL" respectively, and only long tactile presses are handled.
 
+At startup, the clock speed is 120 BPM.
+
 #### Tempo submodes
 
 In the ANY tempo submode, any whole number of BPM from 7 to 960 may be set. When using the encoder, turning one step clockwise or counterclockwise steps to the next higher or lower whole number. When using the tap button, the tap interval is converted to the nearest whole number BPM.
@@ -49,9 +51,7 @@ In the MM submode, the clock speed is constrained to a generalized version of th
 | 126 | 132 | 138 | 144 | 152 | 160 | 168 | 176 | 184 | 192 | 200 | 208 |     |     |     |     |
 |    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |
 
-
-
-Note each line is 2x the previous. The generalized version extends this pattern:
+Note each line is 2x the previous, and the steps from one value to the next increase from 2 to 3 to 4 to 6 to 8. Roughly speaking, the gaps between values are about 5% of the value (it's a bit like E24 resistor values); getting from a low value to a high value requires much less encoder turning than in ANY mode. The generalized version extends this pattern:
 
 |    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -65,6 +65,8 @@ Note each line is 2x the previous. The generalized version extends this pattern:
 
 In MM submode, when using the encoder, turning one step clockwise or counterclockwise steps to the next higher or lower number in the above list. When using the tap button, the tap interval is converted to the nearest MM value.
 
+At startup, the module is in MM submode.
+
 ### Set mode
 
 In this mode four menu lines are shown:
@@ -76,13 +78,13 @@ In this mode four menu lines are shown:
 
 (The Width line is not displayed when external clock is active.) A cursor on the left edge points to one of these lines. Turning the encoder moves the cursor up or down. Pressing the encoder moves the cursor to the right edge, indicating this line has been selected. Now turning the encoder cycles between available options for that line. Pressing the encoder again moves the cursor back to the left edge.
 
-**/N amt** is the amount of clock division applied on the **Div N** output; there will be an output pulse once every *amt* clock pulses. Any number from 1 through 64 may be selected.
+**/N amt** is the amount of clock division applied on the **Div N** output; there will be an output pulse once every *amt* clock pulses. Any number from 1 through 64 may be selected. At startup, *amt* is 8.
 
-**/N off** is the offset applied to the **Div N** output; output pulses will occur *off* pulses later than they would if *off* were zero. For example, if *amt* is 4 and *off* is 0, output pulses will occur on the same clock pulses on both the **Div 4** and **Div N** outputs, but if *off* is changed to 1, output pulses will occur on the **Div N** output 1 clock pulse after they occur on the **Div 4** output. You can think of the **Div 4** pulses as occurring on the beat while the **Div N** pulses are off the beat. *off* can be set to any value from 0 through *amt*-1. When *amt* is changed, *off* is automatically set to 0.
+**/N off** is the offset applied to the **Div N** output; output pulses will occur *off* pulses later than they would if *off* were zero. For example, if *amt* is 4 and *off* is 0, output pulses will occur on the same clock pulses on both the **Div 4** and **Div N** outputs, but if *off* is changed to 1, output pulses will occur on the **Div N** output 1 clock pulse after they occur on the **Div 4** output. You can think of the **Div 4** pulses as occurring on the beat while the **Div N** pulses are off the beat. *off* can be set to any value from 0 through *amt*-1. At startup, *off* is 0, and when *amt* is changed, *off* is automatically reset to 0.
 
 **Clock** can have one of two values, INT and EXT. When set to EXT, the internal clock is disabled and instead clock pulses input on the **Clock In** jack are repeated at the **Clock Out** jack and divided by 2, 4, 8, and *amt* at the **Div 2**, **Div 4**, **Div 8**, and **Div N** jacks. When external clock is enabled, the Width line in set mode is not available, nor are any run mode functions (other than to return to set mode). Returning to INT restarts the internal clock, and the external clock pulses are ignored.
 
-**Width** represents the pulse width (duty cycle) of the (internal) clock, in percent. Turning the encoder increases or decreases the width in increments of 5%, in the range 5% to 95%.
+**Width** represents the pulse width (duty cycle) of the (internal) clock, in percent. Turning the encoder increases or decreases the width in increments of 5%, in the range 5% to 95%. At startup, *width* is 50.
 
 At any time in set mode, a long press on the tactile button switches to run mode.
 

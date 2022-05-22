@@ -48,7 +48,13 @@
           "min_clearance": 0.508
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
@@ -115,9 +121,15 @@
       },
       "track_widths": [
         0.0,
+        0.25,
         0.75
       ],
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
@@ -370,9 +382,10 @@
         "microvia_drill": 0.1,
         "name": "Ground",
         "nets": [
-          "GND"
+          "GND",
+          "GND1"
         ],
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "pcb_color": "rgb(132, 132, 132)",
         "schematic_color": "rgb(132, 132, 132)",
         "track_width": 0.25,
         "via_diameter": 0.8,
@@ -392,11 +405,10 @@
         "nets": [
           "+12V",
           "+5V",
-          "-12V",
-          "/+12_IN",
-          "/-12_IN"
+          "+5V_1",
+          "/+12_IN"
         ],
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "pcb_color": "rgb(221, 133, 0)",
         "schematic_color": "rgb(221, 133, 0)",
         "track_width": 0.75,
         "via_diameter": 0.8,
