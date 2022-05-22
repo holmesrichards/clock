@@ -200,6 +200,61 @@ float MMdir (float was, int dir)
 
 /*********************************************************************/
 
+void oled_display_set_wid()
+{
+  char buf[5];
+  String os = String (duty_cycle) + String ("%");
+  while (os.length() < 4)
+    os = String (" ") + os;
+  os.toCharArray (buf, 5);
+  u8x8.drawString (11, WID_ROW, buf);
+}
+
+/*********************************************************************/
+
+void oled_display_set_amt()
+{
+  char buf[5];
+  String os = String (Ndiv);
+  while (os.length() < 4)
+    os = String (" ") + os;
+  os.toCharArray (buf, 5);
+  u8x8.drawString (11, AMT_ROW, buf);
+}
+  
+/*********************************************************************/
+
+void oled_display_set_off()
+{
+  char buf[5];
+  String os = String (Noff);
+  while (os.length() < 4)
+    os = String (" ") + os;
+  os.toCharArray (buf, 5);
+  u8x8.drawString (11, OFF_ROW, buf);
+}
+
+/*********************************************************************/
+
+void oled_display_set_clk()
+{
+  u8x8.drawString (12, CLK_ROW, ext_clock ? "EXT" : "INT");	  
+}
+
+void oled_display_set_clear_curs()
+{
+  u8x8.drawString (curs_col, curs_row, " ");
+}
+
+/*********************************************************************/
+
+void oled_display_set_set_curs()
+{  
+  u8x8.drawString (curs_col, curs_row, curs_col == 0 ? ">" : "<");
+}
+
+/*********************************************************************/
+
 void oled_display_set()
 {
   // OLED display in set mode
@@ -214,20 +269,43 @@ void oled_display_set()
   u8x8.drawString (0, CLK_ROW, " Clock          ");      
   u8x8.drawString (0, 6, "                ");      
   u8x8.drawString (0, 7, "                ");
-  String os = ext_clock ? String (" ") : String (duty_cycle) + String ("%");
-  int los = os.length();
-  os.toCharArray (buf, los+1);
-  u8x8.drawString (15-los, WID_ROW, buf);
-  os = String (Ndiv);
-  los = os.length();
-  os.toCharArray (buf, los+1);
-  u8x8.drawString (15-los, AMT_ROW, buf);
-  os = String (Noff);
-  los = os.length();
-  os.toCharArray (buf, los+1);
-  u8x8.drawString (15-los, OFF_ROW, buf);
-  u8x8.drawString (12, CLK_ROW, ext_clock ? "EXT" : "INT");	  
-  u8x8.drawString (curs_col, curs_row, curs_col == 0 ? ">" : "<");
+  oled_display_set_set_curs();
+  oled_display_set_wid();
+  oled_display_set_amt();
+  oled_display_set_off();
+  oled_display_set_clk();
+}
+
+/*********************************************************************/
+
+void oled_display_run_bpm()
+{
+  // Right justify BPM with only as many decimal places as needed
+  float ff = BPM;
+  int i = 0;
+  for (; i < 4; ++i)
+    {
+      if (ff == int(ff))
+	break;
+      ff *= 10;
+    }
+  String s = String (BPM, i);
+  while (s.length() < 8)
+    s = String(" ") + s;
+  char buf[9];
+  s.toCharArray (buf, 9);      
+  
+  u8x8.setFont(u8x8_font_profont29_2x3_r);
+  u8x8.drawString (0, 1, buf);
+  u8x8.drawString (0, 4, "     BPM");
+}
+
+/*********************************************************************/
+
+void oled_display_run_submode()
+{
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
+  u8x8.drawString (0, 7, MMmode ? "MM " : "ANY");
 }
 
 /*********************************************************************/
@@ -252,25 +330,8 @@ void oled_display_run()
     {
       u8x8.setFont(u8x8_font_profont29_2x3_r);
       u8x8.drawString (0, 0, "                ");
-
-      // Right justify BPM with only as many decimal places as needed
-      float ff = BPM;
-      int i = 0;
-      for (; i < 4; ++i)
-	{
-	  if (ff == int(ff))
-	    break;
-	  ff *= 10;
-	}
-      String s = String (BPM, i);
-      while (s.length() < 8)
-	s = String(" ") + s;
-      s.toCharArray (buf, 9);      
-
-      u8x8.drawString (0, 1, buf);
-      u8x8.drawString (0, 4, "     BPM");
-      u8x8.setFont(u8x8_font_victoriamedium8_r);
-      u8x8.drawString (0, 7, MMmode ? "MM " : "ANY");
+      oled_display_run_bpm();
+      oled_display_run_submode();
     }     
 }
 
@@ -312,8 +373,9 @@ void set_mode_handler (int dre, int drt)
     {
       // Set mode: Encoder push is over ====================
       enc_pushed = false;
+      oled_display_set_clear_curs();
       curs_col = 15-curs_col;
-      oled_display_set();
+      oled_display_set_set_curs();
       return;
     }
   else if (!tact_pushed && drt == HIGH)
@@ -353,32 +415,51 @@ void set_mode_handler (int dre, int drt)
     {
       if (curs_col == 0)
 	// Go to next/previous row
-	curs_row = constrain (curs_row+delta, 2, 5);
+	{
+	  oled_display_set_clear_curs();
+	  curs_row = constrain (curs_row+delta, 2, 5);
+	  oled_display_set_set_curs();
+	  return;
+	}
       else if (!ext_clock && curs_row == WID_ROW)
 	// Change pulse width
-	duty_cycle = constrain (duty_cycle + 5*delta, min_duty, max_duty);
+	{
+	  duty_cycle = constrain (duty_cycle + 5*delta, min_duty, max_duty);
+	  oled_display_set_wid();
+	  return;
+	}
       else if (curs_row == AMT_ROW)
 	{
-	  // Change division amount
+	  // Change division amount	  
 	  Ndiv = constrain (Ndiv + delta, 1, 64);
 	  Noff = 0;
+	  oled_display_set_amt();
+	  oled_display_set_off();
+	  return;
 	}
       else if (curs_row == OFF_ROW)
 	// Change division offset
-	Noff = (Noff + delta + Ndiv) % Ndiv;
+	{
+	  Noff = (Noff + delta + Ndiv) % Ndiv;
+	  oled_display_set_off();
+	  return;
+	}
       else if (curs_row == CLK_ROW)
 	// Toggle external clock
-	if (ext_clock)
-	  {
-	    ext_clock = false;
-	    start_it();
-	  }		
-	else
-	  {
-	    stop_it();		    
-	    ext_clock = true;
-	  }
-      oled_display_set();
+	{
+	  if (ext_clock)
+	    {
+	      ext_clock = false;
+	      start_it();
+	    }		
+	  else
+	    {
+	      stop_it();		    
+	      ext_clock = true;
+	    }
+	  oled_display_set_clk();
+	  return;
+	}
     }
 }
 
@@ -400,7 +481,7 @@ void run_mode_handler (int dre, int drt)
     {
       // Run mode: Unhandled long encoder press in progress ====================
       MMmode = !MMmode;
-      oled_display_run();
+      oled_display_run_submode();
       enc_push_handled = true;
       return;
     }
@@ -421,13 +502,16 @@ void run_mode_handler (int dre, int drt)
 	      running = true;
 	      start_it();
 	    }
+	  oled_display_run();
+	  return;
 	}
       else
 	if (!enc_push_handled)
-	  MMmode = !MMmode;
-	  
-      oled_display_run(); 
-      return;
+	  {
+	    MMmode = !MMmode;
+	    oled_display_run_submode(); 
+	    return;
+	  }
    }
   else if (!tact_pushed && drt == HIGH)
     {
@@ -469,8 +553,9 @@ void run_mode_handler (int dre, int drt)
 		BPM = constrain (MMdir (60000.0 / tap_time, 0), min_BPM, max_BPM);
 	      else
 		BPM = int (constrain (60000.0 / tap_time, min_BPM, max_BPM) + 0.5);
-	      oled_display_run();
+	      oled_display_run_bpm();
 	    }
+	  return;
 	}
       else if (tact_push_millis >= 500 && !tact_push_handled)
 	{
@@ -478,8 +563,8 @@ void run_mode_handler (int dre, int drt)
 	  curs_col = 0;
 	  curs_row = 2;	  
 	  oled_display_set();
+	  return;
 	}
-      return;
     }
 
   // No push in progress or pending  ====================
@@ -492,7 +577,8 @@ void run_mode_handler (int dre, int drt)
 	BPM = constrain (MMdir (BPM, delta), min_BPM, max_BPM);
       else
 	BPM = constrain (int(BPM+delta+0.5), int(min_BPM), int(max_BPM));
-      oled_display_run();
+      oled_display_run_bpm();
+      return;
     }
 }
 
