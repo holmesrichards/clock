@@ -361,7 +361,12 @@ void start_it()
 void set_mode_handler (int dre, int drt)
 {
   // Set mode interface ==========================================
-      
+
+  long mli = millis();
+  long tpmdif = mli - tact_push_millis;
+  if (tpmdif < 0)
+    tpmdif += 2147483648L;
+  
   if (!enc_pushed && dre == HIGH)
     {
       // Set mode: Encoder has been newly pushed ====================
@@ -382,12 +387,11 @@ void set_mode_handler (int dre, int drt)
     {
       // Set mode: Tact has been newly pushed ====================
       tact_pushed = true;
-      tact_push_millis = millis();
+      tact_push_millis = mli;
       tact_push_handled = false;
       return;
     }
-  else if (tact_pushed && !tact_push_handled 
-	   && drt == HIGH && millis() - tact_push_millis >= 500)
+  else if (tact_pushed && !tact_push_handled && drt == HIGH && tpmdif >= 500)
     {
       // Set mode: Unhandled long tact press in progress ====================
       set_mode = false;
@@ -399,7 +403,7 @@ void set_mode_handler (int dre, int drt)
     {
       // Set mode: Tact push is over ====================
       tact_pushed = false;
-      if (millis() - tact_push_millis >= 500 && !tact_push_handled)
+      if (tpmdif >= 500 && !tact_push_handled)
 	{
 	  set_mode = false;
 	  oled_display_run();
@@ -468,16 +472,28 @@ void set_mode_handler (int dre, int drt)
 void run_mode_handler (int dre, int drt)
 {
   // Run mode interface ==========================================
+
+  long mli = millis();
+  long epmdif = mli - tact_push_millis;
+  if (epmdif < 0)
+    epmdif += 2147483648L;
+  long tpmdif = mli - tact_push_millis;
+  if (tpmdif < 0)
+    tpmdif += 2147483648L;
+  long tppmdif = mli - tap_push_millis;
+  if (tppmdif < 0)
+    tppmdif += 2147483648L;
+
   if (!ext_clock && !enc_pushed && dre == HIGH)
     {
       // Run mode: Encoder has been newly pushed ====================
       enc_pushed = true;
-      enc_push_millis = millis();
+      enc_push_millis = mli;
       enc_push_handled = false;
       return;
     }
   else if (running && !ext_clock && enc_pushed && !enc_push_handled 
-	   && dre == HIGH && millis() - enc_push_millis >= 500)
+	   && dre == HIGH && epmdif >= 500)
     {
       // Run mode: Unhandled long encoder press in progress ====================
       MMmode = !MMmode;
@@ -489,7 +505,7 @@ void run_mode_handler (int dre, int drt)
     {
       // Run mode: Encoder push is over ====================
       enc_pushed = false;
-      if (millis() - enc_push_millis < 500)
+      if (epmdif < 500)
 	{
 	  // Short press, toggle running
 	  if (running)
@@ -517,12 +533,11 @@ void run_mode_handler (int dre, int drt)
     {
       // Run mode: Tact has been newly pushed ====================
       tact_pushed = true;
-      tact_push_millis = millis();
+      tact_push_millis = mli;
       tact_push_handled = false;
       return;
     }
-  else if (tact_pushed && !tact_push_handled 
-	   && drt == HIGH && millis() - tact_push_millis >= 500)
+  else if (tact_pushed && !tact_push_handled && drt == HIGH && tpmdif >= 500)
     {
       // Run mode: Unhandled long tact press in progress ====================
       set_mode = true;
@@ -536,18 +551,16 @@ void run_mode_handler (int dre, int drt)
     {
       // Run mode: Tact push is over ====================
       tact_pushed = false;
-      if (running && !ext_clock && millis() - tact_push_millis < 500)
+      if (running && !ext_clock && tpmdif < 500)
 	{
 	  if (tap_millis_prev == -1)
 	    // See a tap with no previous one, set tap_millis_prev
-	    {
-	      tap_millis_prev = millis ();
-	    }
+	    tap_millis_prev = mli;
 	  else
 	    {
 	      // See a tap with a previous one, set BPM
-	      long tap_millis = millis ();
-	      long tap_time = constrain (tap_millis - tap_millis_prev, min_time, max_time);
+	      long tap_millis = mli;
+	      long tap_time = constrain (tppmdif, min_time, max_time);
 	      tap_millis_prev = tap_millis;
 	      if (MMmode)
 		BPM = constrain (MMdir (60000.0 / tap_time, 0), min_BPM, max_BPM);
@@ -557,7 +570,7 @@ void run_mode_handler (int dre, int drt)
 	    }
 	  return;
 	}
-      else if (tact_push_millis >= 500 && !tact_push_handled)
+      else if (tpmdif && !tact_push_handled)
 	{
 	  set_mode = true;
 	  curs_col = 0;
@@ -650,7 +663,11 @@ void loop()
     run_mode_handler (dre, drt);
       
   // No taps for a while, cancel tap processing
-  if (millis() - tap_millis_prev > 4000)
+  long mli = millis();
+  long tpmdif = mli - tact_push_millis;
+  if (tpmdif < 0)
+    tpmdif += 2147483648L;
+  if (tpmdif > 4000)
     tap_millis_prev = -1; 
   
   // Set cycle start and stop times
