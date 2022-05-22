@@ -918,9 +918,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.85"
-     inkscape:cx="420"
-     inkscape:cy="578.82353"
+     inkscape:zoom="0.60104076"
+     inkscape:cx="-126.44733"
+     inkscape:cy="444.22944"
      inkscape:document-units="mm"
      inkscape:current-layer="layer12"
      showgrid="false"
@@ -3466,7 +3466,7 @@
          r="0.025" />
     </g>
     <g
-       transform="translate(8.8582636,-1.0393684)"
+       transform="translate(8.8582636,-0.84251801)"
        id="g5570"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -5366,7 +5366,7 @@
          y="9.3307095"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">DIV N OUT</tspan></text>
     <circle
-       cy="4.5275593"
+       cy="4.7244096"
        cx="2.9527559"
        id="circle5572"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -6227,7 +6227,7 @@
          y="2.0236225" />
     </g>
     <circle
-       cy="4.5275593"
+       cy="4.7244096"
        cx="2.9527559"
        id="circle5578"
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -6239,7 +6239,8 @@
        id="g8256"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
        inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799">
+       inkscape:export-ydpi="999.99799"
+       transform="translate(0,0.19685039)">
       <path
          inkscape:connector-curvature="0"
          id="path5580"
@@ -6429,7 +6430,7 @@
     <g
        id="g2321"
        style="display:inline;stroke-width:0.923077"
-       transform="matrix(1.0833333,0,0,1.0833333,-3.055341,0.24504826)"
+       transform="matrix(1.0833333,0,0,1.0833333,-3.055341,0.44189865)"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799">
@@ -7565,7 +7566,7 @@
        inkscape:export-xdpi="101.46577"
        inkscape:export-ydpi="101.46577" />
     <g
-       transform="matrix(-0.85870685,0,0,0.85870685,4.9830058,-1.5424441)"
+       transform="matrix(-0.85870685,0,0,0.85870685,4.9830058,-1.3455937)"
        id="g1928-1"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
@@ -7743,7 +7744,7 @@
        width="0.47244096"
        height="0.47244096"
        x="2.7165356"
-       y="5.4724407" />
+       y="5.669291" />
     <circle
        cy="7.0879421"
        cx="2.9527559"

@@ -3598,7 +3598,7 @@
     (property "Value" "Behind" (id 1) (at 257.2512 145.923 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "clock:clock_panel_behind" (id 2) (at 250.19 144.78 0)
+    (property "Footprint" "clock:clock_panel_holes" (id 2) (at 250.19 144.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 250.19 144.78 0)
@@ -3634,7 +3634,7 @@
     (property "Value" "OLED_128X64" (id 1) (at 34.925 114.7322 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (id 2) (at 27.94 113.03 0)
+    (property "Footprint" "ao_tht:OLED_MC130GX" (id 2) (at 27.94 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 27.94 113.03 0)
@@ -5391,7 +5391,7 @@
       (reference "GRAF1") (unit 1) (value "Holes") (footprint "clock:clock_panel_holes")
     )
     (path "/3148a9e6-1e75-4e2a-b943-102cc5541cb8"
-      (reference "GRAF2") (unit 1) (value "Behind") (footprint "clock:clock_panel_behind")
+      (reference "GRAF2") (unit 1) (value "Behind") (footprint "clock:clock_panel_holes")
     )
     (path "/9aa227a4-5918-4955-a2f5-b1e4c4fe38eb"
       (reference "H1") (unit 1) (value "MountingHole") (footprint "ao_tht:MountingHole_3.2mm_M3")
@@ -5433,7 +5433,7 @@
       (reference "J9") (unit 1) (value "Conn_02x04_Odd_Even") (footprint "Connector_IDC:IDC-Header_2x04_P2.54mm_Vertical")
     )
     (path "/33f39dd2-4a83-487c-ae50-5387dc326ac4"
-      (reference "OLED1") (unit 1) (value "OLED_128X64") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+      (reference "OLED1") (unit 1) (value "OLED_128X64") (footprint "ao_tht:OLED_MC130GX")
     )
     (path "/cc4603d6-fbbe-4d4f-8c75-cc951d37e1ff"
       (reference "Q1") (unit 1) (value "2N3904") (footprint "ao_tht:TO-92_Inline_Wide")
