@@ -15,7 +15,7 @@ Features are:
 * Rotary encoder to set clock speed and other parameters.
 * Tap button for a different way to set clock speed.
 * OLED for display of speed and settings menu.
-* Two speed modes: ANY mode, to set any whole number of beats per minute (BPM) from 8 to 928, and MM (Maelzel Metronome) mode, to more quickly set standard MM values and generalizations of these from 7.5 (= 60 ÷ 8) to 928 (= 116 × 8) BPM.
+* Two speed modes: INT mode, to set any whole number of beats per minute (BPM) from 8 to 928, and MM (Maelzel Metronome) mode, to more quickly set standard MM values and generalizations of these from 7.5 (= 60 ÷ 8) to 928 (= 116 × 8) BPM.
 * Clock pulse width (duty cycle) variable from 5% to 95%.
 * Interrupt based timer code for accuracy.
 
@@ -23,14 +23,14 @@ Features are:
 
 ### Run mode
 
-The module starts up in **run mode**. Here the display shows the clock speed in BPM. At the lower left is also shown the speed submode, ANY or MM; see below.
+The module starts up in **run mode**. Here the display shows the clock speed in BPM. At the lower left is also shown the speed submode, INT or MM; see below.
 
 In this mode, while the internal clock is running:
 
 * Turning the encoder clockwise or counterclockwise raises or lowers the speed.
 * Tapping the tactile button sets the speed to match the time between the last two taps.
 * Short pressing the encoder stops or restarts the clock.
-* A long encoder press switches between ANY and MM submodes.
+* A long encoder press switches between INT and MM submodes.
 * A long tactile button press switches to **set mode**.
 
 If the clock is stopped or external clock is enabled, the display shows "STOPPED" or "EXTERNAL" respectively, and only long tactile presses are handled.
@@ -39,7 +39,7 @@ At startup, the clock speed is 120 BPM.
 
 #### Speed submodes
 
-In the ANY speed submode, any whole number of BPM from 8 to 928 may be set. When using the encoder, turning one step clockwise or counterclockwise steps to the next higher or lower whole number. When using the tap button, the tap interval is converted to the nearest whole number BPM.
+In the INT speed submode, any whole (INTeger) number of BPM from 8 to 928 may be set. When using the encoder, turning one step clockwise or counterclockwise steps to the next higher or lower whole number. When using the tap button, the tap interval is converted to the nearest whole number BPM.
 
 In the MM submode, the clock speed is constrained to a generalized version of the usual Maelzel metronome markings, which are
 
@@ -50,7 +50,7 @@ In the MM submode, the clock speed is constrained to a generalized version of th
 | 120 | 126 | 132 | 138 | 144 | 152 | 160 | 168 | 176 | 184 | 192 | 200 | 208 |     |     |     |
 |    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |
 
-Note each line is 2x the previous, and the steps from one value to the next increase from 2 to 3 to 4 to 6 to 8. Roughly speaking, the gaps between values are about 5% of the value (it's a bit like E48 resistor values); getting from a low value to a high value requires much less encoder turning than in ANY mode. The generalized version extends this pattern:
+Note each line is 2x the previous, and the steps from one value to the next increase from 2 to 3 to 4 to 6 to 8. Roughly speaking, the gaps between values are about 5% of the value (it's a bit like E48 resistor values); getting from a low value to a high value requires much less encoder turning than in INT mode. The generalized version extends this pattern:
 
 |    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |

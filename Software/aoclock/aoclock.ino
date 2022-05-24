@@ -28,7 +28,7 @@ int count = 0; // count of clock pulses
 // State of things
 bool running;  // clock is running?
 bool set_mode; // menu mode for settings vs run mode for speed control
-bool MMmode;   // Maelzel Metronome vs ANY submode
+bool MMmode;   // Maelzel Metronome vs INT submode
 bool tact_pushed = false;
 long tact_push_millis = -1;
 bool tact_push_handled = false;
@@ -46,8 +46,8 @@ int min_time = 60000 / max_BPM;
 int duty_cycle = 50;  // in percent
 int min_duty = 5;
 int max_duty = 95;
-long cycle_start = 0;
-long cycle_stop = 0;
+long period = 0; // period in microseconds
+long ontime = 0; // on time in microseconds
 
 // Variable division handling
 int Ndiv = 16;    // variable division amount
@@ -61,9 +61,9 @@ bool ec_on = false; // external clock state
 int enc_a_prev;
 
 // For the timer interrupt
-long millicount = 0; // millisecond counter
-long time1 = -1;  // time to turn off clock pulse
-long time2 = -1;  // time to turn on again
+long millicount = 0;       // millisecond*1000 counter
+long clock_off_time = -1;  // time (in microsec) to turn off clock pulse
+long clock_on_time = -1;   // time (in microsec) to turn on again
 
 U8X8_SH1106_128X64_NONAME_HW_I2C u8x8;  // object for OLED control
 const int AMT_ROW = 2;
@@ -125,19 +125,32 @@ void timerStuff()
   
   if (running)
     {
-      millicount++;
-      if (time1 > 0 && millicount >= time1)
+      millicount += 1000;
+      if (clock_off_time > 0 && millicount >= clock_off_time)
 	{
 	  cycle_off();
-	  time1 = -1;
+	  clock_off_time = -1;
 	}
-      if (millicount >= time2)
+      if (millicount >= clock_on_time)
 	{
 	  cycle_on();
-	  if (millicount > 2147483647L - cycle_start)
-	    millicount = millicount % (8*Ndiv); // prevent overflow, preserve divisions
-	  time1 = millicount + cycle_stop;
-	  time2 = millicount + cycle_start;
+	  // prevent wraparound
+	  long adjust = 0;
+	  if (millicount > 2147483647L - period)
+	    adjust = millicount - period;
+	  millicount -= adjust;
+	  if (clock_on_time < 0)
+	    {
+	      clock_off_time = millicount;
+	      clock_on_time = millicount;
+	    }
+	  else
+	    {
+	      clock_off_time -= adjust;
+	      clock_on_time -= adjust;
+	    }
+	  clock_off_time += ontime;
+	  clock_on_time +=  period;
 	}
     }
 }
@@ -305,7 +318,7 @@ void oled_display_run_bpm()
 void oled_display_run_submode()
 {
   u8x8.setFont(u8x8_font_victoriamedium8_r);
-  u8x8.drawString (0, 7, MMmode ? "MM " : "ANY");
+  u8x8.drawString (0, 7, MMmode ? "MM " : "INT");
 }
 
 /*********************************************************************/
@@ -350,8 +363,8 @@ void stop_it()
 
 void start_it()
 {
-  time1 = -1;
-  time2 = -1;
+  clock_off_time = -1;
+  clock_on_time = -1;
   count = 0;
   cycle_on();
 }
@@ -630,9 +643,8 @@ void loop()
   static bool started = false;
   if (!started)
     {
-      long cycletime = (60000/BPM);
-      cycle_start = cycletime;
-      cycle_stop = long(cycletime * duty_cycle * 0.01);
+      period = (60000000/BPM);  // period in usec
+      ontime = long(period * duty_cycle * 0.01);
 
       cycle_on();
 
@@ -664,8 +676,7 @@ void loop()
   if (tpmdif > 4000)
     tap_millis_prev = -1; 
   
-  // Set cycle start and stop times
-  long cycletime = 60000/BPM;
-  cycle_start = cycletime;
-  cycle_stop = long(cycletime * duty_cycle * 0.01);
+  // Set period and on times
+  period = (60000000/BPM);  // period in usec
+  ontime = long(period * duty_cycle * 0.01);
 }
