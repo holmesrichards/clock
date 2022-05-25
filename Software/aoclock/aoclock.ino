@@ -39,9 +39,10 @@ unsigned long tap_millis_prev;  // millis for previous tap
 bool tap_millis_prev_set = false;   // true if tap_millis_prev is valid
 
 // Tempo and duty cycle parameters
-float BPM = 120.0;
-float max_BPM = 928.0;
+float BPM = 120.0;     // Beats per minute
+float max_BPM = 208.0;
 float min_BPM = 7.5;
+int PPB = 4;         // pulses per beat
 int max_time = 60000 / min_BPM;
 int min_time = 60000 / max_BPM;
 int duty_cycle = 50;  // in percent
@@ -62,15 +63,16 @@ bool ec_on = false; // external clock state
 int enc_a_prev;
 
 // For the timer interrupt
-unsigned long millicount = 0;  // millisecond*1000 counter
+unsigned long millicount;  // millisecond*1000 counter
 unsigned long cycle_start_time;  // time (in microsec) when this cycle started
 bool clock_state;              // true when clock pulse high
 
 U8X8_SH1106_128X64_NONAME_HW_I2C u8x8;  // object for OLED control
-const int AMT_ROW = 2;
-const int OFF_ROW = 3;
-const int CLK_ROW = 4;
-const int WID_ROW = 5;
+const int AMT_ROW = 1;
+const int OFF_ROW = 2;
+const int CLK_ROW = 3;
+const int WID_ROW = 4;
+const int PPB_ROW = 5;
 // Initial cursor position
 int curs_col = 0;
 int curs_row = AMT_ROW;
@@ -207,6 +209,7 @@ void oled_display_set_wid()
   while (os.length() < 4)
     os = String (" ") + os;
   os.toCharArray (buf, 5);
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (11, WID_ROW, buf);
 }
 
@@ -219,6 +222,7 @@ void oled_display_set_amt()
   while (os.length() < 4)
     os = String (" ") + os;
   os.toCharArray (buf, 5);
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (11, AMT_ROW, buf);
 }
   
@@ -231,6 +235,7 @@ void oled_display_set_off()
   while (os.length() < 4)
     os = String (" ") + os;
   os.toCharArray (buf, 5);
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (11, OFF_ROW, buf);
 }
 
@@ -238,11 +243,28 @@ void oled_display_set_off()
 
 void oled_display_set_clk()
 {
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (12, CLK_ROW, ext_clock ? "EXT" : "INT");	  
 }
 
+/*********************************************************************/
+
+void oled_display_set_ppb()
+{
+  char buf[3];
+  String os = String (PPB);
+  while (os.length() < 2)
+    os = String (" ") + os;
+  os.toCharArray (buf, 3);
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
+  u8x8.drawString (13, PPB_ROW, buf);
+}
+
+/*********************************************************************/
+
 void oled_display_set_clear_curs()
 {
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (curs_col, curs_row, " ");
 }
 
@@ -250,6 +272,7 @@ void oled_display_set_clear_curs()
 
 void oled_display_set_set_curs()
 {  
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (curs_col, curs_row, curs_col == 0 ? ">" : "<");
 }
 
@@ -262,18 +285,19 @@ void oled_display_set()
   char buf[17];
   u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (0, 0, "                ");      
-  u8x8.drawString (0, 1, "                ");      
-  u8x8.drawString (0, WID_ROW, ext_clock ? "                " : " Width          ");      
-  u8x8.drawString (0, AMT_ROW, " /N amt         ");      
-  u8x8.drawString (0, OFF_ROW, " /N off         ");      
+  u8x8.drawString (0, AMT_ROW, " /N amount      ");      
+  u8x8.drawString (0, OFF_ROW, " /N offset      ");      
   u8x8.drawString (0, CLK_ROW, " Clock          ");      
+  u8x8.drawString (0, WID_ROW, ext_clock ? "                " : " Width          ");      
+  u8x8.drawString (0, PPB_ROW, " Pulse/beat     ");      
   u8x8.drawString (0, 6, "                ");      
   u8x8.drawString (0, 7, "                ");
   oled_display_set_set_curs();
-  oled_display_set_wid();
   oled_display_set_amt();
   oled_display_set_off();
   oled_display_set_clk();
+  oled_display_set_wid();
+  oled_display_set_ppb();
 }
 
 /*********************************************************************/
@@ -310,6 +334,32 @@ void oled_display_run_submode()
 
 /*********************************************************************/
 
+void oled_display_run_ppb()
+{
+  char buf[7];
+  String os = String (PPB) + String(" PPB");
+  while (os.length() < 6)
+    os = String (" ") + os;
+  os.toCharArray (buf, 7);
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
+  u8x8.drawString (10, 7, buf);
+}
+
+/*********************************************************************/
+
+void oled_display_run_mc()
+{
+  // for debugging, display millicount
+  char buf[16];
+  unsigned long d = 0 - millicount;
+  String os = String (d);
+  os.toCharArray (buf, 16);
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
+  u8x8.drawString (0, 0, buf);
+}
+
+/*********************************************************************/
+
 void oled_display_run()
 {
   // OLED display in run mode
@@ -331,6 +381,7 @@ void oled_display_run()
       u8x8.setFont(u8x8_font_profont29_2x3_r);
       u8x8.drawString (0, 0, "                ");
       oled_display_run_bpm();
+      oled_display_run_ppb();
       oled_display_run_submode();
     }     
 }
@@ -419,15 +470,8 @@ void set_mode_handler (int dre, int drt)
 	// Go to next/previous row
 	{
 	  oled_display_set_clear_curs();
-	  curs_row = constrain (curs_row+delta, 2, 5);
+	  curs_row = constrain (curs_row+delta, AMT_ROW, PPB_ROW);
 	  oled_display_set_set_curs();
-	  return;
-	}
-      else if (!ext_clock && curs_row == WID_ROW)
-	// Change pulse width
-	{
-	  duty_cycle = constrain (duty_cycle + 5*delta, min_duty, max_duty);
-	  oled_display_set_wid();
 	  return;
 	}
       else if (curs_row == AMT_ROW)
@@ -460,6 +504,20 @@ void set_mode_handler (int dre, int drt)
 	      ext_clock = true;
 	    }
 	  oled_display_set_clk();
+	  return;
+	}
+      else if (!ext_clock && curs_row == WID_ROW)
+	// Change pulse width
+	{
+	  duty_cycle = constrain (duty_cycle + 5*delta, min_duty, max_duty);
+	  oled_display_set_wid();
+	  return;
+	}
+      else if (!ext_clock && curs_row == PPB_ROW)
+	// Change pulses per beat
+	{
+	  PPB = (PPB + delta + 23) % 24 + 1;
+	  oled_display_set_ppb();
 	  return;
 	}
     }
@@ -533,7 +591,7 @@ void run_mode_handler (int dre, int drt)
       // Run mode: Unhandled long tact press in progress ====================
       set_mode = true;
       curs_col = 0;
-      curs_row = 2;	  
+      curs_row = AMT_ROW;	  
       oled_display_set();
       tact_push_handled = true;
       return;
@@ -554,13 +612,14 @@ void run_mode_handler (int dre, int drt)
 	      oled_display_run_bpm();
 	    }
 	  tap_millis_prev = mli;
+	  tap_millis_prev_set = true;
 	  return;
 	}
       else if (tpmdif && !tact_push_handled)
 	{
 	  set_mode = true;
 	  curs_col = 0;
-	  curs_row = 2;	  
+	  curs_row = AMT_ROW;
 	  oled_display_set();
 	  return;
 	}
@@ -622,7 +681,7 @@ void loop()
   static bool started = false;
   if (!started)
     {
-      period = (60000000/BPM);  // period in usec
+      period = (60000000./BPM/PPB);  // period in usec
       ontime = period * duty_cycle * 0.01;
       start_it();
       started = true;
@@ -650,6 +709,9 @@ void loop()
     set_mode_handler (dre, drt);
   else
     run_mode_handler (dre, drt);
+
+  /* if (!set_mode) */
+  /*   oled_display_run_mc(); */
       
   // No taps for a while, cancel tap processing
   unsigned long mli = millis();
@@ -658,6 +720,6 @@ void loop()
     tap_millis_prev_set = false;
   
   // Set period and on times
-  period = (60000000/BPM);  // period in usec
+  period = (60000000./BPM/PPB);  // period in usec
   ontime = period * duty_cycle * 0.01;
 }
