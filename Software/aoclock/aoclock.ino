@@ -63,9 +63,8 @@ int enc_a_prev;
 
 // For the timer interrupt
 unsigned long millicount = 0;  // millisecond*1000 counter
-unsigned long clock_off_time;  // time (in microsec) to turn off clock pulse
-unsigned long clock_on_time;   // time (in microsec) to turn on again
-bool clock_times_set = false;  // true if clock times are good
+unsigned long cycle_start_time;  // time (in microsec) when this cycle started
+bool clock_state;              // true when clock pulse high
 
 U8X8_SH1106_128X64_NONAME_HW_I2C u8x8;  // object for OLED control
 const int AMT_ROW = 2;
@@ -129,23 +128,16 @@ void timerStuff()
   if (running)
     {
       millicount += 1000; 
-      if (millicount - clock_off_time < period) // should be rollover safe
+      if (clock_state and millicount - cycle_start_time >= ontime) // should be rollover safe
 	{
 	  cycle_off();
-	  clock_off_time += period;
+	  clock_state = false;
 	}
-      if (millicount - clock_on_time < period)
+      if (millicount - cycle_start_time >= period)
 	{
 	  cycle_on();
-	  if (!clock_times_set)
-	    {
-	      clock_on_time = millicount;
-	      clock_times_set = true;
-	    }
-
-	  // Set next trigger times
-	  clock_off_time = clock_on_time + ontime;
-	  clock_on_time +=  period;
+	  clock_state = true;
+	  cycle_start_time += period;
 	}
     }
 }
@@ -358,11 +350,10 @@ void stop_it()
 
 void start_it()
 {
-  clock_off_time = 0;
-  clock_on_time = 0;
-  clock_times_set = false;
   count = 0;
   cycle_on();
+  clock_state = true;
+  cycle_start_time = millicount;
 }
 
 /*********************************************************************/
@@ -633,9 +624,7 @@ void loop()
     {
       period = (60000000/BPM);  // period in usec
       ontime = period * duty_cycle * 0.01;
-
-      cycle_on();
-
+      start_it();
       started = true;
     }
 
@@ -643,9 +632,15 @@ void loop()
     {
       int new_ec = digitalRead (CLOCK_IN) == HIGH;
       if (new_ec and !ec_on)
-	cycle_on();
+	{
+	  cycle_on();
+	  clock_state = true;
+	}
       else if (!new_ec and ec_on)
-	cycle_off();
+	{
+	  cycle_off();
+	  clock_state = false;
+	}
       ec_on = new_ec;
     }
 
