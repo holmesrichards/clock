@@ -12,36 +12,45 @@ Features are:
 
 * 5 outputs: Clock out, clock divided by 2, 4, and 8, and clock divided by arbitrary number (between 1 and 64) with offset.
 * Clock input, allowing use of clock division features with an external clock source.
-* Rotary encoder to set clock speed and other parameters.
-* Tap button for a different way to set clock speed.
-* OLED for display of speed and settings menu.
-* Two speed modes: INT mode, to set any whole number of beats per minute (BPM) from 8 to 928, and MM (Maelzel Metronome) mode, to more quickly set standard MM values and generalizations of these from 7.5 (= 60 ÷ 8) to 928 (= 116 × 8) BPM.
+* Rotary encoder to set clock tempo and other parameters.
+* Tap button for a different way to set clock tempo.
+* OLED for display of tempo and settings menu.
+* Two tempo submodes: INT mode, to set any whole number of beats per minute (BPM) from 8 to 928, and MM (Maelzel Metronome) mode, to more quickly set standard MM values and generalizations of these from 7.5 (= 60 ÷ 8) to 208 BPM.
+* Clock pulses per beat (PPB) variable from 1 to 24.
 * Clock pulse width (duty cycle) variable from 5% to 95%.
 * Interrupt based timer code for accuracy.
 
 ## Usage
 
+### Pulses and beats
+
+"Beat" is a musical term, referring to the fundamental unit of rhythm, with usually (not always) a quarter note duration corresponding to one beat. "Tempo" refers to how many beats occur per minute.
+
+Since there are shorter notes than quarter notes, this clock can put out multiple — 4 or 8 or some other number — clock pulses per beat.
+
+This module, instead of doing things in terms of clock speed in pulses per minute, uses the more music-oriented idea of tempo in beats per minute, along with clock pulses per beat.
+
 ### Run mode
 
-The module starts up in **run mode**. Here the display shows the clock speed in BPM. At the lower left is also shown the speed submode, INT or MM; see below.
+The module starts up in **run mode**. Here the display shows the tempo in BPM along with PPB. At the lower left is also shown the tempo submode, INT or MM; see below.
 
 In this mode, while the internal clock is running:
 
-* Turning the encoder clockwise or counterclockwise raises or lowers the speed.
-* Tapping the tactile button sets the speed to match the time between the last two taps.
+* Turning the encoder clockwise or counterclockwise raises or lowers the tempo.
+* Tapping the tactile button sets the tempo to match the time between the last two taps.
 * Short pressing the encoder stops or restarts the clock.
 * A long encoder press switches between INT and MM submodes.
 * A long tactile button press switches to **set mode**.
 
 If the clock is stopped or external clock is enabled, the display shows "STOPPED" or "EXTERNAL" respectively, and only long tactile presses are handled.
 
-At startup, the clock speed is 120 BPM.
+At startup, the clock tempo is 120 BPM and there are 4 PPB (so the clock tempo is 480 pulses per minute).
 
-#### Speed submodes
+#### Tempo submodes
 
-In the INT speed submode, any whole (INTeger) number of BPM from 8 to 928 may be set. When using the encoder, turning one step clockwise or counterclockwise steps to the next higher or lower whole number. When using the tap button, the tap interval is converted to the nearest whole number BPM.
+In the INT tempo submode, any whole (INTeger) number of BPM from 8 to 208 may be set. When using the encoder, turning one step clockwise or counterclockwise steps to the next higher or lower whole number. When using the tap button, the tap interval is converted to the nearest whole number BPM.
 
-In the MM submode, the clock speed is constrained to a generalized version of the usual Maelzel metronome markings, which are
+In the MM submode, the clock tempo is constrained to a generalized version of the usual Maelzel metronome markings, which are
 
 |    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -58,9 +67,9 @@ Note each line is 2x the previous, and the steps from one value to the next incr
 | 15 |15.75 | 16.5 | 17.25 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 |
 | 30 |31.5 | 33 | 34.5 | 36 | 38 | 40 | 42 | 44 | 46 | 48 | 50 | 52 | 54 | 56 | 58 |
 | 60 | 63 | 66 | 69 | 72 | 76 | 80 | 84 | 88 | 92 | 96 | 100 | 104 | 108 | 112 | 116 |
-| 120 |126 | 132 | 138 | 144 | 152 | 160 | 168 | 176 | 184 | 192 | 200 | 208 | 216 | 224 | 232 |
-| 240 |252 | 264 | 276 | 288 | 304 | 320 | 336 | 352 | 368 | 384 | 400 | 416 | 432 | 448 | 464 |
-| 480 |504 | 528 | 552 | 576 | 608 | 640 | 672 | 704 | 736 | 768 | 800 | 832 | 864 | 896 | 928 |
+| 120 | 126 | 132 | 138 | 144 | 152 | 160 | 168 | 176 | 184 | 192 | 200 | 208 |     |     |     |
+|    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |
+
 
 In MM submode, when using the encoder, turning one step clockwise or counterclockwise steps to the next higher or lower number in the above list. When using the tap button, the tap interval is converted to the nearest MM value.
 
@@ -68,14 +77,15 @@ At startup, the module is in MM submode.
 
 ### Set mode
 
-In this mode four menu lines are shown:
+In this mode five menu lines are shown:
 
-* /N amt
-* /N off
+* /N amount
+* /N offset
 * Clock
 * Width
+* Pulse/beat
 
-(The Width line is not displayed when external clock is active.) A cursor on the left edge points to one of these lines. Turning the encoder moves the cursor up or down. Pressing the encoder moves the cursor to the right edge, indicating this line has been selected. Now turning the encoder cycles between available options for that line. Pressing the encoder again moves the cursor back to the left edge.
+(The Width and Pulse/beat lines are not displayed when external clock is active.) A cursor on the left edge points to one of these lines. Turning the encoder moves the cursor up or down. Pressing the encoder moves the cursor to the right edge, indicating this line has been selected. Now turning the encoder cycles between available options for that line. Pressing the encoder again moves the cursor back to the left edge.
 
 **/N amt** is the amount of clock division applied on the **Div N** output; there will be an output pulse once every *amt* clock pulses. Any number from 1 through 64 may be selected. At startup, *amt* is 16.
 
@@ -84,6 +94,8 @@ In this mode four menu lines are shown:
 **Clock** can have one of two values, INT and EXT. When set to EXT, the internal clock is disabled and instead clock pulses input on the **Clock In** jack are repeated at the **Clock Out** jack and divided by 2, 4, 8, and *amt* at the **Div 2**, **Div 4**, **Div 8**, and **Div N** jacks. When external clock is enabled, the Width line in set mode is not available, nor are any run mode functions (other than to return to set mode). Returning to INT restarts the internal clock, and the external clock pulses are ignored.
 
 **Width** represents the pulse width (duty cycle) of the (internal) clock, in percent. Turning the encoder increases or decreases the width in increments of 5%, in the range 5% to 95%. At startup, *width* is 50.
+
+**Pulse/beat** is the number of clock pulses per musical beat, or PPB. Any number from 1 through 24 may be selected. At startup, PPB is 4.
 
 At any time in set mode, a long press on the tactile button switches to run mode.
 

@@ -63,7 +63,7 @@ bool ec_on = false; // external clock state
 int enc_a_prev;
 
 // For the timer interrupt
-unsigned long millicount;  // millisecond*1000 counter
+unsigned long tickcount;  // interrupt counter
 unsigned long cycle_start_time;  // time (in microsec) when this cycle started
 bool clock_state;              // true when clock pulse high
 
@@ -122,20 +122,20 @@ void cycle_on()
 
 void timerStuff()
 {
-  // Called by interrupt handler once every millisecond
+  // Called by interrupt handler once every 100 us
   
   if (ext_clock)
     return;
   
   if (running)
     {
-      millicount += 1000; 
-      if (clock_state and millicount - cycle_start_time >= ontime) // should be rollover safe
+      tickcount += 100; 
+      if (clock_state and tickcount - cycle_start_time >= ontime) // should be rollover safe
 	{
 	  cycle_off();
 	  clock_state = false;
 	}
-      if (millicount - cycle_start_time >= period)
+      if (tickcount - cycle_start_time >= period)
 	{
 	  cycle_on();
 	  clock_state = true;
@@ -347,11 +347,11 @@ void oled_display_run_ppb()
 
 /*********************************************************************/
 
-void oled_display_run_mc()
+void oled_display_run_ticks()
 {
-  // for debugging, display millicount
+  // for debugging, display tickcount
   char buf[16];
-  unsigned long d = 0 - millicount;
+  unsigned long d = 0 - tickcount;
   String os = String (d);
   os.toCharArray (buf, 16);
   u8x8.setFont(u8x8_font_victoriamedium8_r);
@@ -404,7 +404,7 @@ void start_it()
   count = 0;
   cycle_on();
   clock_state = true;
-  cycle_start_time = millicount;
+  cycle_start_time = tickcount;
 }
 
 /*********************************************************************/
@@ -667,7 +667,7 @@ void setup()
   
   // Timer interrupt
   running = true;
-  Timer1.initialize(1000); // interrupt every 1 ms
+  Timer1.initialize(100); // interrupt every 1 ms
   Timer1.attachInterrupt(timerStuff);
 
   set_mode = false;
@@ -711,7 +711,7 @@ void loop()
     run_mode_handler (dre, drt);
 
   /* if (!set_mode) */
-  /*   oled_display_run_mc(); */
+  /*   oled_display_run_ticks(); */
       
   // No taps for a while, cancel tap processing
   unsigned long mli = millis();
