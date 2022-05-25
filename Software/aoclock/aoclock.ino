@@ -30,12 +30,13 @@ bool running;  // clock is running?
 bool set_mode; // menu mode for settings vs run mode for speed control
 bool MMmode;   // Maelzel Metronome vs INT submode
 bool tact_pushed = false;
-long tact_push_millis = -1;
+unsigned long tact_push_millis;
 bool tact_push_handled = false;
 bool enc_pushed = false;
-long enc_push_millis = -1;
+unsigned long enc_push_millis;
 bool enc_push_handled = false;
-long tap_millis_prev = -1;  // millis for previous tap
+unsigned long tap_millis_prev;  // millis for previous tap
+bool tap_millis_prev_set = false;   // true if tap_millis_prev is valid
 
 // Tempo and duty cycle parameters
 float BPM = 120.0;
@@ -46,8 +47,8 @@ int min_time = 60000 / max_BPM;
 int duty_cycle = 50;  // in percent
 int min_duty = 5;
 int max_duty = 95;
-long period = 0; // period in microseconds
-long ontime = 0; // on time in microseconds
+unsigned long period = 0; // period in microseconds
+unsigned long ontime = 0; // on time in microseconds
 
 // Variable division handling
 int Ndiv = 16;    // variable division amount
@@ -61,9 +62,10 @@ bool ec_on = false; // external clock state
 int enc_a_prev;
 
 // For the timer interrupt
-long millicount = 0;       // millisecond*1000 counter
-long clock_off_time = -1;  // time (in microsec) to turn off clock pulse
-long clock_on_time = -1;   // time (in microsec) to turn on again
+unsigned long millicount = 0;  // millisecond*1000 counter
+unsigned long clock_off_time;  // time (in microsec) to turn off clock pulse
+unsigned long clock_on_time;   // time (in microsec) to turn on again
+bool clock_times_set = false;  // true if clock times are good
 
 U8X8_SH1106_128X64_NONAME_HW_I2C u8x8;  // object for OLED control
 const int AMT_ROW = 2;
@@ -119,37 +121,30 @@ void cycle_on()
 
 void timerStuff()
 {
-  // Called by interrupt handler
+  // Called by interrupt handler once every millisecond
+  
   if (ext_clock)
     return;
   
   if (running)
     {
-      millicount += 1000;
-      if (clock_off_time > 0 && millicount >= clock_off_time)
+      millicount += 1000; 
+      if (millicount - clock_off_time < period) // should be rollover safe
 	{
 	  cycle_off();
-	  clock_off_time = -1;
+	  clock_off_time += period;
 	}
-      if (millicount >= clock_on_time)
+      if (millicount - clock_on_time < period)
 	{
 	  cycle_on();
-	  // prevent wraparound
-	  long adjust = 0;
-	  if (millicount > 2147483647L - period)
-	    adjust = millicount - period;
-	  millicount -= adjust;
-	  if (clock_on_time < 0)
+	  if (!clock_times_set)
 	    {
-	      clock_off_time = millicount;
 	      clock_on_time = millicount;
+	      clock_times_set = true;
 	    }
-	  else
-	    {
-	      clock_off_time -= adjust;
-	      clock_on_time -= adjust;
-	    }
-	  clock_off_time += ontime;
+
+	  // Set next trigger times
+	  clock_off_time = clock_on_time + ontime;
 	  clock_on_time +=  period;
 	}
     }
@@ -363,8 +358,9 @@ void stop_it()
 
 void start_it()
 {
-  clock_off_time = -1;
-  clock_on_time = -1;
+  clock_off_time = 0;
+  clock_on_time = 0;
+  clock_times_set = false;
   count = 0;
   cycle_on();
 }
@@ -375,10 +371,8 @@ void set_mode_handler (int dre, int drt)
 {
   // Set mode interface ==========================================
 
-  long mli = millis();
-  long tpmdif = mli - tact_push_millis;
-  if (tpmdif < 0)
-    tpmdif += 2147483648L;
+  unsigned long mli = millis();
+  unsigned long tpmdif = mli - tact_push_millis; // should be rollover safe
   
   if (!enc_pushed && dre == HIGH)
     {
@@ -486,13 +480,9 @@ void run_mode_handler (int dre, int drt)
 {
   // Run mode interface ==========================================
 
-  long mli = millis();
-  long epmdif = mli - enc_push_millis;
-  if (epmdif < 0)
-    epmdif += 2147483648L;
-  long tpmdif = mli - tact_push_millis;
-  if (tpmdif < 0)
-    tpmdif += 2147483648L;
+  unsigned long mli = millis();
+  unsigned long epmdif = mli - enc_push_millis;
+  unsigned long tpmdif = mli - tact_push_millis;
 
   if (!ext_clock && !enc_pushed && dre == HIGH)
     {
@@ -563,11 +553,9 @@ void run_mode_handler (int dre, int drt)
       tact_pushed = false;
       if (running && !ext_clock && tpmdif < 500)
 	{
-	  if (tap_millis_prev != -1)
+	  if (tap_millis_prev_set)
 	    {
-	      long tmpdif = mli - tap_millis_prev;
-	      if (tmpdif < 0)
-		tmpdif += 2147483648L;
+	      unsigned long tmpdif = mli - tap_millis_prev;
 	      if (MMmode)
 		BPM = constrain (MMdir (60000.0 / tmpdif, 0), min_BPM, max_BPM);
 	      else
@@ -644,7 +632,7 @@ void loop()
   if (!started)
     {
       period = (60000000/BPM);  // period in usec
-      ontime = long(period * duty_cycle * 0.01);
+      ontime = period * duty_cycle * 0.01;
 
       cycle_on();
 
@@ -669,14 +657,12 @@ void loop()
     run_mode_handler (dre, drt);
       
   // No taps for a while, cancel tap processing
-  long mli = millis();
-  long tpmdif = mli - tact_push_millis;
-  if (tpmdif < 0)
-    tpmdif += 2147483648L;
+  unsigned long mli = millis();
+  unsigned long tpmdif = mli - tact_push_millis;
   if (tpmdif > 4000)
-    tap_millis_prev = -1; 
+    tap_millis_prev_set = false;
   
   // Set period and on times
   period = (60000000/BPM);  // period in usec
-  ontime = long(period * duty_cycle * 0.01);
+  ontime = period * duty_cycle * 0.01;
 }
