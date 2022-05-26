@@ -36,7 +36,7 @@ volatile int counts[5] = {0, 0, 0, 0, 0}; // counts of clock pulses
 // State of things
 bool running;  // clock is running?
 bool set_mode; // menu mode for settings vs run mode for speed control
-bool MMmode;   // Maelzel Metronome vs INT submode
+bool MMmode;   // Maelzel Metronome vs INC submode
 bool tact_pushed = false;
 unsigned long tact_push_millis;
 bool tact_push_handled = false;
@@ -394,7 +394,7 @@ void oled_display_run_submode()
   // Update tempo submode display
   
   u8x8.setFont(u8x8_font_victoriamedium8_r);
-  u8x8.drawString (0, 7, MMmode ? "MM " : "INT");
+  u8x8.drawString (0, 7, MMmode ? "MM " : "INC");
 }
 
 /*********************************************************************/

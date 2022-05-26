@@ -15,7 +15,7 @@ Features are:
 * Rotary encoder to set clock tempo and other parameters.
 * Tap button for a different way to set clock tempo.
 * OLED for display of tempo and settings menu.
-* Two tempo submodes: INT mode, to set any whole number of beats per minute (BPM) from 8 to 928, and MM (Maelzel Metronome) mode, to more quickly set standard MM values and generalizations of these from 7.5 (= 60 ÷ 8) to 208 BPM.
+* Two tempo submodes: INC mode, to set any whole number of beats per minute (BPM) from 8 to 928, and MM (Maelzel Metronome) mode, to more quickly set standard MM values and generalizations of these from 7.5 (= 60 ÷ 8) to 208 BPM.
 * Clock pulses per beat (PPB) variable from 1 to 24.
 * Clock pulse width (duty cycle) variable from 5% to 95%.
 * Interrupt based timer code for accuracy.
@@ -36,14 +36,14 @@ The module starts up in **run mode**. Here the display shows the tempo in BPM al
 
 At the left, if the clock is running, there is a dot that flashes once per beat.
 
-At the lower left is also shown the tempo submode, INT or MM; see below.
+At the lower left is also shown the tempo submode, INC or MM; see below.
 
 In this mode, while the internal clock is enabled:
 
 * Turning the encoder clockwise or counterclockwise raises or lowers the tempo.
 * Tapping the tactile button sets the tempo to match the time between the last two taps.
 * Short pressing the encoder stops or restarts the clock.
-* A long encoder press switches between INT and MM submodes.
+* A long encoder press switches between INC and MM submodes.
 * A long tactile button press switches to **set mode**.
 
 If the external clock is enabled, the display shows "EXTERNAL", and only long tactile presses are handled.
@@ -52,7 +52,7 @@ At startup, the tempo is 120 BPM and there are 4 PPB (so the clock speed is 480 
 
 #### Tempo submodes
 
-In the INT tempo submode, any whole (INTeger) number of BPM from 8 to 208 may be set. When using the encoder, turning one step clockwise or counterclockwise steps to the next higher or lower whole number. When using the tap button, the tap interval is converted to the nearest whole number BPM.
+In the INC (increment) tempo submode, any whole number of BPM from 8 to 208 may be set. When using the encoder, turning one step clockwise or counterclockwise steps to the next higher or lower whole number. When using the tap button, the tap interval is converted to the nearest whole number BPM.
 
 In the MM submode, the clock tempo is constrained to a generalized version of the usual Maelzel metronome markings, which are
 
