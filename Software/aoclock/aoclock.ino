@@ -239,31 +239,17 @@ float MMdir (float was, int dir)
 
 /*********************************************************************/
 
-void oled_display_set_wid()
-{
-  // Update clock width display
-  
-  char buf[5];
-  String os = String (duty_cycle) + String ("%");
-  while (os.length() < 4)
-    os = String (" ") + os;
-  os.toCharArray (buf, 5);
-  u8x8.setFont(u8x8_font_victoriamedium8_r);
-  u8x8.drawString (11, WID_ROW, buf);
-}
-
-/*********************************************************************/
-
 void oled_display_set_amt()
 {
   // Update division amount display
   
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
+  u8x8.drawString (0, AMT_ROW, " /N amount      ");      
   char buf[5];
   String os = String (Ndiv);
   while (os.length() < 4)
     os = String (" ") + os;
   os.toCharArray (buf, 5);
-  u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (11, AMT_ROW, buf);
 }
   
@@ -273,12 +259,13 @@ void oled_display_set_off()
 {
   // Update division offset display
   
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
+  u8x8.drawString (0, OFF_ROW, " /N offset      ");      
   char buf[5];
   String os = String (Noff);
   while (os.length() < 4)
     os = String (" ") + os;
   os.toCharArray (buf, 5);
-  u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (11, OFF_ROW, buf);
 }
 
@@ -289,7 +276,29 @@ void oled_display_set_clk()
   // Update int/ext clock display
   
   u8x8.setFont(u8x8_font_victoriamedium8_r);
+  u8x8.drawString (0, CLK_ROW, " Clock          ");      
   u8x8.drawString (12, CLK_ROW, ext_clock ? "EXT" : "INT");	  
+}
+
+/*********************************************************************/
+
+void oled_display_set_wid()
+{
+  // Update clock width display
+  
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
+  u8x8.drawString (0, WID_ROW, ext_clock ? "                " : " Width          ");
+  if (ext_clock)
+    u8x8.drawString (11, WID_ROW, "    ");
+  else
+    {
+      char buf[5];
+      String os = String (duty_cycle) + String ("%");
+      while (os.length() < 4)
+	os = String (" ") + os;
+      os.toCharArray (buf, 5);
+      u8x8.drawString (11, WID_ROW, buf);
+    }
 }
 
 /*********************************************************************/
@@ -298,13 +307,19 @@ void oled_display_set_ppb()
 {
   // Update pulses per beat display (for set mode)
   
-  char buf[3];
-  String os = String (PPB);
-  while (os.length() < 2)
-    os = String (" ") + os;
-  os.toCharArray (buf, 3);
   u8x8.setFont(u8x8_font_victoriamedium8_r);
-  u8x8.drawString (13, PPB_ROW, buf);
+  u8x8.drawString (0, PPB_ROW, ext_clock ? "                " : " Pulse/beat     ");      
+  if (ext_clock)
+    u8x8.drawString (13, WID_ROW, "  ");
+  else
+    {
+      char buf[3];
+      String os = String (PPB);
+      while (os.length() < 2)
+	os = String (" ") + os;
+      os.toCharArray (buf, 3);
+      u8x8.drawString (13, PPB_ROW, buf);
+    }
 }
 
 /*********************************************************************/
@@ -336,19 +351,14 @@ void oled_display_set()
   char buf[17];
   u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (0, 0, "                ");      
-  u8x8.drawString (0, AMT_ROW, " /N amount      ");      
-  u8x8.drawString (0, OFF_ROW, " /N offset      ");      
-  u8x8.drawString (0, CLK_ROW, " Clock          ");      
-  u8x8.drawString (0, WID_ROW, ext_clock ? "                " : " Width          ");      
-  u8x8.drawString (0, PPB_ROW, " Pulse/beat     ");      
   u8x8.drawString (0, 6, "                ");      
   u8x8.drawString (0, 7, "                ");
-  oled_display_set_set_curs();
   oled_display_set_amt();
   oled_display_set_off();
   oled_display_set_clk();
   oled_display_set_wid();
   oled_display_set_ppb();
+  oled_display_set_set_curs();
 }
 
 /*********************************************************************/
@@ -527,7 +537,8 @@ void set_mode_handler (int dre, int drt)
 	// Go to next/previous row
 	{
 	  oled_display_set_clear_curs();
-	  curs_row = constrain (curs_row+delta, AMT_ROW, PPB_ROW);
+	  curs_row = constrain (curs_row+delta, AMT_ROW,
+				ext_clock ? CLK_ROW : PPB_ROW);
 	  oled_display_set_set_curs();
 	  return;
 	}
@@ -561,6 +572,9 @@ void set_mode_handler (int dre, int drt)
 	      ext_clock = true;
 	    }
 	  oled_display_set_clk();
+	  oled_display_set_wid();
+	  oled_display_set_ppb();
+	  oled_display_set_set_curs();
 	  return;
 	}
       else if (!ext_clock && curs_row == WID_ROW)

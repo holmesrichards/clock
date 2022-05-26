@@ -32,9 +32,13 @@ This module, instead of doing things in terms of clock speed in pulses per minut
 
 ### Run mode
 
-The module starts up in **run mode**. Here the display shows the tempo in BPM along with PPB. At the lower left is also shown the tempo submode, INT or MM; see below.
+The module starts up in **run mode**. Here the display shows the tempo in BPM along with PPB.
 
-In this mode, while the internal clock is running:
+At the left, if the clock is running, there is a dot that flashes once per beat.
+
+At the lower left is also shown the tempo submode, INT or MM; see below.
+
+In this mode, while the internal clock is enabled:
 
 * Turning the encoder clockwise or counterclockwise raises or lowers the tempo.
 * Tapping the tactile button sets the tempo to match the time between the last two taps.
@@ -42,9 +46,9 @@ In this mode, while the internal clock is running:
 * A long encoder press switches between INT and MM submodes.
 * A long tactile button press switches to **set mode**.
 
-If the clock is stopped or external clock is enabled, the display shows "STOPPED" or "EXTERNAL" respectively, and only long tactile presses are handled.
+If the external clock is enabled, the display shows "EXTERNAL", and only long tactile presses are handled.
 
-At startup, the clock tempo is 120 BPM and there are 4 PPB (so the clock tempo is 480 pulses per minute).
+At startup, the tempo is 120 BPM and there are 4 PPB (so the clock speed is 480 pulses per minute).
 
 #### Tempo submodes
 
@@ -122,9 +126,10 @@ The Arduino software uses these libraries:
 
 * TimerOne (from [https://github.com/PaulStoffregen/TimerOne](https://github.com/PaulStoffregen/TimerOne))
 * U8g2lib  (from [https://github.com/olikraus/u8g2](https://github.com/olikraus/u8g2))
+* DirectIO (from [https://github.com/mmarchetti/DirectIO.git](https://github.com/mmarchetti/DirectIO.git))
 * assert (built into Arduino system)
 
-The user must install the first two of these to use the software.
+The user must install the first three of these to use the software.
 
 ## GitHub repository
 
