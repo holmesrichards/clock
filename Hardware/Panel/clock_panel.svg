@@ -5,7 +5,7 @@
    viewBox="0 0 8.5 11"
    version="1.1"
    id="svg8"
-   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
+   inkscape:version="1.2 (1:1.2+202205241504+da316b6974)"
    sodipodi:docname="clock_panel.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -16,6 +16,17 @@
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect2768"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
     <inkscape:path-effect
        effect="bspline"
        id="path-effect2430"
@@ -918,11 +929,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.60104076"
-     inkscape:cx="-126.44733"
-     inkscape:cy="444.22944"
+     inkscape:zoom="0.84999999"
+     inkscape:cx="253.52941"
+     inkscape:cy="558.82353"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer12"
+     inkscape:current-layer="layer11"
      showgrid="false"
      units="in"
      inkscape:window-width="1581"
@@ -948,7 +959,9 @@
      inkscape:snap-smooth-nodes="true"
      inkscape:object-nodes="true"
      inkscape:pagecheckerboard="0"
-     inkscape:snap-intersection-paths="false">
+     inkscape:snap-intersection-paths="false"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid10120"
@@ -1001,63 +1014,78 @@
     <sodipodi:guide
        position="1.968504,1.6692913"
        orientation="0,-1"
-       id="guide3116" />
+       id="guide3116"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1.968504,2.6535433"
        orientation="0,-1"
-       id="guide3118" />
+       id="guide3118"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1.968504,3.1259842"
        orientation="0,-1"
-       id="guide3120" />
+       id="guide3120"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2.9527559,4.503937"
        orientation="0,-1"
-       id="guide3122" />
+       id="guide3122"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2.9527559,5.4881887"
        orientation="0,-1"
-       id="guide3128" />
+       id="guide3128"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2.9527557,7.2598426"
        orientation="0,-1"
-       id="guide3130" />
+       id="guide3130"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1.9291339,1.1574803"
        orientation="0,-1"
-       id="guide15539" />
+       id="guide15539"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1.968504,1.551181"
        orientation="0,-1"
-       id="guide15541" />
+       id="guide15541"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="3.2677166,6.5511811"
        orientation="1,0"
-       id="guide2294" />
+       id="guide2294"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="2.519496,8.1285743"
        orientation="0,-1"
-       id="guide6958" />
+       id="guide6958"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1.9488187,3.3228359"
        orientation="0,-1"
-       id="guide13461" />
+       id="guide13461"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1.9488187,2.9291351"
        orientation="0,-1"
-       id="guide13463" />
+       id="guide13463"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1.9462079,2.3385823"
        orientation="0,-1"
-       id="guide13465" />
+       id="guide13465"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1.9462079,1.9448815"
        orientation="0,-1"
-       id="guide13467" />
+       id="guide13467"
+       inkscape:locked="false" />
     <sodipodi:guide
        position="1.9539029,4.5433095"
        orientation="0,-1"
-       id="guide22503" />
+       id="guide22503"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -3794,7 +3822,7 @@
     <path
        id="rect3576"
        style="display:inline;vector-effect:none;fill-rule:evenodd;stroke-width:0.0104167"
-       d="m 2.0078731,7.4409447 0.8197905,-8.238e-4 0.010846,-0.9851788 1.0591278,0.00175 -6e-7,0.9842542 V 9.4094486 H 2.0078731 Z"
+       d="m 2.0078731,7.4409447 9e-7,-0.9842517 0.8306356,-0.00175 1.0591278,0.00175 -6e-7,0.9842542 V 9.4094486 H 2.0078731 Z"
        sodipodi:nodetypes="cccccccc"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -5323,7 +5351,7 @@
          id="tspan2541"
          x="2.4606297"
          y="9.3307095"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">DIV 8 OUT</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">DIV 8</tspan></text>
     <circle
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle3136"
@@ -5364,7 +5392,7 @@
          id="tspan2541-6"
          x="3.4448817"
          y="9.3307095"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">DIV N OUT</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">DIV N</tspan></text>
     <circle
        cy="4.7244096"
        cx="2.9527559"
@@ -5376,7 +5404,7 @@
        inkscape:export-ydpi="999.99799" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="2.4606297"
        y="7.3622055"
        id="text10690"
@@ -5387,7 +5415,7 @@
          id="tspan10688"
          x="2.4606297"
          y="7.3622055"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.0104167">CLOCK IN</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">BEAT</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -5401,7 +5429,7 @@
          id="tspan10710"
          x="3.4448817"
          y="7.3622055"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">CLOCK OUT</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">CLOCK</tspan></text>
     <circle
        r="0.098425195"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -5460,7 +5488,7 @@
          id="tspan2642"
          x="2.4606297"
          y="8.3464575"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">DIV 2 OUT</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">DIV 2</tspan></text>
     <circle
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2646"
@@ -5483,7 +5511,7 @@
          id="tspan2648"
          x="3.4448817"
          y="8.3464575"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">DIV 4 OUT</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">DIV 4</tspan></text>
     <circle
        r="0.098425195"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -5535,6 +5563,24 @@
        id="path2426"
        inkscape:path-effect="#path-effect2430"
        inkscape:original-d="M 2.9527569,7.0866174 3.4448828,6.889779"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <circle
+       r="0.098425195"
+       style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle2754"
+       cx="2.9527559"
+       cy="6.692914"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <path
+       style="opacity:1;fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.03125;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.993004"
+       d="m 2.4606276,6.8897722 c 0,0 0.4921293,-0.1968557 0.4921293,-0.1968557"
+       id="path2756"
+       inkscape:path-effect="#path-effect2768"
+       inkscape:original-d="M 2.4606276,6.8897722 2.9527569,6.6929165"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
@@ -6418,15 +6464,6 @@
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
-    <circle
-       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-       id="circle5495"
-       cx="2.3578758"
-       cy="2.665355"
-       r="0.05905512"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799" />
     <g
        id="g2321"
        style="display:inline;stroke-width:0.923077"
@@ -6514,29 +6551,27 @@
          inkscape:export-ydpi="101.46577" />
     </g>
     <circle
-       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-       id="circle14558"
-       cx="3.5547256"
-       cy="2.665355"
-       r="0.05905512"
+       r="0.098425195"
+       style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle2758"
+       cx="2.9527559"
+       cy="6.692914"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
-    <circle
-       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-       id="circle14560"
-       cx="2.3578768"
-       cy="3.7874002"
-       r="0.05905512"
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 2.9527556,6.6535434 v 0.07874"
+       id="path2760"
+       inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
-    <circle
-       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-       id="circle14562"
-       cx="3.5547266"
-       cy="3.7874002"
-       r="0.05905512"
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 2.9921258,6.6915862 h -0.07874"
+       id="path2762"
+       inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
@@ -6546,6 +6581,16 @@
      id="layer11"
      inkscape:label="Panel Hardware"
      style="display:inline">
+    <rect
+       style="font-variation-settings:normal;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00787402;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       id="rect2992"
+       width="1.1503941"
+       height="0.57086641"
+       x="2.3775592"
+       y="2.8641734"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
     <g
        id="g17280"
        transform="translate(8.467393,9.0668094)">
@@ -7674,70 +7719,6 @@
            y="19.454044"
            id="tspan5523" /></text>
     </g>
-    <g
-       id="g5531"
-       transform="matrix(0.75171498,0,0,0.75168394,5.5305203,2.9597089)"
-       style="display:inline;stroke-width:1.33032">
-      <circle
-         cy="1.1011159"
-         cx="-4.220541"
-         id="circle5527"
-         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         r="0.10305937" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path5529"
-         d="M -4.1174816,1.1011159 H -4.3236004"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-    <g
-       id="g5537"
-       transform="matrix(0.75171498,0,0,0.75168394,6.7273697,2.9597099)"
-       style="display:inline;stroke-width:1.33032">
-      <circle
-         cy="1.1011159"
-         cx="-4.220541"
-         id="circle5533"
-         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         r="0.10305937" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path5535"
-         d="M -4.1174816,1.1011159 H -4.3236004"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-    <g
-       id="g5543"
-       transform="matrix(0.75171498,0,0,0.75168394,6.7273697,1.8376629)"
-       style="display:inline;stroke-width:1.33032">
-      <circle
-         cy="1.1011159"
-         cx="-4.220541"
-         id="circle5539"
-         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         r="0.10305937" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path5541"
-         d="M -4.1174816,1.1011159 H -4.3236004"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-    <g
-       id="g5549"
-       transform="matrix(0.75171498,0,0,0.75168394,5.5305193,1.8376629)"
-       style="display:inline;stroke-width:1.33032">
-      <circle
-         cy="1.1011159"
-         cx="-4.220541"
-         id="circle5545"
-         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         r="0.10305937" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path5547"
-         d="M -4.1174816,1.1011159 H -4.3236004"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
     <rect
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#4d4d4d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
        id="rect5257-9"
@@ -7750,6 +7731,15 @@
        cx="2.9527559"
        id="circle2440"
        style="display:inline;opacity:1;vector-effect:none;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       r="0.098425187"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
+       inkscape:export-xdpi="101.46577"
+       inkscape:export-ydpi="101.46577" />
+    <circle
+       cy="6.692914"
+       cx="2.9527559"
+       id="circle2764"
+       style="display:inline;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.098425187"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel.png"
        inkscape:export-xdpi="101.46577"
