@@ -338,6 +338,19 @@ void oled_display_set()
 
 /*********************************************************************/
 
+void oled_display_run_ppm()
+{
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
+  String os = String (int(PPB*BPM+0.5)) + String(" PPM");
+  while (os.length() < 9)
+    os = String (" ") + os;
+  char buf[10];
+  os.toCharArray (buf, 10);
+  u8x8.drawString (7, 7, buf);
+}
+
+/*********************************************************************/
+
 void oled_display_run_bpm()
 {
   // Update BPM display
@@ -360,6 +373,8 @@ void oled_display_run_bpm()
   u8x8.setFont(u8x8_font_profont29_2x3_r);
   u8x8.drawString (2, 1, buf);
   u8x8.drawString (0, 4, "     BPM");
+
+  oled_display_run_ppm();
 }
 
 /*********************************************************************/
@@ -369,7 +384,7 @@ void oled_display_run_submode()
   // Update tempo submode display
   
   u8x8.setFont(u8x8_font_victoriamedium8_r);
-  u8x8.drawString (0, 7, MMmode ? "MM " : "INC");
+  u8x8.drawString (0, 0, MMmode ? "MM " : "INC");
 }
 
 /*********************************************************************/
@@ -378,13 +393,15 @@ void oled_display_run_ppb()
 {
   // Update pulses per beat display (for run mode)
   
-  char buf[7];
-  String os = String (PPB) + String(" PPB");
-  while (os.length() < 6)
-    os = String (" ") + os;
-  os.toCharArray (buf, 7);
+  char buf[10];
   u8x8.setFont(u8x8_font_victoriamedium8_r);
-  u8x8.drawString (10, 7, buf);
+  String os = String (PPB) + String(" PPB");
+  while (os.length() < 7)
+    os = String (" ") + os;
+  os.toCharArray (buf, 8);
+  u8x8.drawString (0, 7, buf);
+
+  oled_display_run_ppm();
 }
 
 /*********************************************************************/

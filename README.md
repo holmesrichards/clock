@@ -31,11 +31,11 @@ This module, instead of doing things in terms of clock speed in pulses per minut
 
 ### Run mode
 
-The module starts up in **run mode**. Here the display shows the tempo in BPM along with PPB.
+The module starts up in **run mode**. Here the display shows the tempo in BPM. In a smaller font at the bottom are also shown  PPB and PPM (pulses per minute, which is just PPB times BPM).
 
 At the left, if the clock is running, there is a dot that flashes once per beat.
 
-At the lower left is also shown the tempo submode, INC or MM; see below.
+At the upper left is shown the tempo submode, INC or MM; see below.
 
 In this mode:
 
