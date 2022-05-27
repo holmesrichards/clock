@@ -16,22 +16,23 @@
 const int ENCA      = 2; // ENCA must be pin 2 or 3
 const int ENCB      = 3;
 const int ENCPUSH   = 4;
-const int CLOCK_OUT = 5;
-const int DIV2      = 6;
-const int DIV4      = 7;
-const int DIV8      = 8;
-const int DIVN      = 9;
-const int TACT      = 10;
-const int CLOCK_IN  = 11;
+const int TACT      = 5;
+const int BEAT      = 6;
+const int CLOCK     = 7;
+const int DIV2      = 8;
+const int DIV4      = 9;
+const int DIV8      = 10;
+const int DIVN      = 11;
 
-volatile Output<CLOCK_OUT> o_clock_out;
+volatile Output<BEAT> o_beat;
+volatile Output<CLOCK> o_clock;
 volatile Output<DIV2> o_div2;
 volatile Output<DIV4> o_div4;
 volatile Output<DIV8> o_div8;
 volatile Output<DIVN> o_divn;
 
 volatile int counts[5] = {0, 0, 0, 0, 0}; // counts of clock pulses
-// for div2, div4, div8, divn outputs, and beat display
+// for div2, div4, div8, divn, and beat outputs
 
 // State of things
 bool running;  // clock is running?
@@ -63,10 +64,6 @@ unsigned long ontime = 0; // on time in microseconds
 int Ndiv = 16;    // variable division amount
 int Noff = 0;    // variable division offset
 
-// External clock handling
-bool ext_clock = false;  // external or internal clock
-bool ec_on = false; // external clock state
-
 // Encoder handling
 
 volatile int volDelta = 0;
@@ -79,9 +76,8 @@ volatile bool clock_state;              // true when clock pulse high
 U8X8_SH1106_128X64_NONAME_HW_I2C u8x8;  // object for OLED control
 const int AMT_ROW = 1;
 const int OFF_ROW = 2;
-const int CLK_ROW = 3;
+const int PPB_ROW = 3;
 const int WID_ROW = 4;
-const int PPB_ROW = 5;
 // Initial cursor position
 int curs_col = 0;
 int curs_row = AMT_ROW;
@@ -96,7 +92,8 @@ void cycle_off()
   
   if (running)
     {
-      o_clock_out.write(LOW);
+      o_beat.write(LOW);
+      o_clock.write(LOW);
       o_div2.write(LOW);
       o_div4.write(LOW);
       o_div8.write(LOW);
@@ -128,7 +125,7 @@ void cycle_on()
   
   if (running)
     {
-      o_clock_out.write(HIGH);
+      o_clock.write(HIGH);
       if (counts[0] == 0)
 	{
 	  o_div2.write(HIGH);
@@ -141,6 +138,8 @@ void cycle_on()
 	}
       if (counts[3] == Noff)
 	o_divn.write(HIGH);
+      if (counts[4] == 0)
+	o_beat.write(HIGH);
     }
 }
 
@@ -151,9 +150,6 @@ void timerStuff()
   // Called by interrupt handler once every 100 us
   // When we pass ontime ticks, call cycle_off
   // When we pass period ticks, call cycle_on
-  
-  if (ext_clock)
-    return;
   
   if (running)
     {
@@ -271,34 +267,18 @@ void oled_display_set_off()
 
 /*********************************************************************/
 
-void oled_display_set_clk()
-{
-  // Update int/ext clock display
-  
-  u8x8.setFont(u8x8_font_victoriamedium8_r);
-  u8x8.drawString (0, CLK_ROW, " Clock          ");      
-  u8x8.drawString (12, CLK_ROW, ext_clock ? "EXT" : "INT");	  
-}
-
-/*********************************************************************/
-
 void oled_display_set_wid()
 {
   // Update clock width display
   
   u8x8.setFont(u8x8_font_victoriamedium8_r);
-  u8x8.drawString (0, WID_ROW, ext_clock ? "                " : " Width          ");
-  if (ext_clock)
-    u8x8.drawString (11, WID_ROW, "    ");
-  else
-    {
-      char buf[5];
-      String os = String (duty_cycle) + String ("%");
-      while (os.length() < 4)
-	os = String (" ") + os;
-      os.toCharArray (buf, 5);
-      u8x8.drawString (11, WID_ROW, buf);
-    }
+  u8x8.drawString (0, WID_ROW, " Width          ");
+  char buf[5];
+  String os = String (duty_cycle) + String ("%");
+  while (os.length() < 4)
+    os = String (" ") + os;
+  os.toCharArray (buf, 5);
+  u8x8.drawString (11, WID_ROW, buf);
 }
 
 /*********************************************************************/
@@ -308,18 +288,13 @@ void oled_display_set_ppb()
   // Update pulses per beat display (for set mode)
   
   u8x8.setFont(u8x8_font_victoriamedium8_r);
-  u8x8.drawString (0, PPB_ROW, ext_clock ? "                " : " Pulse/beat     ");      
-  if (ext_clock)
-    u8x8.drawString (13, WID_ROW, "  ");
-  else
-    {
-      char buf[3];
-      String os = String (PPB);
-      while (os.length() < 2)
-	os = String (" ") + os;
-      os.toCharArray (buf, 3);
-      u8x8.drawString (13, PPB_ROW, buf);
-    }
+  u8x8.drawString (0, PPB_ROW, " Pulse/beat     ");      
+  char buf[3];
+  String os = String (PPB);
+  while (os.length() < 2)
+    os = String (" ") + os;
+  os.toCharArray (buf, 3);
+  u8x8.drawString (13, PPB_ROW, buf);
 }
 
 /*********************************************************************/
@@ -351,11 +326,11 @@ void oled_display_set()
   char buf[17];
   u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (0, 0, "                ");      
+  u8x8.drawString (0, 5, "                ");      
   u8x8.drawString (0, 6, "                ");      
   u8x8.drawString (0, 7, "                ");
   oled_display_set_amt();
   oled_display_set_off();
-  oled_display_set_clk();
   oled_display_set_wid();
   oled_display_set_ppb();
   oled_display_set_set_curs();
@@ -417,7 +392,10 @@ void oled_display_run_ppb()
 void oled_display_run_beat()
 {
   u8x8.setFont(u8x8_font_profont29_2x3_r);
-  u8x8.drawString (0, 1, running && (counts[4] < PPB/2) ? "." : " " );
+  if (PPB == 1)
+    u8x8.drawString (0, 1, running && clock_state ? "." : " " );
+  else
+    u8x8.drawString (0, 1, running && (counts[4] < PPB/2) ? "." : " " );
 }
 
 /*********************************************************************/
@@ -427,33 +405,20 @@ void oled_display_run()
   // OLED display in run mode
 
   char buf[17];
-  if (ext_clock)
-    {
-      u8x8.setFont(u8x8_font_victoriamedium8_r);
-      u8x8.drawString (0, 0, "                ");
-      u8x8.drawString (0, 1, "                ");
-      u8x8.drawString (0, 5, "                ");
-      u8x8.drawString (0, 6, "                ");
-      u8x8.drawString (0, 7, "                ");
-      u8x8.setFont(u8x8_font_profont29_2x3_r);
-      u8x8.drawString (0, 2, "EXTERNAL");
-    }
-  else
-    {
-      u8x8.setFont(u8x8_font_profont29_2x3_r);
-      u8x8.drawString (0, 0, "                ");
-      oled_display_run_bpm();
-      oled_display_run_beat();
-      oled_display_run_ppb();
-      oled_display_run_submode();
-    }     
+  u8x8.setFont(u8x8_font_profont29_2x3_r);
+  u8x8.drawString (0, 0, "                ");
+  oled_display_run_bpm();
+  oled_display_run_beat();
+  oled_display_run_ppb();
+  oled_display_run_submode();
 }
 
 /*********************************************************************/
 
 void stop_it()
 {
-  o_clock_out.write(LOW);
+  o_beat.write(LOW);
+  o_clock.write(LOW);
   o_div2.write(LOW);
   o_div4.write(LOW);
   o_div8.write(LOW);
@@ -537,10 +502,7 @@ void set_mode_handler (int dre, int drt)
 	// Go to next/previous row
 	{
 	  oled_display_set_clear_curs();
-	  curs_row = constrain (curs_row+delta, AMT_ROW,
-				ext_clock ? CLK_ROW : PPB_ROW);
-	  oled_display_set_set_curs();
-	  return;
+	  curs_row = constrain (curs_row+delta, AMT_ROW, WID_ROW);
 	}
       else if (curs_row == AMT_ROW)
 	{
@@ -549,48 +511,31 @@ void set_mode_handler (int dre, int drt)
 	  Noff = 0;
 	  oled_display_set_amt();
 	  oled_display_set_off();
-	  return;
 	}
       else if (curs_row == OFF_ROW)
 	// Change division offset
 	{
 	  Noff = (Noff + delta + Ndiv) % Ndiv;
 	  oled_display_set_off();
-	  return;
 	}
-      else if (curs_row == CLK_ROW)
-	// Toggle external clock
-	{
-	  if (ext_clock)
-	    {
-	      ext_clock = false;
-	      start_it();
-	    }		
-	  else
-	    {
-	      stop_it();		    
-	      ext_clock = true;
-	    }
-	  oled_display_set_clk();
-	  oled_display_set_wid();
-	  oled_display_set_ppb();
-	  oled_display_set_set_curs();
-	  return;
-	}
-      else if (!ext_clock && curs_row == WID_ROW)
+      else if (curs_row == WID_ROW)
 	// Change pulse width
 	{
 	  duty_cycle = constrain (duty_cycle + 5*delta, min_duty, max_duty);
 	  oled_display_set_wid();
-	  return;
 	}
-      else if (!ext_clock && curs_row == PPB_ROW)
+      else if (curs_row == PPB_ROW)
 	// Change pulses per beat
 	{
 	  PPB = (PPB + delta + 23) % 24 + 1;
+	  counts[0] = 0;
+	  counts[1] = 0;
+	  counts[2] = 0;
+	  counts[3] = 0;
+	  counts[4] = 0;
 	  oled_display_set_ppb();
-	  return;
 	}
+      oled_display_set_set_curs();
     }
 }
 
@@ -607,7 +552,7 @@ void run_mode_handler (int dre, int drt)
   if (running)
     oled_display_run_beat(); // update beat display
   
-  if (!ext_clock && !enc_pushed && dre == HIGH)
+  if (!enc_pushed && dre == HIGH)
     {
       // Run mode: Encoder has been newly pushed ====================
       enc_pushed = true;
@@ -615,7 +560,7 @@ void run_mode_handler (int dre, int drt)
       enc_push_handled = false;
       return;
     }
-  else if (!ext_clock && enc_pushed && !enc_push_handled 
+  else if (enc_pushed && !enc_push_handled 
 	   && dre == HIGH && epmdif >= 500)
     {
       // Run mode: Unhandled long encoder press in progress ====================
@@ -624,7 +569,7 @@ void run_mode_handler (int dre, int drt)
       enc_push_handled = true;
       return;
     }
-  else if (!ext_clock && enc_pushed && dre == LOW)
+  else if (enc_pushed && dre == LOW)
     {
       // Run mode: Encoder push is over ====================
       enc_pushed = false;
@@ -674,7 +619,7 @@ void run_mode_handler (int dre, int drt)
     {
       // Run mode: Tact push is over ====================
       tact_pushed = false;
-      if (!ext_clock && tpmdif < 500)
+      if (tpmdif < 500)
 	{
 	  if (tap_millis_prev_set)
 	    {
@@ -719,10 +664,10 @@ void run_mode_handler (int dre, int drt)
 void setup()
 {
 #if DEBUG  
-  Serial.begin (9600);
+  Serial.begin (115200);
   Serial.println ("setup");
 #endif
-  pinMode (CLOCK_OUT, OUTPUT);
+  pinMode (CLOCK, OUTPUT);
   pinMode (DIV2, OUTPUT);
   pinMode (DIV4, OUTPUT);
   pinMode (DIV8, OUTPUT);
@@ -731,7 +676,7 @@ void setup()
   pinMode (ENCA, INPUT);
   pinMode (ENCB, INPUT);
   pinMode (ENCPUSH, INPUT);
-  pinMode (CLOCK_IN, INPUT);
+  pinMode (BEAT, INPUT);
 
   MMmode = true;
   
@@ -762,22 +707,6 @@ void loop()
       ontime = period * duty_cycle * 0.01;
       start_it();
       started = true;
-    }
-
-  if (ext_clock)
-    {
-      int new_ec = digitalRead (CLOCK_IN) == HIGH;
-      if (new_ec and !ec_on)
-	{
-	  cycle_on();
-	  clock_state = true;
-	}
-      else if (!new_ec and ec_on)
-	{
-	  cycle_off();
-	  clock_state = false;
-	}
-      ec_on = new_ec;
     }
 
   int dre = digitalRead (ENCPUSH);
