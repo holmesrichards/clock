@@ -509,6 +509,11 @@ void set_mode_handler (int dre, int drt)
 	  // Change division amount	  
 	  Ndiv = constrain (Ndiv + delta, 1, 64);
 	  Noff = 0;
+	  counts[0] = 0;
+	  counts[1] = 0;
+	  counts[2] = 0;
+	  counts[3] = 0;
+	  counts[4] = 0;
 	  oled_display_set_amt();
 	  oled_display_set_off();
 	}

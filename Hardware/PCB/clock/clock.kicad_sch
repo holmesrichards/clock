@@ -765,7 +765,7 @@
       (property "Value" "Arduino_Nano_v3.x" (id 1) (at 5.08 -24.13 0)
         (effects (font (size 1.27 1.27)) (justify left top))
       )
-      (property "Footprint" "Module:Arduino_Nano" (id 2) (at 0 0 0)
+      (property "Footprint" "ao_tht:Arduino_Nano" (id 2) (at 0 0 0)
         (effects (font (size 1.27 1.27) italic) hide)
       )
       (property "Datasheet" "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" (id 3) (at 0 0 0)
@@ -3308,7 +3308,7 @@
     (uuid 00000000-0000-0000-0000-000061356efa)
     (property "Reference" "A1" (id 0) (at 139.7 58.6486 0))
     (property "Value" "Arduino_Nano_v3.x" (id 1) (at 139.7 60.96 0))
-    (property "Footprint" "Module:Arduino_Nano" (id 2) (at 154.94 86.36 0)
+    (property "Footprint" "ao_tht:Arduino_Nano" (id 2) (at 154.94 86.36 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" (id 3) (at 154.94 86.36 0)
@@ -3482,15 +3482,15 @@
     (pin "2" (uuid 0104eb1c-c703-4526-9b92-032a7e395b8a))
   )
 
-  (symbol (lib_id "4xxx:40106") (at 252.73 61.595 0) (unit 3)
+  (symbol (lib_id "4xxx:40106") (at 110.49 101.6 0) (unit 3)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 0927a29c-3d35-4237-bd3b-ffb508f638b6)
-    (property "Reference" "U?" (id 0) (at 252.73 54.0852 0))
-    (property "Value" "40106" (id 1) (at 252.73 56.6221 0))
-    (property "Footprint" "ao_tht:DIP-14_W7.62mm_Socket_LongPads" (id 2) (at 252.73 61.595 0)
+    (property "Reference" "U1" (id 0) (at 110.49 94.0902 0))
+    (property "Value" "40106" (id 1) (at 110.49 96.6271 0))
+    (property "Footprint" "ao_tht:DIP-14_W7.62mm_Socket_LongPads" (id 2) (at 110.49 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf" (id 3) (at 252.73 61.595 0)
+    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf" (id 3) (at 110.49 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid a8aa7cc9-6dea-4292-ae77-ed0c602cd470))
@@ -4122,15 +4122,15 @@
     (pin "2" (uuid fc594ffb-5294-44d7-830c-daeae2e0dd8d))
   )
 
-  (symbol (lib_id "4xxx:40106") (at 110.49 101.6 0) (unit 2)
+  (symbol (lib_id "4xxx:40106") (at 110.49 76.2 0) (unit 2)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 580751f7-43c5-4c51-bca5-c6e90b85abfc)
-    (property "Reference" "U1" (id 0) (at 110.49 94.0902 0))
-    (property "Value" "40106" (id 1) (at 110.49 96.6271 0))
-    (property "Footprint" "ao_tht:DIP-14_W7.62mm_Socket_LongPads" (id 2) (at 110.49 101.6 0)
+    (property "Reference" "U1" (id 0) (at 110.49 68.6902 0))
+    (property "Value" "40106" (id 1) (at 110.49 71.2271 0))
+    (property "Footprint" "ao_tht:DIP-14_W7.62mm_Socket_LongPads" (id 2) (at 110.49 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf" (id 3) (at 110.49 101.6 0)
+    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf" (id 3) (at 110.49 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 96aca5ef-b4c0-4181-b438-9f3653841384))
@@ -4290,7 +4290,7 @@
   (symbol (lib_id "power:GND") (at 184.785 41.91 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 77a6d395-67e7-44ac-815c-e94a27719639)
-    (property "Reference" "#PWR?" (id 0) (at 184.785 48.26 0)
+    (property "Reference" "#PWR03" (id 0) (at 184.785 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 184.785 46.3534 0))
@@ -4502,26 +4502,26 @@
     (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf" (id 3) (at 252.73 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a8aa7cc9-6dea-4292-ae77-ed0c602cd470))
-    (pin "2" (uuid 2a156862-f959-497c-8ac0-bd2f7b00c0ad))
-    (pin "3" (uuid 6f7d7d99-244c-4b53-a861-7a169ba4cb26))
-    (pin "4" (uuid e689c926-0a83-4217-bc5f-d5535ce47ca9))
-    (pin "5" (uuid c337469e-bb99-4666-9e82-40624096e1ee))
-    (pin "6" (uuid 6b0dccd0-e6de-406d-babd-7f94038b3aa4))
-    (pin "8" (uuid d3c1b5bf-b3c2-4db8-83a8-798bea808534))
-    (pin "9" (uuid bf038a34-6731-4938-9f6e-212cf2908566))
-    (pin "10" (uuid a127819a-02fe-491e-aca9-2b641f453a64))
-    (pin "11" (uuid f6f94a3f-e714-40fe-ae26-692dc1417524))
+    (pin "1" (uuid a8aa7cc9-6dea-4292-ae77-ed0c602cd471))
+    (pin "2" (uuid 2a156862-f959-497c-8ac0-bd2f7b00c0ae))
+    (pin "3" (uuid 6f7d7d99-244c-4b53-a861-7a169ba4cb27))
+    (pin "4" (uuid e689c926-0a83-4217-bc5f-d5535ce47caa))
+    (pin "5" (uuid c337469e-bb99-4666-9e82-40624096e1ef))
+    (pin "6" (uuid 6b0dccd0-e6de-406d-babd-7f94038b3aa5))
+    (pin "8" (uuid d3c1b5bf-b3c2-4db8-83a8-798bea808535))
+    (pin "9" (uuid bf038a34-6731-4938-9f6e-212cf2908567))
+    (pin "10" (uuid a127819a-02fe-491e-aca9-2b641f453a65))
+    (pin "11" (uuid f6f94a3f-e714-40fe-ae26-692dc1417525))
     (pin "12" (uuid 0d81521d-3e8d-4158-9b2d-b25fcadc37f3))
     (pin "13" (uuid a26c76bb-32f3-48d9-a86c-ddac498a9825))
-    (pin "14" (uuid 5a64d267-f405-4e42-afde-5df1124a825b))
-    (pin "7" (uuid 294420f2-0d9f-4d9b-948e-018e8af76851))
+    (pin "14" (uuid 5a64d267-f405-4e42-afde-5df1124a825c))
+    (pin "7" (uuid 294420f2-0d9f-4d9b-948e-018e8af76852))
   )
 
   (symbol (lib_id "power:GND") (at 243.84 62.865 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 973c34a4-7f61-4ac1-b953-2157eabe9bfb)
-    (property "Reference" "#PWR?" (id 0) (at 243.84 69.215 0)
+    (property "Reference" "#PWR017" (id 0) (at 243.84 69.215 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 243.84 67.3084 0))
@@ -4658,7 +4658,7 @@
   (symbol (lib_id "ao_symbols:AudioJack2") (at 222.25 31.75 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid a5690c82-845b-437a-9c7d-128afa0df540)
-    (property "Reference" "J?" (id 0) (at 222.885 39.2598 0))
+    (property "Reference" "J1" (id 0) (at 222.885 39.2598 0))
     (property "Value" "AudioJack2" (id 1) (at 222.885 36.7229 0))
     (property "Footprint" "ao_tht:Jack_6.35mm_PJ_629HAN_slots" (id 2) (at 222.25 31.75 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -4822,15 +4822,15 @@
     (pin "2" (uuid e8d4c700-0163-4fcd-a1ae-b6194b588e64))
   )
 
-  (symbol (lib_id "4xxx:40106") (at 110.49 76.2 0) (unit 1)
+  (symbol (lib_id "4xxx:40106") (at 252.73 61.595 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid bae4ee1e-5df5-490c-b627-dd4907de3d2c)
-    (property "Reference" "U1" (id 0) (at 110.49 68.6902 0))
-    (property "Value" "40106" (id 1) (at 110.49 71.2271 0))
-    (property "Footprint" "ao_tht:DIP-14_W7.62mm_Socket_LongPads" (id 2) (at 110.49 76.2 0)
+    (property "Reference" "U1" (id 0) (at 252.73 54.0852 0))
+    (property "Value" "40106" (id 1) (at 252.73 56.6221 0))
+    (property "Footprint" "ao_tht:DIP-14_W7.62mm_Socket_LongPads" (id 2) (at 252.73 61.595 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf" (id 3) (at 110.49 76.2 0)
+    (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf" (id 3) (at 252.73 61.595 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 82d578cb-f1f5-4fda-9662-c682d0d7ed63))
@@ -4914,7 +4914,7 @@
   (symbol (lib_id "ao_symbols:1N4733A") (at 184.785 36.83 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c6e93163-5a6e-4f65-af6f-629e7f4649b9)
-    (property "Reference" "D?" (id 0) (at 182.245 36.1981 90)
+    (property "Reference" "D1" (id 0) (at 182.245 36.1981 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "1N4733A" (id 1) (at 182.245 38.735 90)
@@ -4964,7 +4964,7 @@
   (symbol (lib_id "power:GND") (at 208.28 43.18 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid cafbf13d-14e1-4ab2-9416-c8d75fc9e6c4)
-    (property "Reference" "#PWR?" (id 0) (at 208.28 49.53 0)
+    (property "Reference" "#PWR010" (id 0) (at 208.28 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 208.28 47.6234 0))
@@ -5081,7 +5081,7 @@
   (symbol (lib_id "ao_symbols:LED_red") (at 203.2 41.91 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid dcbf7136-5232-4d1a-baa5-501dff0dd2d6)
-    (property "Reference" "D?" (id 0) (at 204.7875 36.0512 0))
+    (property "Reference" "D13" (id 0) (at 204.7875 36.0512 0))
     (property "Value" "LED_red" (id 1) (at 203.2 39.37 0))
     (property "Footprint" "ao_tht:LED_D5.0mm" (id 2) (at 203.2 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -5316,7 +5316,7 @@
   (symbol (lib_id "ao_symbols:R") (at 199.39 31.75 90) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid f1c97e37-e22e-431e-9cb8-52256edbe8e2)
-    (property "Reference" "R?" (id 0) (at 199.39 27.0342 90))
+    (property "Reference" "R6" (id 0) (at 199.39 27.0342 90))
     (property "Value" "1k" (id 1) (at 199.39 29.5711 90))
     (property "Footprint" "ao_tht:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" (id 2) (at 199.39 33.528 90)
       (effects (font (size 1.27 1.27)) hide)
@@ -5350,7 +5350,7 @@
   (symbol (lib_id "power:GND") (at 215.9 35.56 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid f627b6f7-4413-4c56-a66a-27d4211fc15c)
-    (property "Reference" "#PWR?" (id 0) (at 215.9 41.91 0)
+    (property "Reference" "#PWR011" (id 0) (at 215.9 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 215.9 40.0034 0))
@@ -5391,7 +5391,7 @@
   (symbol (lib_id "ao_symbols:R") (at 190.5 36.83 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid fbda2c68-db23-4ccb-9a06-1084cc248aa2)
-    (property "Reference" "R?" (id 0) (at 192.278 35.9953 0)
+    (property "Reference" "R1" (id 0) (at 192.278 35.9953 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "RL" (id 1) (at 192.278 38.5322 0)
@@ -5472,6 +5472,9 @@
     (path "/0b3fd8f7-7f8e-4d29-8571-b38623aa466c"
       (reference "#PWR02") (unit 1) (value "GND1") (footprint "")
     )
+    (path "/77a6d395-67e7-44ac-815c-e94a27719639"
+      (reference "#PWR03") (unit 1) (value "GND") (footprint "")
+    )
     (path "/00000000-0000-0000-0000-00005f73fa68"
       (reference "#PWR04") (unit 1) (value "GND") (footprint "")
     )
@@ -5490,6 +5493,12 @@
     (path "/9046ad01-04e0-423e-adae-64a29911c6e1"
       (reference "#PWR09") (unit 1) (value "+5V_1") (footprint "")
     )
+    (path "/cafbf13d-14e1-4ab2-9416-c8d75fc9e6c4"
+      (reference "#PWR010") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/f627b6f7-4413-4c56-a66a-27d4211fc15c"
+      (reference "#PWR011") (unit 1) (value "GND") (footprint "")
+    )
     (path "/00000000-0000-0000-0000-00005f73fa6e"
       (reference "#PWR012") (unit 1) (value "GND") (footprint "")
     )
@@ -5504,6 +5513,9 @@
     )
     (path "/e5d2e148-e0f9-4c2d-9236-c8b2ac33f4da"
       (reference "#PWR016") (unit 1) (value "GND1") (footprint "")
+    )
+    (path "/973c34a4-7f61-4ac1-b953-2157eabe9bfb"
+      (reference "#PWR017") (unit 1) (value "GND") (footprint "")
     )
     (path "/83437e9a-4430-4ba1-840e-4520d0acf7c8"
       (reference "#PWR019") (unit 1) (value "+12V") (footprint "")
@@ -5607,20 +5619,8 @@
     (path "/04fb8dc7-b19a-4487-8ffe-9f244fc9dc0d"
       (reference "#PWR0102") (unit 1) (value "GND1") (footprint "")
     )
-    (path "/77a6d395-67e7-44ac-815c-e94a27719639"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/973c34a4-7f61-4ac1-b953-2157eabe9bfb"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/cafbf13d-14e1-4ab2-9416-c8d75fc9e6c4"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/f627b6f7-4413-4c56-a66a-27d4211fc15c"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
     (path "/00000000-0000-0000-0000-000061356efa"
-      (reference "A1") (unit 1) (value "Arduino_Nano_v3.x") (footprint "Module:Arduino_Nano")
+      (reference "A1") (unit 1) (value "Arduino_Nano_v3.x") (footprint "ao_tht:Arduino_Nano")
     )
     (path "/38ca7b9a-dd9a-40ed-ba66-1e1f3a0da856"
       (reference "C1") (unit 1) (value "100nF") (footprint "ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm")
@@ -5639,6 +5639,9 @@
     )
     (path "/00000000-0000-0000-0000-00005f73fa42"
       (reference "C6") (unit 1) (value "100nF") (footprint "ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm")
+    )
+    (path "/c6e93163-5a6e-4f65-af6f-629e7f4649b9"
+      (reference "D1") (unit 1) (value "1N4733A") (footprint "ao_tht:D_DO-41_SOD81_P10.16mm_Horizontal")
     )
     (path "/00000000-0000-0000-0000-00005f73fa24"
       (reference "D2") (unit 1) (value "1N5817") (footprint "ao_tht:D_DO-41_SOD81_P10.16mm_Horizontal")
@@ -5673,11 +5676,8 @@
     (path "/48eaded6-2a6e-44fa-9b4b-abb17f60bf7b"
       (reference "D12") (unit 1) (value "1N4733A") (footprint "ao_tht:D_DO-41_SOD81_P10.16mm_Horizontal")
     )
-    (path "/c6e93163-5a6e-4f65-af6f-629e7f4649b9"
-      (reference "D?") (unit 1) (value "1N4733A") (footprint "ao_tht:D_DO-41_SOD81_P10.16mm_Horizontal")
-    )
     (path "/dcbf7136-5232-4d1a-baa5-501dff0dd2d6"
-      (reference "D?") (unit 1) (value "LED_red") (footprint "ao_tht:LED_D5.0mm")
+      (reference "D13") (unit 1) (value "LED_red") (footprint "ao_tht:LED_D5.0mm")
     )
     (path "/00000000-0000-0000-0000-000061355bfb"
       (reference "GRAF1") (unit 1) (value "Holes") (footprint "clock:clock_panel_holes")
@@ -5696,6 +5696,9 @@
     )
     (path "/12e1d4aa-6b0c-41d5-b218-e5e9b2bff065"
       (reference "H4") (unit 1) (value "MountingHole") (footprint "ao_tht:MountingHole_3.2mm_M3")
+    )
+    (path "/a5690c82-845b-437a-9c7d-128afa0df540"
+      (reference "J1") (unit 1) (value "AudioJack2") (footprint "ao_tht:Jack_6.35mm_PJ_629HAN_slots")
     )
     (path "/00000000-0000-0000-0000-00006074df58"
       (reference "J2") (unit 1) (value "Synth_power_2x5") (footprint "ao_tht:Power_Header")
@@ -5721,11 +5724,11 @@
     (path "/f0ca7bb0-78db-422b-8482-7a98698fc57d"
       (reference "J9") (unit 1) (value "Conn_02x04_Odd_Even") (footprint "Connector_IDC:IDC-Header_2x04_P2.54mm_Vertical")
     )
-    (path "/a5690c82-845b-437a-9c7d-128afa0df540"
-      (reference "J?") (unit 1) (value "AudioJack2") (footprint "ao_tht:Jack_6.35mm_PJ_629HAN_slots")
-    )
     (path "/33f39dd2-4a83-487c-ae50-5387dc326ac4"
       (reference "OLED1") (unit 1) (value "OLED_128X64") (footprint "ao_tht:OLED_MC130GX")
+    )
+    (path "/fbda2c68-db23-4ccb-9a06-1084cc248aa2"
+      (reference "R1") (unit 1) (value "RL") (footprint "ao_tht:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal")
     )
     (path "/4016c354-1267-4b39-bf57-7938fd10c636"
       (reference "R2") (unit 1) (value "10k") (footprint "ao_tht:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal")
@@ -5738,6 +5741,9 @@
     )
     (path "/22757321-ec02-4036-8743-1afb1e9d4d8f"
       (reference "R5") (unit 1) (value "10k") (footprint "ao_tht:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal")
+    )
+    (path "/f1c97e37-e22e-431e-9cb8-52256edbe8e2"
+      (reference "R6") (unit 1) (value "1k") (footprint "ao_tht:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal")
     )
     (path "/04d3a4d6-1917-40d5-b93c-460a9679ed11"
       (reference "R7") (unit 1) (value "10k") (footprint "ao_tht:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal")
@@ -5781,12 +5787,6 @@
     (path "/19eecd7c-9fd3-42d8-b1c3-18b5be23a28a"
       (reference "R21") (unit 1) (value "1k") (footprint "ao_tht:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal")
     )
-    (path "/f1c97e37-e22e-431e-9cb8-52256edbe8e2"
-      (reference "R?") (unit 1) (value "1k") (footprint "ao_tht:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal")
-    )
-    (path "/fbda2c68-db23-4ccb-9a06-1084cc248aa2"
-      (reference "R?") (unit 1) (value "RL") (footprint "ao_tht:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal")
-    )
     (path "/cab18edd-443d-484c-9138-7169b2972b26"
       (reference "SW1") (unit 1) (value "RotaryEncoder") (footprint "ao_tht:RotaryEncoder_Bourns-PEC11R-4xxxF-Sxxxx-Switch_Vertical_H20mm")
     )
@@ -5808,6 +5808,9 @@
     (path "/580751f7-43c5-4c51-bca5-c6e90b85abfc"
       (reference "U1") (unit 2) (value "40106") (footprint "ao_tht:DIP-14_W7.62mm_Socket_LongPads")
     )
+    (path "/0927a29c-3d35-4237-bd3b-ffb508f638b6"
+      (reference "U1") (unit 3) (value "40106") (footprint "ao_tht:DIP-14_W7.62mm_Socket_LongPads")
+    )
     (path "/7f8d8652-a842-4ae9-9de5-db86d268b40a"
       (reference "U1") (unit 4) (value "40106") (footprint "ao_tht:DIP-14_W7.62mm_Socket_LongPads")
     )
@@ -5819,9 +5822,6 @@
     )
     (path "/030be389-e710-4ebe-9c09-b098abeae63f"
       (reference "U1") (unit 7) (value "40106") (footprint "ao_tht:DIP-14_W7.62mm_Socket_LongPads")
-    )
-    (path "/0927a29c-3d35-4237-bd3b-ffb508f638b6"
-      (reference "U?") (unit 3) (value "40106") (footprint "ao_tht:DIP-14_W7.62mm_Socket_LongPads")
     )
   )
 )
