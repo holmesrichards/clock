@@ -2834,8 +2834,8 @@
     )
   )
 
-  (text "With BOM LEDs I chose\nRL = 2k for red, RL = \n470R for green"
-    (at 233.68 40.005 0)
+  (text "With Tayda standard LEDs I chose\nRL = 3.3k for red, RL = 470R for green.\nThen current is ~ 1 mA red, ~ 6 mA\ngreen. Green LED especially affects\nvoltage on +12 V rail by about 10 mV.\nConsider using super bright LEDs with\nlarger RL?"
+    (at 204.47 27.94 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d690a3ee-e14b-4ad3-a2be-0d91d81dd4ac)
   )
