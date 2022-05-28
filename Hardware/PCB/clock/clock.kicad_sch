@@ -2834,6 +2834,12 @@
     )
   )
 
+  (text "With BOM LEDs I chose\nRL = 2k for red, RL = \n470R for green"
+    (at 233.68 40.005 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid d690a3ee-e14b-4ad3-a2be-0d91d81dd4ac)
+  )
+
   (label "ENC_A" (at 139.7 76.2 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 0238bfdc-85b5-4247-b1c0-36de617c0a8a)
