@@ -694,11 +694,11 @@ void setup()
   pinMode (DIV4, OUTPUT);
   pinMode (DIV8, OUTPUT);
   pinMode (DIVN, OUTPUT);
+  pinMode (BEAT, OUTPUT);
   pinMode (TACT, INPUT);    
   pinMode (ENCA, INPUT);
   pinMode (ENCB, INPUT);
   pinMode (ENCPUSH, INPUT);
-  pinMode (BEAT, INPUT);
 
   MMmode = true;
   
