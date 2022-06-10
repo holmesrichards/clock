@@ -1,6 +1,6 @@
 # LED notes
 
-On the breadboard, there is some modulation of the 12 V rail with clock pulsing. Oddly it's seen only every fifth clock pulse (with 4 pulses per beat and N=16, etc.) It goes away when the LEDs are removed. On the breadboard the beat LED is green and the rest are red, and the green LED has a decidedly larger effect than the reds. With green disconnected the effect is there but very small, hard to quantify in the noise. With green connected the modulation is about 10 mV.
+On the breadboard, there is some modulation of the 12 V rail with clock pulsing. It goes away when the LEDs are removed. On the breadboard the beat LED is green and the rest are red, and the green LED has a decidedly larger effect than the reds. With green disconnected and red connected the effect is there but very small, hard to quantify in the noise. With green connected the modulation is about 10 mV.
 
 RL = 470R for the green and 3.3k for the reds. Voltage drop across RL is 2.8 V for green and 3.2 V for red, so green is drawing 6 mA and red are drawing 1 mA each.
 
