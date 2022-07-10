@@ -929,11 +929,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.60104076"
-     inkscape:cx="435.91054"
-     inkscape:cy="738.71862"
+     inkscape:zoom="0.84999999"
+     inkscape:cx="-532.94118"
+     inkscape:cy="909.41177"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer16"
+     inkscape:current-layer="layer15"
      showgrid="false"
      units="in"
      inkscape:window-width="1581"
@@ -1102,7 +1102,7 @@
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="Outline"
-     style="display:inline">
+     style="display:none">
     <rect
        y="1.9685047"
        x="1.968504"
@@ -6464,6 +6464,13 @@
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Clock/Images/clock_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
+    <rect
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.00520833;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       id="rect17564"
+       width="1.2992126"
+       height="0.7480315"
+       x="2.3031499"
+       y="2.7755909" />
     <g
        id="g2321"
        style="display:inline;stroke-width:0.923077"
@@ -6580,7 +6587,7 @@
      inkscape:groupmode="layer"
      id="layer11"
      inkscape:label="Panel Hardware"
-     style="display:inline">
+     style="display:none">
     <rect
        style="font-variation-settings:normal;display:inline;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00787402;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        id="rect2992"
