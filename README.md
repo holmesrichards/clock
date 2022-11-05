@@ -97,6 +97,14 @@ A cursor on the left edge points to one of these lines. Turning the encoder move
 
 At any time in set mode, a long press on the tactile button switches to run mode.
 
+## Some possible added features
+
+Unimplemented ideas for added functionality. We could do stuff that would affect all outputs, but probably best to leave most outputs behaving "normally" and repurpose just the /N output:
+
+* Manual pulse mode: Pressing the push button creates an immediate output pulse (instead of setting tempo). This (unlike the following two modes) should be made to work even if the clock is disabled, that is, no regular clock pulses are being generated but push button pulses are created.
+* Hit or Miss mode: A parameter specifies the probability of generating a pulse when the time for a pulse (at the full clock rate) arrives.
+* Random mode: Pulses are generated at random intervals. Uniform probability time differences from 0 to 1/frequency? Exponential distribution with mean 1/frequency? Some other distribution? To generate an exponential distribution: Generate R uniformly in [0,1], then T = -θ ln(1-R) is exponentially distributed with mean θ.
+
 ## Current draw
  mA +12 V,  mA -12 V
 

@@ -1,0 +1,26 @@
+Drill report for clock_panel.kicad_pcb
+Created on Sat Sep  3 08:57:15 2022
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'clock_panel.drl' contains
+    plated through holes:
+    =============================================================
+    T1  3.200mm  0.1260"  (4 holes)  (with 4 slots)
+    T2  5.000mm  0.1969"  (6 holes)
+    T3  7.500mm  0.2953"  (1 hole)
+    T4  10.000mm  0.3937"  (6 holes)
+
+    Total plated holes count 17
+
+
+Not plated through holes are merged with plated holes
+    unplated through holes:
+    =============================================================
+    T5  2.700mm  0.1063"  (4 holes)
+
+    Total unplated holes count 4
