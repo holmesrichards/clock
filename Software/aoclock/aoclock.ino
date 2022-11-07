@@ -46,6 +46,10 @@ unsigned long enc_push_millis;
 bool enc_push_handled = false;
 unsigned long tap_millis_prev;  // millis for previous tap
 bool tap_millis_prev_set = false;   // true if tap_millis_prev is valid
+unsigned long act_millis;  // time of last user action
+
+unsigned long oled_timeout = 60L*1000L;   // timeout for OLED = 1 minute
+bool blank_screen;    // OLED is blank
 
 // Tempo and duty cycle parameters
 float BPM = 120.0;     // Beats per minute
@@ -238,7 +242,7 @@ float MMdir (float was, int dir)
 void oled_display_set_amt()
 {
   // Update division amount display
-  
+
   u8x8.setFont(u8x8_font_victoriamedium8_r);
   u8x8.drawString (0, AMT_ROW, " /N amount      ");      
   char buf[5];
@@ -470,6 +474,7 @@ void set_mode_handler (int dre, int drt)
       // Set mode: Encoder has been newly pushed ====================
       enc_pushed = true;
       enc_push_handled = false;
+      act_millis = millis();
       return;
     }
   else if (enc_pushed && dre == LOW)
@@ -479,6 +484,7 @@ void set_mode_handler (int dre, int drt)
       oled_display_set_clear_curs();
       curs_col = 15-curs_col;
       oled_display_set_set_curs();
+      act_millis = millis();
       return;
     }
   else if (!tact_pushed && drt == HIGH)
@@ -487,6 +493,7 @@ void set_mode_handler (int dre, int drt)
       tact_pushed = true;
       tact_push_millis = mli;
       tact_push_handled = false;
+      act_millis = millis();
       return;
     }
   else if (tact_pushed && !tact_push_handled && drt == HIGH && tpmdif >= 500)
@@ -495,12 +502,14 @@ void set_mode_handler (int dre, int drt)
       set_mode = false;
       oled_display_run();
       tact_push_handled = true;
+      act_millis = millis();
       return;
     }
   else if (tact_pushed && drt == LOW)
     {
       // Set mode: Tact push is over ====================
       tact_pushed = false;
+      act_millis = millis();
       if (tpmdif >= 500 && !tact_push_handled)
 	{
 	  set_mode = false;
@@ -515,6 +524,7 @@ void set_mode_handler (int dre, int drt)
   int delta = encoder();
   if (delta != 0)
     {
+      act_millis = millis();
       if (curs_col == 0)
 	// Go to next/previous row
 	{
@@ -577,6 +587,7 @@ void run_mode_handler (int dre, int drt)
   if (!enc_pushed && dre == HIGH)
     {
       // Run mode: Encoder has been newly pushed ====================
+      act_millis = millis();
       enc_pushed = true;
       enc_push_millis = mli;
       enc_push_handled = false;
@@ -586,6 +597,7 @@ void run_mode_handler (int dre, int drt)
 	   && dre == HIGH && epmdif >= 500)
     {
       // Run mode: Unhandled long encoder press in progress ====================
+      act_millis = millis();
       MMmode = !MMmode;
       oled_display_run_submode();
       enc_push_handled = true;
@@ -594,6 +606,7 @@ void run_mode_handler (int dre, int drt)
   else if (enc_pushed && dre == LOW)
     {
       // Run mode: Encoder push is over ====================
+      act_millis = millis();
       enc_pushed = false;
       if (epmdif < 500)
 	{
@@ -622,6 +635,7 @@ void run_mode_handler (int dre, int drt)
   else if (!tact_pushed && drt == HIGH)
     {
       // Run mode: Tact has been newly pushed ====================
+      act_millis = millis();
       tact_pushed = true;
       tact_push_millis = mli;
       tact_push_handled = false;
@@ -630,6 +644,7 @@ void run_mode_handler (int dre, int drt)
   else if (tact_pushed && !tact_push_handled && drt == HIGH && tpmdif >= 500)
     {
       // Run mode: Unhandled long tact press in progress ====================
+      act_millis = millis();
       set_mode = true;
       curs_col = 0;
       curs_row = AMT_ROW;	  
@@ -640,6 +655,7 @@ void run_mode_handler (int dre, int drt)
   else if (tact_pushed && drt == LOW)
     {
       // Run mode: Tact push is over ====================
+      act_millis = millis();
       tact_pushed = false;
       if (tpmdif < 500)
 	{
@@ -652,6 +668,8 @@ void run_mode_handler (int dre, int drt)
 		BPM = int(constrain (60000.0 / tmpdif, min_BPM, max_BPM) + 0.5);
 	      oled_display_run_bpm();
 	    }
+	  if (blank_screen)  // no action if first tap and screen is blanked
+	    return;
 	  tap_millis_prev = mli;
 	  tap_millis_prev_set = true;
 	  return;
@@ -672,6 +690,7 @@ void run_mode_handler (int dre, int drt)
   int delta = encoder();
   if (delta != 0)
     {
+      act_millis = millis();
       if (MMmode)
 	BPM = constrain (MMdir (BPM, delta), min_BPM, max_BPM);
       else
@@ -704,6 +723,9 @@ void setup()
   
   //OLED
   u8x8.begin();
+
+  // Action time
+  act_millis = millis();
   
   // Timer interrupt
   running = true;
@@ -714,6 +736,7 @@ void setup()
   attachInterrupt (0, encoderCallback, RISING);
 
   // Display in run mode
+  blank_screen = false;
   set_mode = false;
   oled_display_run();
 }
@@ -738,15 +761,30 @@ void loop()
   else
     run_mode_handler (dre, drt);
 
-  /* if (!set_mode) */
-  /*   oled_display_run_ticks(); */
-      
   // No taps for a while, cancel tap processing
   unsigned long mli = millis();
   unsigned long tpmdif = mli - tact_push_millis;
-  if (tpmdif > 4000)
+  if (tpmdif > 8000L)
     tap_millis_prev_set = false;
-  
+
+  // No action for a while? Blank or unblank OLED
+  unsigned long actdif = mli - act_millis;
+
+  if (!blank_screen && actdif > oled_timeout)
+    {
+      blank_screen = true;
+      u8x8.setPowerSave(true);
+      Serial.print ("blank");
+    }
+    
+  if (blank_screen && actdif <= oled_timeout)
+    {
+      blank_screen = false;
+      u8x8.setPowerSave(false);
+      Serial.print ("unblank");
+    }
+  Serial.println ();
+    
   // Set period and on times
   period = (60000000./BPM/PPB);  // period in usec
   ontime = period * duty_cycle * 0.01;
