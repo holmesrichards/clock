@@ -5,7 +5,7 @@ This is a clock synth module in Kosmo format. Features are:
 * Rotary encoder to set tempo and other parameters.
 * Tap button for a different way to set tempo.
 * OLED for display of tempo and settings menu.
-* 5 outputs: Clock out, clock divided by 2, 4, and 8, and clock divided by arbitrary number (between 1 and 64) with offset.
+* 6 outputs: Beat, clock, clock divided by 2, 4, and 8, and clock divided by arbitrary number (between 1 and 64) with offset.
 * Two tempo submodes: INC (increment) mode, to set any whole number of beats per minute (BPM) from 8 to 928, and MM (Maelzel Metronome) mode, to more quickly set standard MM values and generalizations of these from 7.5 (= 60 ÷ 8) to 208 BPM.
 * Clock pulses per beat (PPB) variable from 1 to 24.
 * Clock pulse width (duty cycle) variable from 5% to 95%.
