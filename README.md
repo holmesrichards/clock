@@ -66,7 +66,7 @@ At startup, the module is in MM submode.
 
 ### Set mode
 
-In this mode five menu lines are shown:
+In this mode four menu lines are shown:
 
 * /N amount
 * /N offset
