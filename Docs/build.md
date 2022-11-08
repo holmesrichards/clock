@@ -21,13 +21,15 @@ Different versions of the OLED module have different pinouts: Some go GND-VCC-SC
 
 ## Errata
 
-Some problems with the first run boards:
+Some problems with the first run boards. (First run boards have no version marking):
 
 * The mounting holes on the panel for the OLED are slightly too small for M3 hardware. Use M2.5 or enlarge the holes.
-* These mounting holes are of limited use anyway. Once the OLED is soldered to the front board, it will be nearly impossible to add or remove nuts to secure the screen. I just used 6 mm screws and nuts to provide alignment for the OLED (and to avoid empty holes on the panel).
+* These mounting holes are of limited use anyway. Once the OLED is soldered to the front board, it will be nearly impossible to add or remove nuts to secure the screen. I just used 6 mm screws and nuts to provide alignment for the OLED (and to avoid empty holes on the panel). 
 * The push button is connected wrong. To correct this:
     1. Using a hobby knife, cut across the trace that runs from the upper left switch pad (as viewed from the back of the board) to the right R2 pad. Verify there is no longer connectivity between these pads.
     2. Add a small wire from the right R2 pad to the lower left switch pad.
+
+As of version 1.0 (marked as such on PCBs) there are no mounting holes on the panel, and the push button is connected correctly.
 
 ![clock_bodge1](../Images/clock_bodge1.jpg)
 ![clock_bodge2](../Images/clock_bodge2.jpg)
