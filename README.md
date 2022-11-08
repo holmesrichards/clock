@@ -52,11 +52,11 @@ In the MM submode, the tempo is constrained to a generalized version of the usua
 Note each line is 2x the previous, and the steps from one value to the next increase from 2 to 3 to 4 to 6 to 8. Roughly speaking, the gaps between values are about 5% of the value (it's a bit like E48 resistor values); getting from a low value to a high value requires much less encoder turning than in INC mode. The generalized version extends this pattern:
 
 <pre><span style="font-size: 10px">
-|   7.5 |     7.875 |   8.25 |   8.625 |   9 |   9.5 |  10 |  10.5 |  11 |  11.5 |  12 |  12.5 |  13 |  13.5 |  14 |  14.5 |
-|  15   |    15.75  |  16.5  |  17.25  |  18 |  19   |  20 |  21   |  22 |  23   |  24 |  25   |  26 |  27   |  28 |  29   |
-|  30   |    31.5   |  33    |  34.5   |  36 |  38   |  40 |  42   |  44 |  46   |  48 |  50   |  52 |  54   |  56 |  58   |
-|  60   |    63     |  66    |  69     |  72 |  76   |  80 |  84   |  88 |  92   |  96 | 100   | 104 | 108   | 112 | 116   |
-| 120   |   126     | 132    | 138     | 144 | 152   | 160 | 168   | 176 | 184   | 192 | 200   | 208 |       |     |       |
+|   7.5 |   7.875 |   8.25 |   8.625 |   9 |   9.5 |  10 |  10.5 |  11 |  11.5 |  12 |  12.5 |  13 |  13.5 |  14 |  14.5 |
+|  15   |  15.75  |  16.5  |  17.25  |  18 |  19   |  20 |  21   |  22 |  23   |  24 |  25   |  26 |  27   |  28 |  29   |
+|  30   |  31.5   |  33    |  34.5   |  36 |  38   |  40 |  42   |  44 |  46   |  48 |  50   |  52 |  54   |  56 |  58   |
+|  60   |  63     |  66    |  69     |  72 |  76   |  80 |  84   |  88 |  92   |  96 | 100   | 104 | 108   | 112 | 116   |
+| 120   | 126     | 132    | 138     | 144 | 152   | 160 | 168   | 176 | 184   | 192 | 200   | 208 |       |     |       |
 </span></pre>
 
 
