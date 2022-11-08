@@ -1,5 +1,5 @@
 Drill report for clock_panel.kicad_pcb
-Created on Sat Sep  3 08:57:15 2022
+Created on Tue Nov  8 11:41:20 2022
 
 Copper Layer Stackup:
     =============================================================
@@ -21,6 +21,5 @@ Drill file 'clock_panel.drl' contains
 Not plated through holes are merged with plated holes
     unplated through holes:
     =============================================================
-    T5  2.700mm  0.1063"  (4 holes)
 
-    Total unplated holes count 4
+    Total unplated holes count 0
