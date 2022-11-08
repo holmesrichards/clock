@@ -2,7 +2,9 @@
 
 Footprints for resistors are small ones — you can use 1/8 watt resistors, or you can use regular 1/4 watt resistors stood on end at least on the back board — check vertical clearance on the front board.
 
-There are six LEDs, which often may all be turning on or off at the same time, and I was concerned my usual LEDs would draw enough current to have a noticeable effect on the +12 V rail. Instead the BOM specifies some different LEDs which might be described as "super bright" (and diffused), but on the other hand could be described as "super low current" for a reasonable light level. The series resistors are shown with "RL" for the value; use whatever resistor value you want to get your preferred brightness. With the BOM LEDs I used 6.8k for red and 39k for green (meaning each draws a current of under 0.5 mA). A drawback of these LEDs is the leads are too short to extend from the front panel to the back PCB. I extended the leads by soldering on cutoff resistor legs.
+There are six LEDs, which often may all be turning on or off at the same time, and I was concerned my usual LEDs would draw enough current to have a noticeable effect on the +12 V rail. Instead the BOM specifies some different LEDs which might be described as "super bright" (and diffused), but on the other hand could be described as "super low current" for a reasonable light level. I got these on AliExpress's YuanQi AI Store where they were described as "5mm LED Diode F5", "fog red" and "fog green". 
+
+The series resistors are shown with "RL" for the value; use whatever resistor value you want to get your preferred brightness. With the above LEDs I used 6.8k for red and 39k for green (meaning each draws a current of under 0.5 mA). A drawback of these LEDs is the leads are too short to extend from the front panel to the back PCB. I extended the leads by soldering on cutoff resistor legs.
 
 For socketing the Nano I use two 15-position 2.54 mm pitch pin sockets.
 

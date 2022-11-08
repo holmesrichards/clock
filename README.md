@@ -1,14 +1,6 @@
-This is a work in progress; better README to come soon. Meanwhile:
-
-**Untested hardware and software — Do not assume anything works!**
-
 # Clock
 
-This is a clock synth module in Kosmo format.
-
-I took [Tik-Tak SM](https://create.arduino.cc/projecthub/Synthemafia/modular-synth-clock-module-diy-arduino-sm-tik-tak-bd8ded) as my starting point, but there's not much of it left — I changed and added a lot in both hardware and software.
-
-Features are:
+This is a clock synth module in Kosmo format. Features are:
 
 * Rotary encoder to set tempo and other parameters.
 * Tap button for a different way to set tempo.
@@ -26,8 +18,6 @@ Features are:
 "Beat" is a musical term, referring to the fundamental unit of rhythm, with usually (not always) a quarter note duration corresponding to one beat. "Tempo" refers to how many beats occur per minute.
 
 Since there are shorter notes than quarter notes, this clock can put out multiple — 4 or 8 or some other number — clock pulses per beat.
-
-This module, instead of doing things in terms of clock speed in pulses per minute, uses the more music-oriented idea of tempo in beats per minute, along with clock pulses per beat.
 
 ### Run mode
 
@@ -53,23 +43,21 @@ In the INC tempo submode, any whole number of BPM from 8 to 208 may be set. When
 
 In the MM submode, the tempo is constrained to a generalized version of the usual Maelzel metronome markings, which are
 
-|    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-|    |    |    |    |    |    | 40 | 42 | 44 | 46 | 48 |  50 |  52 |  54 |  56 |  58 |
-| 60 | 63 | 66 | 69 | 72 | 76 | 80 | 84 | 88 | 92 | 96 | 100 | 104 | 108 | 112 | 116 |
+<pre><span style="font-size: 10px">
+|     |     |     |     |     |     |  40 |  42 |  44 |  46 |  48 |  50 |  52 |  54 |  56 |  58 |
+|  60 |  63 |  66 |  69 |  72 |  76 |  80 |  84 |  88 |  92 |  96 | 100 | 104 | 108 | 112 | 116 |
 | 120 | 126 | 132 | 138 | 144 | 152 | 160 | 168 | 176 | 184 | 192 | 200 | 208 |     |     |     |
-|    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |
+</span></pre>
 
 Note each line is 2x the previous, and the steps from one value to the next increase from 2 to 3 to 4 to 6 to 8. Roughly speaking, the gaps between values are about 5% of the value (it's a bit like E48 resistor values); getting from a low value to a high value requires much less encoder turning than in INC mode. The generalized version extends this pattern:
 
-|    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| 7.5 |7.875 | 8.25 | 8.625 | 9 | 9.5 | 10 | 10.5 | 11 | 11.5 | 12 | 12.5 | 13 | 13.5 | 14 | 14.5 |
-| 15 |15.75 | 16.5 | 17.25 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 |
-| 30 |31.5 | 33 | 34.5 | 36 | 38 | 40 | 42 | 44 | 46 | 48 | 50 | 52 | 54 | 56 | 58 |
-| 60 | 63 | 66 | 69 | 72 | 76 | 80 | 84 | 88 | 92 | 96 | 100 | 104 | 108 | 112 | 116 |
-| 120 | 126 | 132 | 138 | 144 | 152 | 160 | 168 | 176 | 184 | 192 | 200 | 208 |     |     |     |
-|    |    |    |    |    |    |    |    |    |    |     |     |     |     |     |     |
+<pre><span style="font-size: 10px">
+|   7.5 |     7.875 |   8.25 |   8.625 |   9 |   9.5 |  10 |  10.5 |  11 |  11.5 |  12 |  12.5 |  13 |  13.5 |  14 |  14.5 |
+|  15   |    15.75  |  16.5  |  17.25  |  18 |  19   |  20 |  21   |  22 |  23   |  24 |  25   |  26 |  27   |  28 |  29   |
+|  30   |    31.5   |  33    |  34.5   |  36 |  38   |  40 |  42   |  44 |  46   |  48 |  50   |  52 |  54   |  56 |  58   |
+|  60   |    63     |  66    |  69     |  72 |  76   |  80 |  84   |  88 |  92   |  96 | 100   | 104 | 108   | 112 | 116   |
+| 120   |   126     | 132    | 138     | 144 | 152   | 160 | 168   | 176 | 184   | 192 | 200   | 208 |       |     |       |
+</span></pre>
 
 
 In MM submode, when using the encoder, turning one step clockwise or counterclockwise steps to the next higher or lower number in the above list. When using the tap button, the tap interval is converted to the nearest MM value.
@@ -101,21 +89,22 @@ At any time in set mode, a long press on the tactile button switches to run mode
 
 To extend the life of the OLED, whenever more than 1 minute has passed with no control actions (button presses, encoder presses, or encoder turns), the screen is blanked. Any subsequent control action turns the screen back on. If that action is a short button press it will have no other effect (i.e. it will not initiate a tap tempo change). Other control actions while the screen is blank will have their usual effect.
 
-## Current draw
- mA +12 V,  mA -12 V
+## Credit
 
+I took [Tik-Tak SM](https://create.arduino.cc/projecthub/Synthemafia/modular-synth-clock-module-diy-arduino-sm-tik-tak-bd8ded) as my starting point, but there's not much of it left — I changed and added a lot in both hardware and software.
+
+## Current draw
+29 mA +12 V, 0 mA -12 V
 
 ## Photos
 
-![]()
-
-![]()
+![clock_front](Images/clock_front.jpg)
 
 ## Documentation
 
-* [Schematic](Docs/.pdf)
-* PCB layout: [front](Docs/_layout_front.pdf), [back](Docs/_layout_back.pdf)
-* [BOM](Docs/_bom.md)
+* [Schematic](Docs/clock.pdf)
+* PCB layout: [front](Docs/clock_layout_front.pdf), [back](Docs/clock_layout_back.pdf)
+* [BOM](Docs/clock_bom.md)
 * [Build notes](Docs/build.md)
 
 ## Libraries
