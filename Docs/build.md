@@ -2,6 +2,8 @@
 
 Footprints for resistors are small ones — you can use 1/8 watt resistors, or you can use regular 1/4 watt resistors stood on end at least on the back board — check vertical clearance on the front board.
 
+There are six LEDs, which often may all be turning on or off at the same time, and I was concerned my usual LEDs would draw enough current to have a noticeable effect on the +12 V rail. Instead the BOM specifies some different LEDs which might be described as "super bright" (and diffused), but on the other hand could be described as "super low current" for a reasonable light level. The series resistors are shown with "RL" for the value; use whatever resistor value you want to get your preferred brightness. With the BOM LEDs I used 6.8k for red and 39k for green (meaning each draws a current of under 0.5 mA).
+
 For socketing the Nano I use two 15-position 2.54 mm pitch pin sockets.
 
 The front board is held in place to the panel with the encoder. I used two 15 mm M3 spacers each with two nylon M3 washers to connect the two PCBs. (Note one of the mounting holes is under the Nano.)
@@ -10,7 +12,7 @@ Make a short 8-conductor ribbon cable to go from one PCB to the other. Take your
 
 ![ribbon](../Images/ribbon.jpg)
 
-Different versions of the OLED module have different pinouts: Some go GND-VCC-SCL-SCA, others go VCC-GND-SCL-SCA. Put a blob of solder on each of the two solder jumpers depending on which kind of OLED you have.
+Different versions of the OLED module have different pinouts: Some go GND-VCC-SCL-SCA, others go VCC-GND-SCL-SCA. Put a blob of solder on each of the two solder jumpers, connecting each center pad to one or the other of the end pads, depending on which kind of OLED you have.
 
 ![clock_jumpers1](../Images/clock_jumpers1.jpg)
 ![clock_jumpers2](../Images/clock_jumpers2.jpg)
