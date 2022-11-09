@@ -106,6 +106,7 @@ I took [Tik-Tak SM](https://create.arduino.cc/projecthub/Synthemafia/modular-syn
 * PCB layout: [front](Docs/clock_layout_front.pdf), [back](Docs/clock_layout_back.pdf)
 * [BOM](Docs/clock_bom.md)
 * [Build notes](Docs/build.md)
+* [Blog post](https://analogoutputblog.wordpress.com/2022/11/09/clocking-in/)
 
 ## Libraries
 
