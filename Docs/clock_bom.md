@@ -20,7 +20,7 @@ Generated from schematic by Eeschema 6.0.9-8da3e8f707~116~ubuntu22.04.1
 | R1, R2, R3, R4, R5, R6, R7, R8 | 8 | 10k | Resistor |  |  | Tayda |  |
 | R9, R10, R11, R12, R13, R14 | 6 | RL (see build notes) | Resistor |  |  | Tayda |  |
 | R15, R16, R17, R18, R19, R20 | 6 | 1k | Resistor |  |  | Tayda |  |
-| SW1 | 1 | SW_Push | Push button tactile switch | E-Switch | EG1821-ND | Digi-Key | TL1100F160Q |
+| SW1 | 1 | SW_Push | Push button tactile switch | E-Switch | TL1100F160Q | Digi-Key |EG1821-ND  |
 | SW2 | 1 | RotaryEncoder | Rotary encoder, dual channel, incremental quadrate outputs, with switch | Bourns | PEC11R-4215K-S0024 | Digi-Key | PEC11R-4215K-S0024-ND |
 | U1 | 1 | 40106 | Hex Schmitt trigger inverter |  |  | Tayda | A-015 |
 | | 2 | | 2x4 position 2.54 mm pitch IDC connector | | | Tayda | A-3346 |
