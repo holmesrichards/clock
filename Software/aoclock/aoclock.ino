@@ -774,16 +774,13 @@ void loop()
     {
       blank_screen = true;
       u8x8.setPowerSave(true);
-      Serial.print ("blank");
     }
     
   if (blank_screen && actdif <= oled_timeout)
     {
       blank_screen = false;
       u8x8.setPowerSave(false);
-      Serial.print ("unblank");
     }
-  Serial.println ();
     
   // Set period and on times
   period = (60000000./BPM/PPB);  // period in usec
